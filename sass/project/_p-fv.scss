@@ -1,6 +1,8 @@
 @use "../global" as global;
 
 .p-fv {
+  position: relative;
+  z-index: 1;
   display: flex;
 
   @include global.mq(pc) {

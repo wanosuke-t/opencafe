@@ -1,5 +1,9 @@
 @use "../global" as global;
 
+html, body {
+  overflow-x: hidden; /* 横スクロールだけを防ぐ */
+}
+
 html {
   scroll-behavior: smooth; // auto or smooth
 }
