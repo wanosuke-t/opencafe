@@ -573,7 +573,7 @@ a {
   .p-fv__pickup {
     bottom: 23px;
     left: auto;
-    right: 20px;
+    right: 19px;
     -webkit-transform: none;
             transform: none;
     padding-inline: 0;
@@ -633,7 +633,7 @@ a {
 .p-fv__pickup-popup {
   position: absolute;
   z-index: 2;
-  top: -40px;
+  top: -41px;
   right: 20px;
   width: 126px;
 }
@@ -702,7 +702,7 @@ a {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin-top: 12px;
-    margin-left: 1px;
+    margin-left: 0;
     margin-right: 16px;
   }
 }
@@ -731,6 +731,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-swiper__slide {
+    max-height: none;
     height: 735px;
   }
 }

@@ -10,6 +10,7 @@
   max-height: 667px;
 
   @include global.mq(pc) {
+    max-height: none;
     height: 735px;
   }
 }
