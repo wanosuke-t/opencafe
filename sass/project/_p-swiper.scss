@@ -1,0 +1,64 @@
+@use "../global" as global;
+
+.p-swiper {
+}
+.p-swiper__wrapper {
+}
+.p-swiper__slide {
+}
+.p-swiper__image {
+  img {
+    width: 100%;
+    max-height: 667px;
+    object-fit: cover;
+
+    @include global.mq(pc) {
+      max-height: 735px;
+      min-height: 735px;
+    }
+  }
+}
+.p-swiper__pagination {
+  height: 18px;
+  bottom: 12px !important;
+  /*widthを初期化*/
+  width: initial !important;
+  left: 12px !important;
+
+  @include global.mq(pc) {
+    bottom: 16px !important;
+  }
+}
+
+// 拡大アニメーション
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.swiper-slide-active img,
+.swiper-slide-duplicate-active img,
+.swiper-slide-prev img {
+  animation: zoomUp 10s linear 0s normal both;
+}
+
+// Swiperのページネーション カスタマイズ
+.swiper-pagination-bullet {
+  /*ドットのサイズを変更*/
+  width: 8px;
+  height: 8px;
+  /*ドットの間隔を変更*/
+  margin: 0 8px !important;
+  /*透過度を変更*/
+  opacity: 1;
+  /*ドットの色を変更*/
+  background-color: global.$text-color-white;
+}
+
+.swiper-pagination-bullet-active {
+  /*アクティブなドットの色を変更*/
+  background-color: global.$pagination-color !important;
+}

@@ -8,6 +8,7 @@
 	<meta name="description" content="">
 
 	<!-- CSS -->
+	<link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./css/style.css">
 
 	<!-- google font -->
@@ -20,73 +21,198 @@
 
 <body>
 
-	<!-- header -->
+	<!-- p-header -->
 	<header class="p-header">
-		<div class="p-header__inner">
 
-			<!-- drawer -->
-			<div id="js-drawer" class="p-drawer">
-				<div id="js-drawer-icon" class="p-drawer__icon is-front-page">
-					<span class="p-drawer__icon-bar"></span>
-					<span class="p-drawer__icon-bar"></span>
-					<span class="p-drawer__icon-bar"></span>
-				</div><!-- /drawer-icon -->
+		<!-- p-drawer -->
+		<div id="js-drawer" class="p-drawer">
+			<div id="js-drawer-icon" class="p-drawer__icon is-front-page">
+				<span class="p-drawer__icon-bar"></span>
+				<span class="p-drawer__icon-bar"></span>
+				<span class="p-drawer__icon-bar"></span>
+			</div><!-- /p-drawer-icon -->
 
-				<!-- drawer-content -->
-				<div id="js-drawer-content" class="p-drawer__content">
-					<div class="p-drawer__content-logo">
-						<a href="#">
-							<img src="./img/logo_light_drawer.png" alt="Open Cafe - dish & coffee -" width="256" height="128">
-						</a>
-					</div>
-					<nav class="p-drawer__content-nav">
-						<ul class="p-drawer__content-list">
-							<li class="p-drawer__content-item">
-								<a href="#"><span class="p-drawer__content-text-en">TOP</span><span
-										class="p-drawer__content-text-ja">トップ</span></a>
-							</li>
-							<li class="p-drawer__content-item">
-								<a href="#"><span class="p-drawer__content-text-en">CONCEPT</span><span
-										class="p-drawer__content-text-ja">コンセプト</span></a>
-							</li>
-							<li class="p-drawer__content-item">
-								<a href="#"><span class="p-drawer__content-text-en">MENU</span><span
-										class="p-drawer__content-text-ja">メニュー</span></a>
-							</li>
-							<li class="p-drawer__content-item">
-								<a href="#"><span class="p-drawer__content-text-en">NEWS</span><span
-										class="p-drawer__content-text-ja">お知らせ</span></a>
-							</li>
-							<li class="p-drawer__content-item">
-								<a href="#"><span class="p-drawer__content-text-en">SHOP</span><span
-										class="p-drawer__content-text-ja">店舗情報</span></a>
-							</li>
-							<li class="p-drawer__content-item">
-								<a href="#"><span class="p-drawer__content-text-en">GIFT</span><span
-										class="p-drawer__content-text-ja">ギフト・贈り物</span></a>
-							</li>
-							<li class="p-drawer__content-item">
-								<a href="#"><span class="p-drawer__content-text-en">CONTACT</span><span
-										class="p-drawer__content-text-ja">お問い合わせ</span></a>
-							</li>
-						</ul>
-					</nav>
-					<ul class="p-drawer__content-sns-icons">
-						<li class="p-drawer__content-sns-icon">
-							<a href="https://x.com/home" target="_blank"><img src="./img/Icon-twitter-light.png" alt="" width="65" height="54"></a>
+			<!-- p-drawer-content -->
+			<div id="js-drawer-content" class="p-drawer__content">
+				<div class="p-drawer__content-logo">
+					<a href="#">
+						<img src="./img/logo_light_drawer.png" alt="Open Cafe - dish & coffee -" width="256" height="128">
+					</a>
+				</div>
+				<nav class="p-drawer__content-nav">
+					<ul class="p-drawer__content-list">
+						<li class="p-drawer__content-item">
+							<a href="#"><span class="p-drawer__content-text-en">TOP</span><span
+									class="p-drawer__content-text-ja">トップ</span></a>
 						</li>
-						<li class="p-drawer__content-sns-icon">
-							<a href="https://www.instagram.com/" target="_blank"><img src="./img/Icon-instagram-light.png" alt="" width="61" height="60"></a>
+						<li class="p-drawer__content-item">
+							<a href="#"><span class="p-drawer__content-text-en">CONCEPT</span><span
+									class="p-drawer__content-text-ja">コンセプト</span></a>
 						</li>
-						<li class="p-drawer__content-sns-icon">
-							<a href="https://www.youtube.com/" target="_blank"><img src="./img/Icon-youtube-light.png" alt="" width="71" height="50"></a>
+						<li class="p-drawer__content-item">
+							<a href="#"><span class="p-drawer__content-text-en">MENU</span><span
+									class="p-drawer__content-text-ja">メニュー</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a href="#"><span class="p-drawer__content-text-en">NEWS</span><span
+									class="p-drawer__content-text-ja">お知らせ</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a href="#"><span class="p-drawer__content-text-en">SHOP</span><span
+									class="p-drawer__content-text-ja">店舗情報</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a href="#"><span class="p-drawer__content-text-en">GIFT</span><span
+									class="p-drawer__content-text-ja">ギフト・贈り物</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a href="#"><span class="p-drawer__content-text-en">CONTACT</span><span
+									class="p-drawer__content-text-ja">お問い合わせ</span></a>
 						</li>
 					</ul>
-				</div><!-- /drawer-content -->
-			</div><!-- /drawer -->
+				</nav>
+				<ul class="p-drawer__content-sns-icons">
+					<li class="p-drawer__content-sns-icon">
+						<a href="https://x.com/home" target="_blank"><img src="./img/Icon-twitter-light.png" alt="" width="65"
+								height="54"></a>
+					</li>
+					<li class="p-drawer__content-sns-icon">
+						<a href="https://www.instagram.com/" target="_blank"><img src="./img/Icon-instagram-light.png" alt=""
+								width="61" height="60"></a>
+					</li>
+					<li class="p-drawer__content-sns-icon">
+						<a href="https://www.youtube.com/" target="_blank"><img src="./img/Icon-youtube-light.png" alt="" width="71"
+								height="50"></a>
+					</li>
+				</ul>
+			</div><!-- /p-drawer-content -->
+		</div><!-- /p-drawer -->
 
-		</div><!-- /inner -->
-	</header><!-- /header -->
+	</header><!-- /p-header -->
+
+	<!-- p-fv -->
+	<section class="p-fv">
+
+		<!-- p-fv__nav -->
+		<div class="p-fv__menu">
+			<h1 class="p-fv__menu-logo">
+				<a href="#">
+					<img src="./img/logo-dark.png" alt="Open Cafe - dish & coffee -" width="332" height="186">
+				</a>
+			</h1>
+			<nav class="p-fv__menu-nav">
+				<ul class="p-fv__menu-list">
+					<li class="p-fv__menu-item">
+						<a class="p-fv__menu-link" href="#"><span class="p-fv__menu-text-en">TOP</span><span
+								class="p-fv__menu-text-ja">トップ</span></a>
+					</li>
+					<li class="p-fv__menu-item">
+						<a class="p-fv__menu-link" href="#"><span class="p-fv__menu-text-en">CONCEPT</span><span
+								class="p-fv__menu-text-ja">コンセプト</span></a>
+					</li>
+					<li class="p-fv__menu-item">
+						<a class="p-fv__menu-link" href="#"><span class="p-fv__menu-text-en">MENU</span><span
+								class="p-fv__menu-text-ja">メニュー</span></a>
+					</li>
+					<li class="p-fv__menu-item">
+						<a class="p-fv__menu-link" href="#"><span class="p-fv__menu-text-en">NEWS</span><span
+								class="p-fv__menu-text-ja">お知らせ</span></a>
+					</li>
+					<li class="p-fv__menu-item">
+						<a class="p-fv__menu-link" href="#"><span class="p-fv__menu-text-en">SHOP</span><span
+								class="p-fv__menu-text-ja">店舗情報</span></a>
+					</li>
+					<li class="p-fv__menu-item">
+						<a class="p-fv__menu-link" href="#"><span class="p-fv__menu-text-en">GIFT</span><span
+								class="p-fv__menu-text-ja">ギフト・贈り物</span></a>
+					</li>
+					<li class="p-fv__menu-item">
+						<a class="p-fv__menu-link" href="#"><span class="p-fv__menu-text-en">CONTACT</span><span
+								class="p-fv__menu-text-ja">お問い合わせ</span></a>
+					</li>
+				</ul>
+			</nav>
+			<ul class="p-fv__menu-sns-icons">
+				<li class="p-fv__menu-sns-icon">
+					<a href="https://x.com/home" target="_blank"><img src="./img/Icon-twitter-dark.png" alt="" width="65"
+							height="54"></a>
+				</li>
+				<li class="p-fv__menu-sns-icon">
+					<a href="https://www.instagram.com/" target="_blank"><img src="./img/Icon-instagram-dark.png" alt=""
+							width="61" height="60"></a>
+				</li>
+				<li class="p-fv__menu-sns-icon">
+					<a href="https://www.youtube.com/" target="_blank"><img src="./img/Icon-youtube-dark.png" alt="" width="71"
+							height="50"></a>
+				</li>
+			</ul>
+
+		</div><!-- /p-fv__menu -->
+
+		<div class="p-fv__content">
+			<!-- p-fv__slider -->
+			<div class="p-fv__slider">
+				<!-- Slider main container -->
+				<div class="swiper p-swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper p-swiper__wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide p-swiper__slide">
+							<picture class="p-swiper__image">
+								<source media="(min-width: 768px)" srcset="./img/fv/img_mainvisual1.jpg" />
+								<img src="./img/fv/img_mainvisual1_sp.jpg" alt="" width="2160" height="1470" />
+							</picture>
+						</div>
+						<div class="swiper-slide p-swiper__slide">
+							<picture class="p-swiper__image">
+								<source media="(min-width: 768px)" srcset="./img/fv/img_mainvisual2.jpg" />
+								<img src="./img/fv/img_mainvisual2_sp.jpg" alt="" width="2160" height="1470" />
+							</picture>
+						</div>
+						<div class="swiper-slide p-swiper__slide">
+							<picture class="p-swiper__image">
+								<source media="(min-width: 768px)" srcset="./img/fv/img_mainvisual3.jpg" />
+								<img src="./img/fv/img_mainvisual3_sp.jpg" alt="" width="2160" height="1470" />
+							</picture>
+						</div>
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination p-swiper__pagination"></div>
+				</div>
+			</div><!-- /p-fv__slider -->
+
+			<h1 class="p-fv__logo">
+				<a href="">
+					<img src="./img/logo-light.png" alt="Open Cafe - dish & coffee -" width="241" height="127">
+				</a>
+			</h1>
+			<p class="p-fv__lead"><span class="p-fv__lead-span">パスタとコーヒーが<br class="u-hidden-pc">とってもおいしい、</span><br
+					class="u-hidden-pc"><span class="p-fv__lead-span">ほっと落ち着くのんびり空間。</span></p>
+
+			<!-- p-fv__pickup -->
+			<div class="p-fv__pickup">
+				<span class="p-fv__pickup-label">カテゴリ</span>
+				<picture class="p-fv__pickup-popup">
+					<source media="(min-width: 768px)" srcset="./img/img_balloon-pickup.png" />
+					<img src="./img/img_balloon-pickup-sp.png" alt="" width="336" height="218" />
+				</picture>
+				<div class="p-fv__pickup-box">
+					<div class="p-fv__pickup-image">
+						<div class="p-fv__pickup-image-box">
+							<img src="./img/img_news1.png" alt="" width="1020" height="638">
+						</div>
+					</div>
+					<div class="p-fv__pickup-content">
+						<time class="p-fv__pickup-content-date" datetime="">2021.01.01</time>
+						<p class="p-fv__pickup-content-text">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</p>
+					</div>
+				</div>
+			</div><!-- p-fv__pickup -->
+
+		</div><!-- /p-fv__content -->
+
+	</section><!-- /p-fv -->
+
 
 	<!-- header-nav -->
 	<nav class="header-nav">
@@ -554,7 +680,9 @@
 		<a href="#"><i class="fas fa-chevron-up"></i></a>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<!-- js -->
+	<script src="./js/lib/swiper-bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 
 </body>
