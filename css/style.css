@@ -84,7 +84,8 @@ textarea {
   vertical-align: top;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden; /* 横スクロールだけを防ぐ */
 }
 

@@ -1,6 +1,7 @@
 @use "../global" as global;
 
-html, body {
+html,
+body {
   overflow-x: hidden; /* 横スクロールだけを防ぐ */
 }
 
