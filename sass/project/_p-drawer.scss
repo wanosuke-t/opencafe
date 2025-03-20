@@ -85,7 +85,8 @@
   position: fixed;
   z-index: 1;
   background: global.$main-color;
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
   height: 100vh;
   top: 0;
   right: 0;
