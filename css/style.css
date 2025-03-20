@@ -560,6 +560,7 @@ a {
 
 .p-fv__pickup {
   position: absolute;
+  display: block;
   z-index: 2;
   bottom: 32px;
   left: 50%;
@@ -648,6 +649,7 @@ a {
 .p-fv__pickup-box {
   position: relative;
   z-index: 1;
+  display: block;
   opacity: 0.85;
   background: #ffffff;
   display: -webkit-box;
@@ -656,6 +658,11 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.p-fv__pickup-box:hover {
+  opacity: 0.7;
 }
 
 .p-fv__pickup-image {

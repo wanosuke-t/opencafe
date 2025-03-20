@@ -178,6 +178,7 @@
 
 .p-fv__pickup {
   position: absolute;
+  display: block;
   z-index: 2;
   bottom: 32px;
   left: 50%;
@@ -261,10 +262,16 @@
 .p-fv__pickup-box {
   position: relative;
   z-index: 1;
+  display: block;
   opacity: 0.85;
   background: global.$text-color-white;
   display: flex;
   align-items: center;
+  transition: opacity 0.3s;
+  
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .p-fv__pickup-image {
