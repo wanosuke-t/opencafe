@@ -2,22 +2,26 @@
 
 .p-swiper {
 }
+
 .p-swiper__wrapper {
 }
-.p-swiper__slide {
-}
-.p-swiper__image {
-  img {
-    width: 100%;
-    max-height: 667px;
-    object-fit: cover;
 
-    @include global.mq(pc) {
-      max-height: 735px;
-      min-height: 735px;
-    }
+.p-swiper__slide {
+  max-height: 667px;
+
+  @include global.mq(pc) {
+    height: 735px;
   }
 }
+
+.p-swiper__image {
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
 .p-swiper__pagination {
   height: 18px;
   bottom: 12px !important;

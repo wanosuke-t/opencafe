@@ -726,17 +726,21 @@ a {
   }
 }
 
-.p-swiper__image img {
-  width: 100%;
+.p-swiper__slide {
   max-height: 667px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 @media screen and (min-width: 768px) {
-  .p-swiper__image img {
-    max-height: 735px;
-    min-height: 735px;
+  .p-swiper__slide {
+    height: 735px;
   }
+}
+
+.p-swiper__image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .p-swiper__pagination {
