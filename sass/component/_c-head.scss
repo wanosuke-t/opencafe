@@ -1,0 +1,38 @@
+@use "../global" as global;
+
+.c-head {
+  
+}
+
+.c-head-en {
+  font-family: global.$ff-en1;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 4px;
+
+  @include global.mq(pc) {
+    font-size: 52px;
+    letter-spacing: 10.4px;
+  }
+
+  @include global.mq(tb) {
+    font-size: 40px;
+  }
+}
+
+.c-head-ja {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+
+  @include global.mq(pc) {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  @include global.mq(tb) {
+    font-size: 12px;
+  }
+}

@@ -62,39 +62,8 @@
 }
 
 .p-concept__head {
-}
-
-.p-concept__head-en {
-  font-family: global.$ff-en1;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 4px;
-
   @include global.mq(pc) {
     margin-top: 18px;
-    font-size: 52px;
-    letter-spacing: 10.4px;
-  }
-
-  @include global.mq(tb) {
-    font-size: 40px;
-  }
-}
-
-.p-concept__head-ja {
-  margin-top: 4px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: normal;
-
-  @include global.mq(pc) {
-    margin-top: 8px;
-    font-size: 14px;
-  }
-
-  @include global.mq(tb) {
-    font-size: 12px;
   }
 }
 
@@ -132,7 +101,7 @@
 
 .p-concept__button {
   margin-top: 61px;
-  margin-left: 1px;
+  margin-left: 5px;
   text-align: center;
 
   @include global.mq(pc) {

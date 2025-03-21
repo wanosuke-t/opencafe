@@ -19,10 +19,22 @@
     max-width: 280px;
   }
 
+  &::before,
   &::after {
     content: "";
-    display: inline-block;
     position: absolute;
+  }
+
+  &::before {
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 24px;
+    background: url("../img/button-arrow.png") no-repeat center center / contain;
+  }
+
+  &::after {
     top: 0;
     left: 0;
     width: 100%;
