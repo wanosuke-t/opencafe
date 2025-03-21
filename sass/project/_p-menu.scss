@@ -17,12 +17,12 @@
     bottom: 0;
     right: 0;
     width: calc(274px / 375px * 100%);
-    height: 2755px;
+    height: calc(2755px / 3123px * 100%);
     background: global.$base-color-dark;
 
     @include global.mq(pc) {
       width: calc(1024px / 1280px * 100%);
-      height: 2700px;
+      height: calc(2700px / 3243px * 100%);
     }
   }
 }
@@ -31,7 +31,9 @@
   padding-inline: 20px;
 
   @include global.mq(pc) {
-    padding-inline: 90px;
+    padding-inline: 50px;
+    max-width: calc(1100px + 50px * 2);
+    margin: 0 auto;
   }
 }
 
@@ -42,9 +44,16 @@
 
 .p-menu__head-en {
   margin-left: 4px;
+
+  @include global.mq(pc) {
+    margin-left: 13px;
+  }
 }
 
 .p-menu__head-ja {
+  @include global.mq(pc) {
+    margin-top: 10px;
+  }
 }
 
 .p-menu__genre {
@@ -62,6 +71,8 @@
 
   @include global.mq(pc) {
     font-size: 24px;
+    padding-block: 7px;
+    padding-left: 22px;
   }
 
   &::before,
@@ -92,7 +103,8 @@
   column-gap: 19px;
 
   @include global.mq(pc) {
-    margin-bottom: 100px;
+    margin-top: 24px;
+    margin-bottom: 101.3px;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 40px;
     column-gap: 34px;
@@ -136,7 +148,7 @@
   padding-inline: 20px;
 
   @include global.mq(pc) {
-    margin-top: 25px;
+    margin-top: 26px;
     display: flex;
     gap: 62px;
     padding-inline: 0;
@@ -149,6 +161,7 @@
   @include global.mq(pc) {
     display: block;
     border: 8px solid global.$text-color-white;
+    height: fit-content;
   }
 
   @include global.mq(tb) {
@@ -158,14 +171,16 @@
 
 .p-menu__drinks {
   @include global.mq(pc) {
+    margin-right: 8px;
     flex-shrink: 0;
-    width: 684px;
+    width: 686px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 51px;
+    gap: 48px;
   }
 
   @include global.mq(tb) {
+    margin-right: 0;
     width: 100%;
   }
 }
@@ -179,6 +194,11 @@
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
+
+  @include global.mq(pc) {
+    padding-bottom: 12.5px;
+
+  }
 }
 
 .p-menu__drink-list {
@@ -213,7 +233,8 @@
   text-align: center;
 
   @include global.mq(pc) {
-    margin-top: 88px;
+    margin-top: 59px;
+    margin-left: 8px;
   }
 }
 
@@ -224,6 +245,8 @@
   width: 128.365px;
 
   @include global.mq(pc) {
-    width: 266px;
+    top: -133px;
+    left: -94px;
+    width: 392px;
   }
 }
