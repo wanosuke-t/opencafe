@@ -5,6 +5,17 @@ $("#js-drawer-icon").on("click", function () {
   $("#js-drawer").toggleClass("is-checked");
 });
 
+const drawer = document.querySelector("#js-drawer");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 200) {
+    drawer.classList.add("is-show");
+  } else {
+    drawer.classList.remove("is-show");
+  }
+});
+
+
 // スマホのドロワーアイコンを消す処理
 $('#js-drawer-content a[href^="#"]').on("click", function (e) {
   $("#js-drawer-icon").removeClass("is-checked");
@@ -42,6 +53,17 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+});
+
+// ページトップボタン
+const pageTop = document.querySelector("#js-pagetop");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 100) {
+    pageTop.classList.add("is-show");
+  } else {
+    pageTop.classList.remove("is-show");
+  }
 });
 
 // /* drawer */

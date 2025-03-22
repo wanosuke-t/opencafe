@@ -164,10 +164,20 @@
   }
 }
 
-.p-news__article-box {
+.p-news__article-link {
+  .p-news__article-image img {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    .p-news__article-image img {
+      transform: scale(1.05);
+    }
+  }
 }
 
 .p-news__article-image {
+  overflow: hidden;
 }
 
 .p-news__article-content {

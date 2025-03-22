@@ -6,10 +6,32 @@
   top: 0;
   left: 0;
   width: 100%;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  @include global.mq(pc) {
+    &--front-page {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  @include global.mq(tb) {
+    &--front-page {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 
   &.is-checked {
     height: 100vh;
     background: rgba(0, 0, 0, 50%);
+  }
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -22,21 +44,7 @@
   right: 10px;
   border-radius: 60px;
   background: global.$main-color;
-  transition: background-color 0.3s, opacity 0.3s;
-
-  @include global.mq(pc) {
-    &.is-front-page {
-      opacity: 0;
-      pointer-events: none;
-    }
-  }
-
-  @include global.mq(tb) {
-    &.is-front-page {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
+  transition: background-color 0.3s ease;
 
   &.is-checked {
     background: global.$text-color-white;
