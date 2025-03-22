@@ -1,0 +1,140 @@
+@use "../global" as global;
+
+.p-access {
+  padding-top: 100px;
+
+  @include global.mq(pc) {
+    padding-top: 0;
+  }
+}
+
+.p-access__container {
+  padding-top: 81px;
+  padding-bottom: 80px;
+  background: global.$base-color-dark;
+
+  @include global.mq(pc) {
+    padding-top: 80px;
+  }
+}
+
+.p-access__inner {
+  position: relative;
+
+  @include global.mq(pc) {
+    padding-inline: 50px;
+    max-width: calc(688px + 50px * 2);
+  }
+}
+
+.p-access__head {
+  text-align: center;
+}
+
+.p-access__head-en {
+  margin-left: 5px;
+
+  @include global.mq(pc) {
+    margin-left: 12px;
+  }
+}
+
+.p-access__head-ja {
+  @include global.mq(pc) {
+    margin-left: 1px;
+  }
+}
+
+.p-access__map {
+  margin-top: 40px;
+  margin-inline: auto;
+  max-width: 335px;
+  height: 188px;
+  border: 5px solid global.$text-color-white;
+
+  @include global.mq(pc) {
+    margin-top: 39px;
+    max-width: 688px;
+    height: 387px;
+    border: 10px solid global.$text-color-white;
+  }
+}
+
+.p-access__map-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.p-access__info {
+  margin-top: 40px;
+  margin-inline: auto;
+  max-width: 335px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 19px;
+
+  @include global.mq(pc) {
+    margin-top: 42px;
+    max-width: 100%;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 40px;
+    row-gap: 23.3px;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(50% - 40px / 2);
+  }
+}
+
+.p-access__definition {
+  padding-bottom: 11px;
+  border-bottom: 1px solid global.$text-color;
+  display: flex;
+  gap: 24px;
+
+  @include global.mq(pc) {
+    padding-bottom: 10px;
+  }
+}
+
+.p-access__term {
+  flex-shrink: 0;
+  width: 56px;
+  font-weight: 700;
+  line-height: normal;
+
+  @include global.mq(pc) {
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.p-access__description {
+  flex-grow: 1;
+  font-weight: 700;
+  line-height: 1.71429; /* 171.429% */
+}
+
+.p-access__balloon-image {
+  position: absolute;
+  top: -123px;
+  left: -31px;
+  width: 200px;
+
+  @include global.mq(pc) {
+    top: -132px;
+    left: 91px;
+    width: 232.912px;
+  }
+}
+
+.p-access__bread-image {
+  position: absolute;
+  top: -180px;
+  right: -40px;
+  width: 194px;
+
+  @include global.mq(pc) {
+    top: -263px;
+    right: -342px;
+    width: 392px;
+  }
+}

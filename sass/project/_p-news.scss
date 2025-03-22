@@ -34,7 +34,8 @@
   margin-top: 38px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 19px;
+  column-gap: 19px;
+  row-gap: 18px;
 
   @include global.mq(pc) {
     margin-top: 40px;
