@@ -1,0 +1,81 @@
+@use "../global" as global;
+
+.p-footer {
+  position: relative;
+  padding-top: 41px;
+  padding-bottom: 14px;
+  text-align: center;
+  background: global.$main-color;
+
+  @include global.mq(pc) {
+    padding-top: 38px;
+    padding-bottom: 16px;
+  }
+}
+
+.p-footer__icons {
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.p-footer__icon {
+  &:nth-of-type(1) {
+    width: 26px;
+
+    @include global.mq(pc) {
+      width: 19.5px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    width: 24px;
+
+    @include global.mq(pc) {
+      width: 18px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    width: 28px;
+
+    @include global.mq(pc) {
+      width: 21px;
+    }
+  }
+}
+
+.p-footer__copyright {
+  display: inline-block;
+  margin-top: 42px;
+  margin-left: 2px;
+  color: global.$text-color-white;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2; /* 200% */
+
+  @include global.mq(pc) {
+    margin-top: 40px;
+  }
+}
+
+.p-footer__coffee-image {
+  position: absolute;
+  bottom: 89px;
+  left: -36px;
+  width: 128px;
+
+  @include global.mq(pc) {
+    bottom: 4px;
+    left: calc(50% - 724px);
+    width: 341px;
+  }
+
+  @include global.mq(tb) {
+    bottom: 40px;
+    left: calc(50% - 400px);
+    width: 180px;
+  }
+}
