@@ -1,0 +1,85 @@
+@use "../global" as global;
+
+.p-page-header {
+  background: url("../img/header/img_firstview_concept_sp.jpg") no-repeat center
+    center / cover;
+
+  @include global.mq(pc) {
+    background: url("../img/header/img_firstview_concept.jpg") no-repeat center
+      center / cover;
+  }
+}
+
+.p-page-header__title {
+  position: relative;
+  z-index: 2;
+  padding-top: 32px;
+  padding-bottom: 30px;
+  text-align: center;
+
+  @include global.mq(pc) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    width: calc(100% - 6px * 2);
+    height: calc(100% - 6px * 2);
+    border: 2px solid global.$text-color-white;
+
+    @include global.mq(pc) {
+      width: calc(100% - 10px * 2);
+      height: calc(100% - 10px * 2);
+    }
+  }
+
+  &::after {
+    width: calc(100% - 11px * 2);
+    height: calc(100% - 11px * 2);
+    border: 1px solid global.$text-color-white;
+
+    @include global.mq(pc) {
+      width: calc(100% - 16px * 2);
+      height: calc(100% - 16px * 2);
+    }
+  }
+}
+
+.p-page-header__title-en {
+  margin-left: 6px;
+  color: global.$text-color-white;
+  font-family: global.$ff-en1;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 6.4px;
+
+  @include global.mq(pc) {
+    margin-left: 15px;
+    font-size: 72px;
+    letter-spacing: 14.4px;
+  }
+}
+
+.p-page-header__title-ja {
+  margin-left: 2px;
+  color: global.$text-color-white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.96px;
+
+  @include global.mq(pc) {
+    margin-top: 6px;
+    font-size: 16px;
+  }
+}
