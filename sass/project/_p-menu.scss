@@ -28,13 +28,6 @@
 }
 
 .p-menu__inner {
-  padding-inline: 20px;
-
-  @include global.mq(pc) {
-    padding-inline: 50px;
-    max-width: calc(1100px + 50px * 2);
-    margin: 0 auto;
-  }
 }
 
 .p-menu__head {
@@ -197,7 +190,6 @@
 
   @include global.mq(pc) {
     padding-bottom: 12.5px;
-
   }
 }
 
@@ -240,13 +232,13 @@
 
 .p-menu__leaves-image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 128.365px;
+  top: -195px;
+  left: -42px;
+  width: 186px;
 
   @include global.mq(pc) {
-    top: -133px;
-    left: -94px;
+    top: -292px;
+    left: -134px;
     width: 392px;
   }
 }

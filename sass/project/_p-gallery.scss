@@ -21,13 +21,6 @@
 }
 
 .p-gallery__inner {
-  padding-inline: 20px;
-
-  @include global.mq(pc) {
-    padding-inline: 50px;
-    max-width: calc(1100px + 50px * 2);
-    margin: 0 auto;
-  }
 }
 
 .p-gallery__head {
@@ -89,12 +82,12 @@
 .p-gallery__beans-image {
   position: absolute;
   width: 168.808px;
-  top: -49px;
+  top: -230px;
   right: -40px;
 
   @include global.mq(pc) {
     width: 390px;
-    top: -218px;
-    right: -134px;
+    top: -459px;
+    right: -175px;
   }
 }

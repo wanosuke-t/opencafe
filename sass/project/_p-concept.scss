@@ -31,6 +31,8 @@
 }
 
 .p-concept__inner {
+  position: relative;
+
   @include global.mq(pc) {
     display: flex;
     flex-direction: row-reverse;
@@ -125,12 +127,12 @@
 
 .p-concept__beans-image {
   position: absolute;
-  top: -20px;
+  top: -140px;
   right: -17px;
   width: 145px;
 
   @include global.mq(pc) {
-    top: -44px;
+    top: -204px;
     right: -40px;
     width: 296px;
   }
@@ -138,12 +140,12 @@
 
 .p-concept__leaves-image {
   position: absolute;
-  bottom: -74px;
+  bottom: -147px;
   right: -33px;
   width: 119px;
 
   @include global.mq(pc) {
-    bottom: -97px;
+    bottom: -437px;
     right: -34px;
     width: 201px;
   }

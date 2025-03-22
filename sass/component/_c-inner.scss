@@ -1,0 +1,13 @@
+@use "../global" as global;
+
+.c-inner {
+  position: relative;
+  padding-inline: 20px;
+
+  @include global.mq(pc) {
+    padding-inline: 50px;
+    max-width: calc(1100px + 50px * 2);
+    margin: 0 auto;
+  }
+
+}
