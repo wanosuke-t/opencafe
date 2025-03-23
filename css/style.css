@@ -1923,7 +1923,7 @@ a {
 @media screen and (min-width: 768px) {
   .p-news {
     padding-top: 120px;
-    padding-bottom: 160px;
+    padding-bottom: 0px;
   }
 }
 
@@ -2168,7 +2168,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-access {
-    padding-top: 0;
+    padding-top: 160px;
   }
 }
 
@@ -2555,6 +2555,7 @@ a {
 @media screen and (min-width: 768px) {
   .p-page-concept {
     padding-top: 63px;
+    padding-bottom: 80px;
   }
 }
 
