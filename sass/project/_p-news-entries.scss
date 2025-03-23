@@ -1,0 +1,28 @@
+@use "../global" as global;
+
+.p-category-title {
+  margin-top: 44px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+
+  @include global.mq(pc) {
+    margin-top: 62px;
+    margin-left: -8px;
+    font-size: 24px;
+  }
+}
+
+.p-news-entries {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 24.5px;
+  column-gap: 19px;
+
+  @include global.mq(pc) {
+    margin-top: 24px;
+    row-gap: 40.5px;
+    column-gap: 40px;
+  }
+}

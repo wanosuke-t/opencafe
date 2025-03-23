@@ -1,0 +1,45 @@
+@use "../global" as global;
+
+.p-pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  @include global.mq(pc) {
+    margin-left: -8px;
+  }
+}
+
+.prev {
+}
+
+.page-numbers {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid global.$main-color;
+  background: global.$text-color-white;
+  display: grid;
+  place-items: center;
+  color: global.$main-color;
+  text-align: center;
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  img {
+    width: 6px;
+  }
+}
+
+.current {
+  color: global.$text-color-white;
+  background: global.$main-color;
+}
+
+.next {
+}

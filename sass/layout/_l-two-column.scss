@@ -1,0 +1,32 @@
+@use "../global" as global;
+
+.l-two-column {
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @include global.mq(pc) {
+    padding-inline: 58px 50px;
+    max-width: calc(1092px + 58px + 50px);
+    margin-inline: auto;
+    flex-direction: row;
+    gap: 72px;
+  }
+}
+
+.l-two-column__main {
+  width: 100%;
+
+  @include global.mq(pc) {
+    width: calc(720px / 1092px * 100%);
+  }
+}
+
+.l-two-column__aside {
+  width: 100%;
+
+  @include global.mq(pc) {
+    width: calc(300px / 1092px * 100%);
+  }
+}
