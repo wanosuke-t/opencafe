@@ -1,12 +1,19 @@
 @use "../global" as global;
 
 .p-page-header {
-  background: url("../img/header/img_firstview_concept_sp.jpg") no-repeat center
-    center / cover;
+  position: relative;
+}
 
-  @include global.mq(pc) {
-    background: url("../img/header/img_firstview_concept.jpg") no-repeat center
-      center / cover;
+.p-page-header__image {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  img {
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -16,6 +23,7 @@
   padding-top: 32px;
   padding-bottom: 30px;
   text-align: center;
+  background: rgba(0, 0, 0, 0.4);
 
   @include global.mq(pc) {
     padding-top: 100px;

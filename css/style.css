@@ -2431,12 +2431,20 @@ a {
 }
 
 .p-page-header {
-  background: url("../img/header/img_firstview_concept_sp.jpg") no-repeat center center/cover;
+  position: relative;
 }
-@media screen and (min-width: 768px) {
-  .p-page-header {
-    background: url("../img/header/img_firstview_concept.jpg") no-repeat center center/cover;
-  }
+
+.p-page-header__image {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.p-page-header__image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-page-header__title {
@@ -2445,6 +2453,7 @@ a {
   padding-top: 32px;
   padding-bottom: 30px;
   text-align: center;
+  background: rgba(0, 0, 0, 0.4);
 }
 @media screen and (min-width: 768px) {
   .p-page-header__title {
@@ -2618,6 +2627,71 @@ a {
     padding-bottom: 0;
     padding-right: 0;
   }
+}
+
+.p-genre-nav {
+  padding-top: 56px;
+}
+@media screen and (min-width: 768px) {
+  .p-genre-nav {
+    padding-top: 63px;
+  }
+}
+
+.p-genre-nav__inner {
+  padding-inline: 20px;
+  max-width: 375px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 12px;
+  -webkit-column-gap: 13px;
+     -moz-column-gap: 13px;
+          column-gap: 13px;
+}
+@media screen and (min-width: 768px) {
+  .p-genre-nav__inner {
+    padding-inline: 50px;
+    max-width: 942px;
+    grid-template-columns: repeat(4, 1fr);
+    -webkit-column-gap: 14px;
+       -moz-column-gap: 14px;
+            column-gap: 14px;
+  }
+}
+
+.p-genre-nav__link {
+  text-align: center;
+}
+.p-genre-nav__link a {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 64px;
+  background: #888;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35714; /* 135.714% */
+}
+@media screen and (min-width: 768px) {
+  .p-genre-nav__link a {
+    font-size: 16px;
+    height: 68px;
+  }
+}
+.p-genre-nav__link a::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  top: 4px;
+  left: 4px;
+  border: 1px solid #ffffff;
+}
+.p-genre-nav__link a.is-active {
+  font-size: 16px;
+  background: #382620;
 }
 
 @media screen and (min-width: 768px) {
