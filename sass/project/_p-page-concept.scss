@@ -1,0 +1,81 @@
+@use "../global" as global;
+
+.p-page-concept {
+  padding-top: 43px;
+  padding-bottom: 60px;
+
+  @include global.mq(pc) {
+    padding-top: 63px;
+  }
+}
+
+.p-page-concept__inner {
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+
+  @include global.mq(pc) {
+    padding-inline: 50px;
+    max-width: calc(1100px + 50px * 2);
+    margin-inline: auto;
+    gap: 200px;
+  }
+}
+
+.p-page-concept__images {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+
+  @include global.mq(pc) {
+    gap: 20px;
+  }
+
+  & > :first-child {
+    grid-column: 1 / 3;
+  }
+
+
+  &--1 {
+    padding-bottom: 48px;
+
+    @include global.mq(pc) {
+      padding-bottom: 0;
+    }
+  }
+
+  &--2 {
+    padding-bottom: 20px;
+
+    @include global.mq(pc) {
+      padding-bottom: 0;
+    }
+  }
+
+  &--3 {
+    padding-bottom: 36px;
+    padding-right: 41px;
+
+    @include global.mq(pc) {
+      padding-bottom: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.p-page-concept__bar-image {
+}
+
+.p-page-concept__coffee1-image {
+}
+
+.p-page-concept__coffee2-image {
+}
+
+.p-page-concept__pasta-image {
+}
+
+.p-page-concept__bread-image {
+}

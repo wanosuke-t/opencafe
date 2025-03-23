@@ -1,0 +1,128 @@
+@use "../global" as global;
+
+.c-concept-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+
+  @include global.mq(pc) {
+    flex-direction: row;
+    gap: 71px;
+  }
+
+  &--reverse {
+    @include global.mq(pc) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    background: global.$base-color-dark;
+  }
+
+  &--1 {
+    &::after {
+      right: -20px;
+      width: 100%;
+      height: calc(100px / 998px * 100%);
+
+      @include global.mq(pc) {
+        bottom: -100px;
+        right: -90px;
+        width: calc(984px / 1100px * 100%);
+        height: calc(200px / 730px * 100%);
+      }
+    }
+  }
+
+  &--2 {
+    &::after {
+      left: -20px;
+      width: calc(284px / 335px * 100%);
+      height: calc(227px / 701px * 100%);
+
+      @include global.mq(pc) {
+        bottom: -60px;
+        left: -90px;
+        width: calc(580px / 1100px * 100%);
+        height: calc(437px / 537px * 100%);
+      }
+    }
+  }
+
+  &--3 {
+    &::after {
+      right: 0;
+      width: calc(184px / 335px * 100%);
+      height: calc(239px / 536px * 100%);
+
+      @include global.mq(pc) {
+        bottom: -80px;
+        right: -90px;
+        width: calc(400px / 1100px * 100%);
+        height: calc(520px / 400px * 100%);
+      }
+    }
+  }
+}
+
+.c-concept-box__content {
+  position: relative;
+  z-index: 2;
+
+  @include global.mq(pc) {
+    flex-shrink: 0;
+    margin-top: -6px;
+    width: 389px;
+  }
+
+  &--1 {
+  }
+
+  &--2 {
+  }
+
+  &--3 {
+    @include global.mq(pc) {
+      margin-top: 0px;
+    }
+  }
+}
+
+.c-concept-box__lead {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2; /* 200% */
+
+  @include global.mq(pc) {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 2.14286; /* 214.286% */
+  }
+}
+
+.c-concept-box__description {
+  margin-top: 32px;
+  font-weight: 500;
+  line-height: 2; /* 200% */
+
+  @include global.mq(pc) {
+    margin-top: 26px;
+  }
+}
+
+.c-concept-box__images {
+  position: relative;
+  z-index: 2;
+
+  @include global.mq(pc) {
+    flex-grow: 1;
+  }
+}
