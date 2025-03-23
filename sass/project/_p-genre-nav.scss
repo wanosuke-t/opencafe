@@ -9,17 +9,12 @@
 }
 
 .p-genre-nav__inner {
-  padding-inline: 20px;
-  max-width: calc(335px + 20px * 2);
-  margin-inline: auto;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 12px;
   column-gap: 13px;
 
   @include global.mq(pc) {
-    padding-inline: 50px;
     max-width: calc(842px + 50px * 2);
     grid-template-columns: repeat(4, 1fr);
     column-gap: 14px;

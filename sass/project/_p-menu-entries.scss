@@ -1,0 +1,52 @@
+@use "../global" as global;
+
+.p-menu-entries {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include global.mq(pc) {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+}
+
+.p-menu-entries__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 24.5px;
+  column-gap: 19px;
+
+  @include global.mq(pc) {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 41px;
+    column-gap: 40px;
+  }
+}
+
+.p-menu-entries__item {
+}
+
+.p-menu-entries__item-image {
+}
+
+.p-menu-entries__item-body {
+}
+
+.p-menu-entries__item-name {
+  margin-top: 8px;
+  font-weight: 700;
+  line-height: normal;
+
+  @include global.mq(pc) {
+    margin-top: 12px;
+  }
+}
+
+.p-menu-entries__item-price {
+  text-align: center;
+  font-family: global.$ff-en3;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

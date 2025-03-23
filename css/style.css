@@ -2639,9 +2639,6 @@ a {
 }
 
 .p-genre-nav__inner {
-  padding-inline: 20px;
-  max-width: 375px;
-  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 12px;
@@ -2651,7 +2648,6 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-genre-nav__inner {
-    padding-inline: 50px;
     max-width: 942px;
     grid-template-columns: repeat(4, 1fr);
     -webkit-column-gap: 14px;
@@ -2692,6 +2688,55 @@ a {
 .p-genre-nav__link a.is-active {
   font-size: 16px;
   background: #382620;
+}
+
+.p-menu-entries {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .p-menu-entries {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+}
+
+.p-menu-entries__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 24.5px;
+  -webkit-column-gap: 19px;
+     -moz-column-gap: 19px;
+          column-gap: 19px;
+}
+@media screen and (min-width: 768px) {
+  .p-menu-entries__inner {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 41px;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
+}
+
+.p-menu-entries__item-name {
+  margin-top: 8px;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (min-width: 768px) {
+  .p-menu-entries__item-name {
+    margin-top: 12px;
+  }
+}
+
+.p-menu-entries__item-price {
+  text-align: center;
+  font-family: "Damion", cursive;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 @media screen and (min-width: 768px) {
