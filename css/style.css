@@ -2602,6 +2602,13 @@ a {
 .p-breadcrumb span {
   font-weight: 700;
 }
+.p-breadcrumb a {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.p-breadcrumb a:hover {
+  opacity: 0.7;
+}
 
 .p-breadcrumb__inner {
   padding-inline: 10px;
