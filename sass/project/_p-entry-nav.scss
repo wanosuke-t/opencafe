@@ -1,0 +1,92 @@
+@use "../global" as global;
+
+.p-entry-nav {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-entry-nav__left {
+  position: relative;
+  padding-left: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 6.277px;
+    height: 11.735px;
+    background: url("../img/arrow-prev.png") no-repeat center center / contain;
+
+    @include global.mq(pc) {
+      width: 6px;
+      height: 12px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: global.$main-color;
+    font-weight: 700;
+
+    @include global.mq(pc) {
+      font-size: 16px;
+    }
+  }
+}
+
+.p-entry-nav__top {
+  a {
+    display: inline-block;
+    margin-left: -8px;
+    color: global.$main-color;
+    font-weight: 700;
+    border: 1px solid global.$main-color;
+    padding: calc(8px - 1px) calc(28px - 1px);
+
+    @include global.mq(pc) {
+      margin-left: 0;
+      font-size: 16px;
+      padding: calc(10px - 1px) calc(36px - 1px);
+    }
+  }
+}
+
+.p-entry-nav__right {
+  position: relative;
+  padding-right: 16.28px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    width: 6.277px;
+    height: 11.735px;
+    background: url("../img/arrow-next.png") no-repeat center center / contain;
+
+    @include global.mq(pc) {
+      right: 0;
+      width: 6px;
+      height: 12px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin-left: -6px;
+    color: global.$main-color;
+    font-weight: 700;
+
+    @include global.mq(pc) {
+      margin-left: 0;
+      font-size: 16px;
+    }
+  }
+}

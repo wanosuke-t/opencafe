@@ -3291,6 +3291,104 @@ a {
   }
 }
 
+.p-entry-nav {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.p-entry-nav__left {
+  position: relative;
+  padding-left: 16px;
+}
+.p-entry-nav__left::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 6.277px;
+  height: 11.735px;
+  background: url("../img/arrow-prev.png") no-repeat center center/contain;
+}
+@media screen and (min-width: 768px) {
+  .p-entry-nav__left::before {
+    width: 6px;
+    height: 12px;
+  }
+}
+.p-entry-nav__left a {
+  display: inline-block;
+  color: #382620;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .p-entry-nav__left a {
+    font-size: 16px;
+  }
+}
+
+.p-entry-nav__top a {
+  display: inline-block;
+  margin-left: -8px;
+  color: #382620;
+  font-weight: 700;
+  border: 1px solid #382620;
+  padding: 7px 27px;
+}
+@media screen and (min-width: 768px) {
+  .p-entry-nav__top a {
+    margin-left: 0;
+    font-size: 16px;
+    padding: 9px 35px;
+  }
+}
+
+.p-entry-nav__right {
+  position: relative;
+  padding-right: 16.28px;
+}
+.p-entry-nav__right::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 6.277px;
+  height: 11.735px;
+  background: url("../img/arrow-next.png") no-repeat center center/contain;
+}
+@media screen and (min-width: 768px) {
+  .p-entry-nav__right::before {
+    right: 0;
+    width: 6px;
+    height: 12px;
+  }
+}
+.p-entry-nav__right a {
+  display: inline-block;
+  margin-left: -6px;
+  color: #382620;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .p-entry-nav__right a {
+    margin-left: 0;
+    font-size: 16px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .u-hidden-pc {
     display: none;
