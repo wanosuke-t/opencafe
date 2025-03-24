@@ -1,0 +1,53 @@
+@use "../global" as global;
+
+.p-categories {
+  padding: 20px;
+  background: #f8f8f8;
+}
+
+.p-categories__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 20px;
+    width: 32px;
+    height: 1px;
+    background-color: global.$main-color;
+  }
+}
+
+.p-categories__list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14.4px;
+}
+
+.p-categories__item {
+}
+
+.p-categories__link {
+  position: relative;
+  padding-left: 12px;
+  color: global.$main-color;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 12px;
+    background: url(../img/arrow-categories.png) no-repeat center center /
+      contain;
+    border-radius: 50%;
+  }
+}

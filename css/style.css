@@ -120,7 +120,8 @@ a {
 }
 
 .l-two-column {
-  padding-top: 47px;
+  padding-top: 43px;
+  padding-bottom: 60px;
   padding-inline: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,11 +130,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 60px;
+  gap: 59px;
 }
 @media screen and (min-width: 768px) {
   .l-two-column {
     padding-top: 62px;
+    padding-bottom: 0;
     padding-inline: 58px 50px;
     max-width: 1200px;
     margin-inline: auto;
@@ -156,17 +158,27 @@ a {
           flex-grow: 1;
   width: 100%;
 }
+
 .l-two-column__aside {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
 }
 @media screen and (min-width: 768px) {
   .l-two-column__aside {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     width: 27.4725274725%;
+    gap: 61px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1100px) {
@@ -2969,6 +2981,58 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+}
+
+.p-categories {
+  padding: 20px;
+  background: #f8f8f8;
+}
+
+.p-categories__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+.p-categories__title::after {
+  content: "";
+  display: block;
+  margin-top: 20px;
+  width: 32px;
+  height: 1px;
+  background-color: #382620;
+}
+
+.p-categories__list {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14.4px;
+}
+
+.p-categories__link {
+  position: relative;
+  padding-left: 12px;
+  color: #382620;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+.p-categories__link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 6px;
+  height: 12px;
+  background: url(../img/arrow-categories.png) no-repeat center center/contain;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) {
