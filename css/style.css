@@ -3461,6 +3461,122 @@ a {
   }
 }
 
+.p-products {
+  padding-top: 44px;
+}
+@media screen and (min-width: 768px) {
+  .p-products {
+    padding-top: 62px;
+    padding-right: 2px;
+  }
+}
+
+.p-products__entries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  -webkit-column-gap: 19px;
+     -moz-column-gap: 19px;
+          column-gap: 19px;
+}
+@media screen and (min-width: 768px) {
+  .p-products__entries {
+    grid-template-columns: repeat(4, 1fr);
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .p-products__entries {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.p-products__entry:nth-of-type(1) {
+  grid-column: span 2; /* 2カラム分に広げる */
+}
+@media screen and (min-width: 768px) {
+  .p-products__entry:nth-of-type(1) {
+    grid-row: span 2; /* 2行分に広げる */
+  }
+}
+.p-products__entry:nth-of-type(1) .p-products__entry-name {
+  margin-top: 12px;
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .p-products__entry:nth-of-type(1) .p-products__entry-name {
+    margin-top: 11px;
+    font-size: 24px;
+  }
+}
+.p-products__entry:nth-of-type(1) .p-products__entry-price {
+  font-size: 28px;
+}
+@media screen and (min-width: 768px) {
+  .p-products__entry:nth-of-type(1) .p-products__entry-price {
+    font-size: 32px;
+  }
+}
+.p-products__entry:nth-of-type(1) .p-products__entry-button a {
+  padding: 4.44px 15px 5.56px 14px;
+}
+@media screen and (min-width: 768px) {
+  .p-products__entry:nth-of-type(1) .p-products__entry-button a {
+    padding: 7px 23px 7px 23px;
+  }
+}
+
+.p-products__entry-name {
+  margin-top: 8.5px;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (min-width: 768px) {
+  .p-products__entry-name {
+    margin-top: 13px;
+  }
+}
+
+.p-products__entry-price {
+  margin-left: -4px;
+  font-family: "Damion", cursive;
+  font-size: 24px;
+  line-height: normal;
+  text-align: center;
+}
+
+.p-products__entry-button {
+  margin-top: 11.3px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-products__entry-button {
+    margin-top: 12px;
+  }
+}
+.p-products__entry-button a {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  background: #222222;
+  padding: 5px 15px 5px 14px;
+  border: 1px solid #222222;
+}
+@media screen and (min-width: 768px) {
+  .p-products__entry-button a {
+    font-size: 14px;
+    padding: 7px 23px 7px 22px;
+  }
+}
+.p-products__entry-button a:hover {
+  color: #222222;
+  background: #f8f8f8;
+}
+
 @media screen and (min-width: 768px) {
   .u-hidden-pc {
     display: none;

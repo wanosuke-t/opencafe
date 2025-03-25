@@ -1,0 +1,120 @@
+@use "../global" as global;
+
+.p-products {
+  padding-top: 44px;
+
+  @include global.mq(pc) {
+    padding-top: 62px;
+    padding-right: 2px;
+  }
+}
+
+.p-products__inner {
+}
+
+.p-products__entries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+  column-gap: 19px;
+
+  @include global.mq(pc) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+  }
+
+  @include global.mq(tb) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.p-products__entry {
+  &:nth-of-type(1) {
+    grid-column: span 2; /* 2カラム分に広げる */
+
+    @include global.mq(pc) {
+      grid-row: span 2; /* 2行分に広げる */
+    }
+
+    .p-products__entry-name {
+      margin-top: 12px;
+      font-size: 20px;
+
+      @include global.mq(pc) {
+        margin-top: 11px;
+        font-size: 24px;
+      }
+    }
+
+    .p-products__entry-price {
+      font-size: 28px;
+
+      @include global.mq(pc) {
+        font-size: 32px;
+      }
+    }
+
+    .p-products__entry-button {
+      a {
+        padding: calc(5.44px - 1px) calc(16px - 1px) calc(6.56px - 1px)
+          calc(15px - 1px);
+
+        @include global.mq(pc) {
+          padding: calc(8px - 1px) calc(24px - 1px) calc(8px - 1px)
+            calc(24px - 1px);
+        }
+      }
+    }
+  }
+}
+
+.p-products__entry-image {
+}
+
+.p-products__entry-name {
+  margin-top: 8.5px;
+  font-weight: 700;
+  line-height: normal;
+
+  @include global.mq(pc) {
+    margin-top: 13px;
+  }
+}
+
+.p-products__entry-price {
+  margin-left: -4px;
+  font-family: global.$ff-en3;
+  font-size: 24px;
+  line-height: normal;
+  text-align: center;
+}
+
+.p-products__entry-button {
+  margin-top: 11.3px;
+  text-align: center;
+
+  @include global.mq(pc) {
+    margin-top: 12px;
+  }
+
+  a {
+    display: inline-block;
+    color: global.$text-color-white;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    background: global.$text-color;
+    padding: calc(6px - 1px) calc(16px - 1px) calc(6px - 1px) calc(15px - 1px);
+    border: 1px solid global.$text-color;
+
+    @include global.mq(pc) {
+      font-size: 14px;
+      padding: calc(8px - 1px) calc(24px - 1px) calc(8px - 1px) calc(23px - 1px);
+    }
+
+    &:hover {
+      color: global.$text-color;
+      background: #f8f8f8;
+    }
+  }
+}
