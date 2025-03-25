@@ -96,6 +96,7 @@
     background: global.$text-color;
     border: 1px solid global.$text-color;
     padding-block: calc(6px - 1px);
+    transition: color 0.3s, background-color 0.3s;
 
     @include global.mq(pc) {
       max-width: 174px;
