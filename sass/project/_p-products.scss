@@ -53,18 +53,6 @@
         font-size: 32px;
       }
     }
-
-    .p-products__entry-button {
-      a {
-        padding: calc(5.44px - 1px) calc(16px - 1px) calc(6.56px - 1px)
-          calc(15px - 1px);
-
-        @include global.mq(pc) {
-          padding: calc(8px - 1px) calc(24px - 1px) calc(8px - 1px)
-            calc(24px - 1px);
-        }
-      }
-    }
   }
 }
 
@@ -77,7 +65,7 @@
   line-height: normal;
 
   @include global.mq(pc) {
-    margin-top: 13px;
+    margin-top: 12.8px;
   }
 }
 
@@ -99,17 +87,20 @@
 
   a {
     display: inline-block;
+    width: 100%;
+    max-width: 140px;
     color: global.$text-color-white;
     font-size: 12px;
     font-weight: 700;
     line-height: normal;
     background: global.$text-color;
-    padding: calc(6px - 1px) calc(16px - 1px) calc(6px - 1px) calc(15px - 1px);
     border: 1px solid global.$text-color;
+    padding-block: calc(6px - 1px);
 
     @include global.mq(pc) {
+      max-width: 174px;
       font-size: 14px;
-      padding: calc(8px - 1px) calc(24px - 1px) calc(8px - 1px) calc(23px - 1px);
+      padding-block: calc(8px - 1px);
     }
 
     &:hover {
