@@ -125,6 +125,22 @@
       }
     }
   }
+
+  &--related {
+    .c-news-article__content-lead {
+      margin-top: 8px;
+
+      @include global.mq(pc) {
+        margin-top: 9px;
+      }
+    }
+
+    .c-news-article__content-date{
+      @include global.mq(pc) {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 .c-news-article__label {

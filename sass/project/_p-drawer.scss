@@ -46,6 +46,12 @@
   background: global.$main-color;
   transition: background-color 0.3s ease;
 
+  @include global.mq(pc) {
+    top: 20px;
+    right: 20px;
+  
+  }
+
   &.is-checked {
     background: global.$text-color-white;
 

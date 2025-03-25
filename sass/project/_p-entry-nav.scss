@@ -1,7 +1,7 @@
 @use "../global" as global;
 
 .p-entry-nav {
-  margin-top: 32px;
+  margin-top: 33px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +42,7 @@
 .p-entry-nav__top {
   a {
     display: inline-block;
-    margin-left: -8px;
+    margin-left: -2px;
     color: global.$main-color;
     font-weight: 700;
     border: 1px solid global.$main-color;
@@ -80,12 +80,12 @@
 
   a {
     display: inline-block;
-    margin-left: -6px;
+    margin-right: 4px;
     color: global.$main-color;
     font-weight: 700;
 
     @include global.mq(pc) {
-      margin-left: 0;
+      margin-right: 0;
       font-size: 16px;
     }
   }
