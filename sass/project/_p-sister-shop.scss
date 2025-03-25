@@ -1,0 +1,32 @@
+@use "../global" as global;
+
+.p-sister-shop {
+  padding-top: 44px;
+  padding-bottom: 60px;
+
+  @include global.mq(pc) {
+    padding-top: 65px;
+    padding-bottom: 0;
+  }
+}
+
+.p-sister-shop__inner {
+  padding-inline: 20px;
+  max-width: calc(335px + 20px * 2);
+  margin-inline: auto;
+
+  @include global.mq(pc) {
+    padding-inline: 50px;
+    max-width: calc(688px + 50px * 2);
+  }
+}
+
+.p-sister-shop__list {
+  display: flex;
+  flex-direction: column;
+  gap: 60.5px;
+
+  @include global.mq(pc) {
+    gap: 121px;
+  }
+}
