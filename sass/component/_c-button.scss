@@ -1,17 +1,22 @@
 @use "../global" as global;
 
 .c-button {
+  position: relative;
+
   color: global.$text-color-white;
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
+
   background: global.$text-color;
   padding-block: 24px 25px;
   width: 100%;
   max-width: 290px;
+
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
   transform: translate(-5px, -6px);
   transition: transform 0.3s;
 

@@ -189,6 +189,7 @@ a {
 }
 
 .c-button {
+  position: relative;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
@@ -3792,6 +3793,174 @@ a {
   .p-sister-shop__list {
     gap: 121px;
   }
+}
+
+.p-contact {
+  padding-top: 44px;
+  padding-bottom: 60px;
+}
+
+.p-contact__inner {
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+.p-contact__head {
+  text-align: center;
+  color: #382620;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2; /* 200% */
+}
+
+.p-contact__message {
+  margin-top: 20px;
+  color: #382620;
+  font-weight: 500;
+}
+
+.p-contact__form {
+  margin-top: 59px;
+}
+.p-contact__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.p-contact__form form p {
+  color: #382620;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+.p-contact__form form p:nth-of-type(n + 2) {
+  margin-top: 40.5px;
+}
+.p-contact__form form p.p-contact__privacy {
+  margin-top: 18px;
+  color: #382620;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71429; /* 171.429% */
+}
+.p-contact__form form .p-contact__required {
+  margin-left: 8px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 2px;
+  background: #f07317;
+  padding: 1px 6px 2px;
+}
+.p-contact__form form .wpcf7-radio {
+  margin-top: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 17px;
+}
+.p-contact__form form .wpcf7-list-item-label {
+  padding-left: 13px;
+}
+.p-contact__form form .wpcf7-text {
+  margin-top: 8.5px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #382620;
+  background: #ffffff;
+  padding: 11px 15px;
+}
+.p-contact__form form .wpcf7-textarea {
+  margin-top: 8.5px;
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  border: 1px solid #382620;
+  background: #ffffff;
+  padding: 11px 15px;
+}
+.p-contact__form form .p-contact__submit {
+  margin-top: 43px;
+  margin-left: 4px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 290px;
+  -webkit-transform: translate(-5px, -6px);
+          transform: translate(-5px, -6px);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .p-contact__form form .p-contact__submit {
+    max-width: 280px;
+  }
+}
+.p-contact__form form .p-contact__submit::before, .p-contact__form form .p-contact__submit::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+.p-contact__form form .p-contact__submit::before {
+  top: 50%;
+  right: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 16px;
+  height: 24px;
+  background: url("../img/button-arrow.png") no-repeat center center/contain;
+}
+.p-contact__form form .p-contact__submit::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #222222;
+  border-right: 1px solid #222222;
+  -webkit-transform: translate(5px, 6px);
+          transform: translate(5px, 6px);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.p-contact__form form .p-contact__submit:hover {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.p-contact__form form .p-contact__submit:hover::after {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.p-contact__form form .p-contact__submit .wpcf7-submit {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  background: #222222;
+  padding-block: 22px 24px;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 768px) {
