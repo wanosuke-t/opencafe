@@ -100,13 +100,26 @@
   &--sister {
     .c-shop__title {
     }
+
     .c-shop__map {
       margin-top: 20px;
+
+      @include global.mq(pc) {
+        margin-top: 24px;
+      }
     }
+
     .c-shop__info {
       margin-top: 18px;
       gap: 18px;
+
+      @include global.mq(pc) {
+        margin-top: 22px;
+        row-gap: 22px;
+        column-gap: 40px;
+      }
     }
+
     .c-shop__definition {
       padding-bottom: 12px;
     }

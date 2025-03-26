@@ -774,9 +774,23 @@ a {
 .c-shop--sister .c-shop__map {
   margin-top: 20px;
 }
+@media screen and (min-width: 768px) {
+  .c-shop--sister .c-shop__map {
+    margin-top: 24px;
+  }
+}
 .c-shop--sister .c-shop__info {
   margin-top: 18px;
   gap: 18px;
+}
+@media screen and (min-width: 768px) {
+  .c-shop--sister .c-shop__info {
+    margin-top: 22px;
+    row-gap: 22px;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
 }
 .c-shop--sister .c-shop__definition {
   padding-bottom: 12px;
@@ -3747,7 +3761,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-sister-shop {
-    padding-top: 65px;
+    padding-top: 63px;
     padding-bottom: 0;
   }
 }
