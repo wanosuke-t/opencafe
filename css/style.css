@@ -3799,6 +3799,12 @@ a {
   padding-top: 44px;
   padding-bottom: 59px;
 }
+@media screen and (min-width: 768px) {
+  .p-contact {
+    padding-top: 63px;
+    padding-bottom: 0;
+  }
+}
 
 .p-contact__inner {
   padding-inline: 20px;
@@ -3833,7 +3839,9 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-contact__message {
-    margin-top: 28px;
+    margin-top: 27px;
+    font-size: 16px;
+    line-height: normal;
   }
 }
 
@@ -3868,8 +3876,22 @@ a {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media screen and (min-width: 768px) {
+  .wpcf7-form p {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 28px;
+  }
+}
 .wpcf7-form p:nth-of-type(n + 2) {
   margin-top: 39.5px;
+}
+@media screen and (min-width: 768px) {
+  .wpcf7-form p:nth-of-type(n + 2) {
+    margin-top: 40px;
+  }
 }
 .wpcf7-form p label {
   width: 100%;
@@ -3884,11 +3906,30 @@ a {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media screen and (min-width: 768px) {
+  .wpcf7-form p label {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 28px;
+  }
+  .wpcf7-form p label .p-contact__item-head {
+    margin-top: 13px;
+  }
+}
 
 .p-contact__item-head {
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
+}
+@media screen and (min-width: 768px) {
+  .p-contact__item-head {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 170px;
+  }
 }
 
 .wpcf7-radio {
@@ -3901,6 +3942,11 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 17px;
+}
+@media screen and (min-width: 768px) {
+  .wpcf7-radio {
+    margin-top: 0;
+  }
 }
 .wpcf7-radio label {
   position: relative;
@@ -3972,6 +4018,26 @@ a {
   padding: 9px 15px 10px;
   font-size: 16px;
 }
+@media screen and (min-width: 768px) {
+  .wpcf7-text {
+    margin-top: 0;
+  }
+}
+.wpcf7-text::-webkit-input-placeholder {
+  color: #ccc;
+}
+.wpcf7-text::-moz-placeholder {
+  color: #ccc;
+}
+.wpcf7-text:-ms-input-placeholder {
+  color: #ccc;
+}
+.wpcf7-text::-ms-input-placeholder {
+  color: #ccc;
+}
+.wpcf7-text::placeholder {
+  color: #ccc;
+}
 
 .wpcf7-textarea {
   margin-top: 8.5px;
@@ -3983,6 +4049,27 @@ a {
   padding: 9px 15px 10px;
   font-size: 16px;
 }
+@media screen and (min-width: 768px) {
+  .wpcf7-textarea {
+    margin-top: 0;
+    height: 240px;
+  }
+}
+.wpcf7-textarea::-webkit-input-placeholder {
+  color: #ccc;
+}
+.wpcf7-textarea::-moz-placeholder {
+  color: #ccc;
+}
+.wpcf7-textarea:-ms-input-placeholder {
+  color: #ccc;
+}
+.wpcf7-textarea::-ms-input-placeholder {
+  color: #ccc;
+}
+.wpcf7-textarea::placeholder {
+  color: #ccc;
+}
 
 .p-contact__privacy {
   margin-top: -22px;
@@ -3990,6 +4077,12 @@ a {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.71429; /* 171.429% */
+}
+@media screen and (min-width: 768px) {
+  .p-contact__privacy {
+    margin-top: 0;
+    line-height: normal;
+  }
 }
 
 .p-contact__submit {
@@ -4010,6 +4103,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-contact__submit {
+    margin-top: 46px;
     max-width: 280px;
   }
 }
@@ -4051,6 +4145,8 @@ a {
 }
 
 .wpcf7-submit {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;

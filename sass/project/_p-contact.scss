@@ -3,6 +3,11 @@
 .p-contact {
   padding-top: 44px;
   padding-bottom: 59px;
+
+  @include global.mq(pc) {
+    padding-top: 63px;
+    padding-bottom: 0;
+  }
 }
 
 .p-contact__inner {
@@ -35,7 +40,9 @@
   font-weight: 500;
 
   @include global.mq(pc) {
-    margin-top: 28px;
+    margin-top: 27px;
+    font-size: 16px;
+    line-height: normal;
   }
 }
 
@@ -57,8 +64,17 @@
     flex-direction: column;
     align-items: flex-start;
 
+    @include global.mq(pc) {
+      flex-direction: row;
+      gap: 28px;
+    }
+
     &:nth-of-type(n + 2) {
       margin-top: 39.5px;
+
+      @include global.mq(pc) {
+        margin-top: 40px;
+      }
     }
 
     label {
@@ -66,6 +82,15 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
+      @include global.mq(pc) {
+        flex-direction: row;
+        gap: 28px;
+
+        .p-contact__item-head {
+          margin-top: 13px;
+        }
+      }
     }
   }
 }
@@ -74,6 +99,11 @@
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
+
+  @include global.mq(pc) {
+    flex-shrink: 0;
+    width: 170px;
+  }
 }
 
 .wpcf7-radio {
@@ -81,6 +111,10 @@
   display: flex;
   flex-direction: column;
   gap: 17px;
+
+  @include global.mq(pc) {
+    margin-top: 0;
+  }
 
   label {
     position: relative;
@@ -159,6 +193,14 @@
   background: global.$text-color-white;
   padding: calc(10px - 1px) calc(16px - 1px) calc(11px - 1px);
   font-size: 16px;
+
+  @include global.mq(pc) {
+    margin-top: 0;
+  }
+
+  &::placeholder {
+    color: #ccc;
+  }
 }
 
 .wpcf7-textarea {
@@ -170,6 +212,15 @@
   background: global.$text-color-white;
   padding: calc(10px - 1px) calc(16px - 1px) calc(11px - 1px);
   font-size: 16px;
+
+  @include global.mq(pc) {
+    margin-top: 0;
+    height: 240px;
+  }
+
+  &::placeholder {
+    color: #ccc;
+  }
 }
 
 .p-contact__privacy {
@@ -178,6 +229,11 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.71429; /* 171.429% */
+
+  @include global.mq(pc) {
+    margin-top: 0;
+    line-height: normal;
+  }
 }
 
 .p-contact__submit {
@@ -193,6 +249,7 @@
   transition: transform 0.3s;
 
   @include global.mq(pc) {
+    margin-top: 46px;
     max-width: 280px;
   }
 
@@ -233,6 +290,7 @@
 }
 
 .wpcf7-submit {
+  flex-shrink: 0;
   color: global.$text-color-white;
   font-size: 16px;
   font-weight: 700;
