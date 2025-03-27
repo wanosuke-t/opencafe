@@ -99,6 +99,15 @@
       display: none;
     }
   }
+
+  &.invalid {
+    .wpcf7-response-output {
+      margin-top: 8px;
+      text-align: center;
+      color: global.$accent-color;
+      font-size: 16px;
+    }
+  }
 }
 
 .p-contact__item-head {
@@ -224,6 +233,7 @@
   background: global.$text-color-white;
   padding: calc(10px - 1px) calc(16px - 1px) calc(11px - 1px);
   font-size: 16px;
+  resize: vertical;
 
   @include global.mq(pc) {
     margin-top: 0;
@@ -318,13 +328,6 @@
 }
 
 .wpcf7-not-valid-tip {
-  color: global.$accent-color;
-  font-size: 16px;
-}
-
-.wpcf7-response-output {
-  margin-top: 8px;
-  text-align: center;
   color: global.$accent-color;
   font-size: 16px;
 }

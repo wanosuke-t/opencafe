@@ -817,6 +817,7 @@ a {
 }
 .c-shop--sister .c-shop__term {
   margin-top: 2px;
+  line-height: normal;
 }
 .p-drawer {
   position: fixed;
@@ -3530,7 +3531,7 @@ a {
     margin-top: 60px;
     margin-left: 8px;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 40px;
+    row-gap: 41px;
     -webkit-column-gap: 40px;
        -moz-column-gap: 40px;
             column-gap: 40px;
@@ -3950,6 +3951,12 @@ a {
 .wpcf7-form.sent .wpcf7-response-output {
   display: none;
 }
+.wpcf7-form.invalid .wpcf7-response-output {
+  margin-top: 8px;
+  text-align: center;
+  color: #f07317;
+  font-size: 16px;
+}
 
 .p-contact__item-head {
   font-size: 16px;
@@ -4083,6 +4090,7 @@ a {
   background: #ffffff;
   padding: 9px 15px 10px;
   font-size: 16px;
+  resize: vertical;
 }
 @media screen and (min-width: 768px) {
   .wpcf7-textarea {
@@ -4201,13 +4209,6 @@ a {
 }
 
 .wpcf7-not-valid-tip {
-  color: #f07317;
-  font-size: 16px;
-}
-
-.wpcf7-response-output {
-  margin-top: 8px;
-  text-align: center;
   color: #f07317;
   font-size: 16px;
 }
