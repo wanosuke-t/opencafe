@@ -58,11 +58,10 @@
     gap: 19px;
 
     @include global.mq(pc) {
-      margin-top: 42px;
       max-width: 100%;
       grid-template-rows: repeat(3, auto);
       column-gap: 40px;
-      row-gap: 23.3px;
+      row-gap: 23px;
       grid-auto-flow: column;
       grid-auto-columns: calc(50% - 40px / 2);
     }
@@ -73,21 +72,16 @@
     border-bottom: 1px solid global.$text-color;
     display: flex;
     gap: 24px;
-
-    @include global.mq(pc) {
-      padding-bottom: 10px;
-    }
   }
 
   .c-shop__term {
     flex-shrink: 0;
     width: 56px;
     font-weight: 700;
-    line-height: normal;
 
     @include global.mq(pc) {
       font-weight: 700;
-      line-height: normal;
+      // line-height: normal;
     }
   }
 

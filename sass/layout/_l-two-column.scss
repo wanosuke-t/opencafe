@@ -2,11 +2,11 @@
 
 .l-two-column {
   padding-top: 43px;
-  padding-bottom: 60px;
+  padding-bottom: 58px;
   padding-inline: 20px;
   display: flex;
   flex-direction: column;
-  gap: 59px;
+  gap: 61px;
 
   @include global.mq(pc) {
     padding-top: 62px;

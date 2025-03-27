@@ -63,7 +63,7 @@
 
 .p-special__menu-lead {
   position: absolute;
-  top: -22px;
+  top: -21px;
   left: 50%;
   transform: translateX(-50%);
   width: 255.269px;
@@ -77,6 +77,7 @@
 
   @include global.mq(pc) {
     margin-left: 2px;
+    top: -20px;
     width: 308px;
     height: 37px;
     font-size: 18px;
@@ -86,7 +87,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 5px;
     width: 29.653px;
     height: 33.3px;
     background: url("../img/special/img-ribbon.png") no-repeat center / contain;
@@ -99,7 +100,7 @@
   }
 
   &::before {
-    left: -18.5px;
+    left: -17.5px;
 
     @include global.mq(pc) {
       left: -22.5px;
@@ -137,12 +138,11 @@
 .p-special__menu-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 22px;
+  row-gap: 23px;
   column-gap: 20px;
 
   @include global.mq(pc) {
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 23px;
   }
 
   @include global.mq(tb) {
@@ -223,7 +223,7 @@
 }
 
 .p-special__set-box {
-  margin-top: 21px;
+  margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
   background: #f7f6f4;

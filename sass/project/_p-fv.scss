@@ -82,7 +82,6 @@
 
 .p-fv__menu-sns-icons {
   margin-top: 57px;
-  margin-left: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,7 +189,7 @@
   @include global.mq(pc) {
     bottom: 23px;
     left: auto;
-    right: 19px;
+    right: 20px;
     transform: none;
     padding-inline: 0;
     max-width: 388px;
@@ -299,6 +298,7 @@
 
 .p-fv__pickup-content {
   flex-grow: 1;
+  margin-top: -1px;
   margin-left: 4px;
   margin-right: 12px;
 
@@ -316,7 +316,7 @@
 }
 
 .p-fv__pickup-content-text {
-  margin-top: 6px;
+  margin-top: 7px;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5;

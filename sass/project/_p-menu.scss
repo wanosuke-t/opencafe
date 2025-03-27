@@ -137,7 +137,7 @@
 }
 
 .p-menu__drinks-wrapper {
-  margin-top: 20px;
+  margin-top: 19px;
   padding-inline: 20px;
 
   @include global.mq(pc) {
@@ -182,7 +182,7 @@
 }
 
 .p-menu__drink-head {
-  padding-bottom: 9.5px;
+  padding-bottom: 10.5px;
   border-bottom: 1px solid global.$text-color;
   font-size: 16px;
   font-weight: 700;
@@ -195,7 +195,7 @@
 
 .p-menu__drink-list {
   padding-top: 12px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
   display: flex;
   flex-direction: column;
   gap: 7.5px;
@@ -232,13 +232,15 @@
 
 .p-menu__leaves-image {
   position: absolute;
-  top: -195px;
-  left: -42px;
-  width: 186px;
+  top: -196px;
+  left: -43px;
+  width: 190px;
+  transform: rotate(-2deg);
 
   @include global.mq(pc) {
     top: -292px;
     left: -134px;
     width: 392px;
+    transform: none;
   }
 }

@@ -1,347 +1,233 @@
 <!DOCTYPE html>
-<html lang="ja" prefix="og: http://ogp.me/ns#">
+<html lang="ja">
 
 <head>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="format-detection" content="telephone=no">
-
-	<title>固定ページのタイトルが入ります</title>
+	<title>Open Cafe</title>
 	<meta name="description" content="">
 
-	<meta property="og:title" content="固定ページのタイトルが入ります">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://example.com/pagetitle/">
-	<meta property="og:image" content="https://example.com/pagetitle/img/ogp.png">
-	<meta property="og:site_name" content="固定ページのタイトルが入ります">
-	<meta property="og:description" content="">
-	<meta name="twitter:card" content="summary_large_image">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./css/style.css">
 
-	<link rel="icon" href="./img/icon-home.png">
-
+	<!-- google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Damion&family=Noto+Serif+JP:wght@200..900&family=Patua+One&display=swap"
+		rel="stylesheet">
 </head>
 
 <body>
 
-	<!-- header -->
-	<header id="header">
-		<div class="inner">
+	<!-- p-header -->
+	<header class="p-header">
 
-			<h1 class="header-logo"><a href="/">TF-30</a></h1><!-- /header-logo -->
-			<div class="header-sub">サブタイトルが入りますサブタイトルが入ります</div><!-- /header-sub -->
+		<!-- p-drawer -->
+		<div id="js-drawer" class="p-drawer is-show">
+			<div id="js-drawer-icon" class="p-drawer__icon">
+				<span class="p-drawer__icon-bar"></span>
+				<span class="p-drawer__icon-bar"></span>
+				<span class="p-drawer__icon-bar"></span>
+			</div><!-- /p-drawer-icon -->
 
-			<!-- drawer -->
-			<div class="drawer">
-				<div class="drawer-icon">
-					<span class="drawer-open"><i class="fas fa-bars"></i></span><!-- /drawer-open -->
-					<span class="drawer-close"><i class="fas fa-times"></i></span><!-- drawer-close -->
-				</div><!-- /drawer-icon -->
-
-				<!-- drawer-content -->
-				<div class="drawer-content">
-					<nav class="drawer-nav">
-						<ul class="drawer-list">
-							<li class="m_icon1 menu-item"><a href="#">メニュー1</a></li>
-							<li class="m_icon2 menu-item"><a href="#">メニュー2</a></li>
-							<li class="m_icon3 menu-item"><a href="#">メニュー3</a></li>
-							<li class="m_icon4 menu-item"><a href="#">メニュー4</a></li>
-							<li class="m_icon5 menu-item"><a href="#">メニュー5</a></li>
-						</ul>
-					</nav>
-				</div><!-- /drawer-content -->
-			</div><!-- /drawer -->
-
-		</div><!-- /inner -->
-	</header><!-- /header -->
-
-	<!-- header-nav -->
-	<nav class="header-nav">
-		<div class="inner">
-			<ul class="header-list">
-				<li class="m_icon1 menu-item"><a href="#">メニュー1</a></li>
-				<li class="m_icon2 menu-item"><a href="#">メニュー2</a></li>
-				<li class="m_icon3 menu-item"><a href="#">メニュー3</a></li>
-				<li class="m_icon4 menu-item"><a href="#">メニュー4</a></li>
-				<li class="m_icon5 menu-item"><a href="#">メニュー5</a></li>
-			</ul>
-		</div><!-- /inner -->
-	</nav><!-- header-nav -->
-
-
-	<!-- content -->
-	<div id="content" class="m_one">
-		<div class="inner">
-
-			<!-- primary -->
-			<main id="primary">
-
-				<!-- breadcrumb -->
-				<div class="breadcrumb">
-					<span property="itemListElement" typeof="ListItem">
-						<a property="item" typeof="WebPage" href="/" class="home"><span property="name">ホーム</span></a>
-						<meta property="position" content="1">
-					</span>
-					<i class="fas fa-angle-right"></i>
-					<span class="current-item">固定ページのタイトルが入ります</span>
-				</div><!-- /breadcrumb -->
-
-
-				<!-- entry -->
-				<article class="entry m_page">
-
-					<!-- entry-header -->
-					<div class="entry-header">
-						<h1 class="entry-title">固定ページのタイトルが入ります固定ページのタイトルが入ります固定ページのタイトルが入ります</h1><!-- /entry-title -->
-						<div class="entry-img"><img src="img/entry10.png" alt=""></div><!-- /entry-img -->
-					</div><!-- /entry-header -->
-
-					<!-- entry-body -->
-					<div class="entry-body">
-						<p>
-							テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-						</p>
-						<h2>見出しが入ります</h2>
-						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<a
-								href="#">テキストリンクテキストリンク</a>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-						</p>
-						<h3>見出しが入ります</h3>
-						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<a
-								href="#">テキストリンクテキストリンク</a>テキストテキストテキストテキストテキスト<strong>テキストボールドテキストボールド</strong>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-						</p>
-						<h4>見出しが入ります</h4>
-						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<a
-								href="#">テキストリンクテキストリンク</a>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-						</p>
-						<h4>見出しが入ります</h4>
-						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<a
-								href="#">テキストリンクテキストリンク</a>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-						</p>
-						<div class="entry-btn"><a class="btn" href="">テキストテキスト</a></div><!-- /entry-btn -->
-					</div><!-- /entry-body -->
-				</article><!-- /entry -->
-			</main><!-- /primary -->
-
-			<!-- secondary -->
-			<aside id="secondary">
-
-				<!-- widget -->
-				<div class="widget widget_text widget_custom_html">
-					<div class="widget-title">プロフィール</div>
-
-					<div class="wprofile">
-						<div class="wprofile-img"><img src="img/profile.png" alt=""></div>
-						<div class="wprofile-content">
-							<p>
-								テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-							</p>
-						</div>
-						<!-- /wprofile-content -->
-						<nav class="wprofile-sns">
-							<div class="wprofile-sns-item m_twitter"><a href="" rel="noopener noreferrer" target="_blank"><i
-										class="fab fa-twitter"></i></a></div>
-							<div class="wprofile-sns-item m_facebook"><a href="" rel="noopener noreferrer" target="_blank"><i
-										class="fab fa-facebook-f"></i></a></div>
-							<div class="wprofile-sns-item m_instagram"><a href="" rel="noopener noreferrer" target="_blank"><i
-										class="fab fa-instagram"></i></a></div>
-						</nav>
-					</div><!-- /wprofile -->
-				</div><!-- /widget -->
-
-
-				<!-- widget -->
-				<div class="widget widget_search">
-					<div class="widget-title">検索</div>
-					<!-- search-form -->
-					<form method="get" class="search-form" action="#">
-						<input type="search" class="search-field" value="" placeholder="キーワード" name="s" id="s">
-						<button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
-					</form><!-- /search-form -->
-				</div><!-- /widget -->
-
-
-				<!-- widget -->
-				<div class="widget widget_popular">
-					<div class="widget-title">人気記事</div>
-
-					<div class="wpost-items m_ranking">
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry2.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry1.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry3.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry4.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry5.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-					</div><!-- /wpost-items -->
-				</div><!-- /widget -->
-
-
-
-				<!-- widget -->
-				<div class="widget widget_recent">
-					<div class="widget-title">新着記事</div>
-
-					<div class="wpost-items">
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry7.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry6.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry10.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry7.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-						<!-- wpost-item -->
-						<a class="wpost-item" href="#">
-							<div class="wpost-item-img"><img src="img/entry9.png" alt=""></div>
-							<div class="wpost-item-body">
-								<div class="wpost-item-title">記事のタイトルが入ります記事のタイトルが入ります記事のタイトルが入ります</div>
-							</div><!-- /wpost-item-body -->
-						</a><!-- /wpost-item -->
-
-					</div><!-- /wpost-items -->
-				</div><!-- /widget -->
-
-				<div class="widget widget_archive">
-					<div class="widget-title">アーカイブ</div>
-					<ul>
-						<li><a href="#">テキストテキストテキスト</a></li>
-						<li><a href="#">テキストテキストテキスト</a></li>
-						<li><a href="#">テキストテキストテキスト</a></li>
+			<!-- p-drawer-content -->
+			<div id="js-drawer-content" class="p-drawer__content">
+				<div class="p-drawer__content-logo">
+					<a class="u-hover-opacity" href="#">
+						<img src="./img/logo_light_drawer.png" alt="Open Cafe - dish & coffee -" width="256" height="128">
+					</a>
+				</div>
+				<nav class="p-drawer__content-nav">
+					<ul class="p-drawer__content-list">
+						<li class="p-drawer__content-item">
+							<a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">TOP</span><span
+									class="p-drawer__content-text-ja">トップ</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">CONCEPT</span><span
+									class="p-drawer__content-text-ja">コンセプト</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">MENU</span><span
+									class="p-drawer__content-text-ja">メニュー</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">NEWS</span><span
+									class="p-drawer__content-text-ja">お知らせ</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">SHOP</span><span
+									class="p-drawer__content-text-ja">店舗情報</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">GIFT</span><span
+									class="p-drawer__content-text-ja">ギフト・贈り物</span></a>
+						</li>
+						<li class="p-drawer__content-item">
+							<a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">CONTACT</span><span
+									class="p-drawer__content-text-ja">お問い合わせ</span></a>
+						</li>
 					</ul>
-				</div><!-- /widget -->
-
-			</aside><!-- secondary -->
-
-
-		</div><!-- /inner -->
-	</div><!-- /content -->
-
-	<!-- footer-menu -->
-	<div id="footer-menu">
-		<div class="inner">
-			<div class="footer-logo"><a href="/">TF-30</a></div><!-- /footer-logo -->
-			<div class="footer-sub">サブタイトルが入りますサブタイトルが入ります</div><!-- /footer-sub -->
-
-			<nav class="footer-nav">
-				<ul class="footer-list">
-					<li class="menu-item"><a href="#">メニュー1</a></li>
-					<li class="menu-item"><a href="#">メニュー2</a></li>
-					<li class="menu-item"><a href="#">メニュー3</a></li>
-					<li class="menu-item"><a href="#">メニュー4</a></li>
-					<li class="menu-item"><a href="#">メニュー5</a></li>
+				</nav>
+				<ul class="p-drawer__content-sns-icons">
+					<li class="p-drawer__content-sns-icon">
+						<a class="u-hover-opacity" href="https://x.com/home" target="_blank"><img src="./img/Icon-twitter-light.png"
+								alt="" width="65" height="54"></a>
+					</li>
+					<li class="p-drawer__content-sns-icon">
+						<a class="u-hover-opacity" href="https://www.instagram.com/" target="_blank"><img
+								src="./img/Icon-instagram-light.png" alt="" width="61" height="60"></a>
+					</li>
+					<li class="p-drawer__content-sns-icon">
+						<a class="u-hover-opacity" href="https://www.youtube.com/" target="_blank"><img
+								src="./img/Icon-youtube-light.png" alt="" width="71" height="50"></a>
+					</li>
 				</ul>
-			</nav>
+			</div><!-- /p-drawer-content -->
+		</div><!-- /p-drawer -->
 
-		</div><!-- /inner -->
-	</div><!-- /footer-menu -->
+	</header><!-- /p-header -->
 
+	<!-- p-page-header -->
+	<section class="p-page-header">
 
+		<picture class="p-page-header__image">
+			<source media="(min-width: 768px)" srcset="./img/header/img_firstview_contact.jpg">
+			<img src="./img/header/img_firstview_contact_sp.jpg" alt="" decoding="async" width="2560" height="640">
+		</picture>
 
-	<!-- footer -->
-	<footer id="footer">
-		<div class="inner">
-			<div class="copy">&copy; daily-trial WordPress theme All rights reserved.</div><!-- /copy -->
-			<div class="by">Presented by <a href="https://tokyofreelance.jp/" rel="noopener" target="_blank">東京フリーランス</a>
-			</div><!-- /by -->
+		<div class="p-page-header__title">
+			<p class="p-page-header__title-en">CONTACT</p>
+			<h1 class="p-page-header__title-ja">お問い合わせ</h1>
+		</div>
 
-		</div><!-- /inner -->
-	</footer><!-- /footer -->
+	</section><!-- /p-page-header -->
 
+	<!-- p-breadcrumb -->
+	<div class="p-breadcrumb">
 
+		<!-- p-breadcrumb__inner -->
+		<div class="p-breadcrumb__inner">
 
-	<!-- footer-sns -->
-	<div class="footer-sns">
-		<div class="inner">
-			<div class="footer-sns-head">この記事をシェアする</div><!-- /footer-sns-head -->
+			<span property="itemListElement" typeof="ListItem">
+				<a href="#"><span property="name">HOME</span></a>
+			</span>
+			<span>></span>
+			<span class="current-item">お問い合わせ</span>
+			<span>></span>
+			<span class="current-item">お問い合わせ完了</span>
 
-			<nav class="footer-sns-buttons">
-				<ul>
-					<li><a class="m_twitter"
-							href="https://twitter.com/share?url=https://example.com/pagetitle/&text=固定ページのタイトルが入ります" rel="nofollow"
-							target="_blank"><img src="img/icon-twitter.png" alt=""></a></li>
-					<li><a class="m_facebook" href="https://www.facebook.com/share.php?u=https://example.com/pagetitle/"
-							rel="nofollow" target="_blank"><img src="img/icon-facebook.png" alt=""></a></li>
-					<li><a class="m_hatena"
-							href="https://b.hatena.ne.jp/add?mode=confirm&url=https://example.com/pagetitle/&title=固定ページのタイトルが入ります"
-							rel="nofollow" target="_blank"><img src="img/icon-hatena.png" alt=""></a></li>
-					<li><a class="m_line" href="https://social-plugins.line.me/lineit/share?url=https://example.com/pagetitle/"
-							rel="nofollow" target="_blank"><img src="img/icon-line.png" alt=""></a></li>
-					<li><a class="m_pocket" href="https://getpocket.com/edit?url=https://example.com/pagetitle/" rel="nofollow"
-							target="_blank"><img src="img/icon-pocket.png" alt=""></a></li>
-				</ul>
-			</nav><!-- /footer-sns-buttons -->
-
-		</div><!-- /inner -->
-	</div><!-- /footer-sns -->
+		</div><!-- p-breadcrumb__inner -->
+	</div><!-- p-breadcrumb -->
 
 
-	<div class="floating">
-		<a href="#"><i class="fas fa-chevron-up"></i></a>
+	<!-- p-contact -->
+	<section class="p-contact">
+		<div class="p-contact__inner">
+
+			<h2 class="p-contact__head">送信が完了しました</h2>
+			<p class="p-contact__message">お問い合わせありがとうございました。<br>3営業日以内に返信いたしますので、しばらくお待ちいただけますと幸いです。</p>
+
+		</div><!-- /p-contact__inner -->
+	</section><!-- /p-contact -->
+
+
+
+	<!-- p-access -->
+	<section class="p-access">
+
+		<!-- p-access__container -->
+		<div class="p-access__container">
+
+			<!-- p-access__inner -->
+			<div class="p-access__inner c-inner">
+				<div class="p-access__head c-head">
+					<p class="p-access__head-en c-head-en">ACCESS</p>
+					<h2 class="p-access__head-ja c-head-ja">アクセス</h2>
+				</div>
+
+				<div class="c-shop">
+					<div class="c-shop__map">
+						<iframe class="c-shop__map-iframe"
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6480.074414226512!2d139.580213!3d35.700702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ee39b555205f%3A0xabb26a0a2fbda595!2z44CSMTgwLTAwMDMg5p2x5Lqs6YO95q2m6JS16YeO5biC5ZCJ56Wl5a-65Y2X55S677yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1742618080559!5m2!1sja!2sjp"
+							width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+					<!-- c-shop__info -->
+					<div class="c-shop__info">
+						<dl class="c-shop__definition">
+							<dt class="c-shop__term">住所</dt>
+							<dd class="c-shop__description">〒000-0000<br>東京都武蔵野市吉祥寺南町一丁目</dd>
+						</dl>
+						<dl class="c-shop__definition">
+							<dt class="c-shop__term">TEL</dt>
+							<dd class="c-shop__description">0123-456-789</dd>
+						</dl>
+						<dl class="c-shop__definition">
+							<dt class="c-shop__term">Mail</dt>
+							<dd class="c-shop__description">example@mail.com</dd>
+						</dl>
+						<dl class="c-shop__definition">
+							<dt class="c-shop__term">営業時間</dt>
+							<dd class="c-shop__description">7:00〜21:00<br>※ラストオーダー 20:30</dd>
+						</dl>
+						<dl class="c-shop__definition">
+							<dt class="c-shop__term">定休日</dt>
+							<dd class="c-shop__description">水曜日</dd>
+						</dl>
+						<dl class="c-shop__definition">
+							<dt class="c-shop__term">座席</dt>
+							<dd class="c-shop__description">テーブル20席 ／ カウンター席6席</dd>
+						</dl>
+					</div><!-- /c-shop__info -->
+				</div>
+
+				<div class="p-access__balloon-image"><img src="./img/access/img_balloon-access.png" alt="" width="466"
+						height="401"></div>
+				<div class="p-access__bread-image"><img src="./img/access/bg_bread.png" alt="" width="466" height="401"></div>
+
+			</div><!-- /p-access__inner -->
+		</div><!-- p-access__container -->
+	</section><!-- /p-access -->
+
+
+	<div id="js-pagetop" class="p-pagetop">
+		<a href="#" class="p-pagetop__button u-hover-opacity"><img src="./img/icon_arrow-top.png" alt="" width="88"
+				height="88"></a>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<!-- p-footer -->
+	<footer class="p-footer">
+
+		<div class="p-footer__icons">
+			<div class="p-footer__icon">
+				<a target="_blank" class="u-hover-opacity" href="https://x.com/home"><img src="./img/Icon-twitter-light.png"
+						alt="" width="65" height="54"></a>
+			</div>
+			<div class="p-footer__icon">
+				<a target="_blank" class="u-hover-opacity" href="https://www.instagram.com/"><img
+						src="./img/Icon-instagram-light.png" alt="" width="61" height="60"></a>
+			</div>
+			<div class="p-footer__icon">
+				<a target="_blank" class="u-hover-opacity" href="https://www.youtube.com/"><img
+						src="./img/Icon-youtube-light.png" alt="" width="71" height="50"></a>
+			</div>
+		</div>
+		<small class="p-footer__copyright">©︎2000-2021 open cafe. All Rights Reserved.</small>
+
+		<picture class="p-footer__coffee-image">
+			<source media="(min-width: 768px)" srcset="./img/footer/bg_coffee-beans3.png">
+			<img src="./img/footer/bg_coffee-beans3-sp.png" alt="" width="682" height="576">
+		</picture>
+
+	</footer><!-- /footer -->
+
+	<!-- js -->
+	<script src="./js/lib/swiper-bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 
 </body>

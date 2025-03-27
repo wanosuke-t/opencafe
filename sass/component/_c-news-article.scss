@@ -25,6 +25,7 @@
       }
 
       &::after {
+        left: 1px;
         width: 78px;
         height: 24px;
 
@@ -48,19 +49,30 @@
     }
 
     .c-news-article__content-date {
-      margin-top: 11px;
+      margin-top: 10px;
     }
 
     .c-news-article__content-date {
       @include global.mq(pc) {
+        margin-top: 12px;
         font-size: 14px;
       }
     }
   }
 
   &--archive {
-    @include global.mq(pc) {
-      .c-news-article__label {
+    .c-news-article__content-lead {
+      margin-top: 8px;
+
+      @include global.mq(pc) {
+        margin-top: 12px;
+        font-size: 16px;
+        line-height: 1.5; /* 150% */
+      }
+    }
+
+    .c-news-article__label {
+      @include global.mq(pc) {
         top: 16px;
 
         font-size: 14px;
@@ -71,14 +83,15 @@
           height: 27px;
         }
       }
+    }
 
-      .c-news-article__content-lead {
-        margin-top: 12px;
-        font-size: 16px;
-        line-height: 1.5; /* 150% */
-      }
+    .c-news-article__content-lead {
+    }
 
-      .c-news-article__content-date {
+    .c-news-article__content-date {
+      margin-top: 7px;
+
+      @include global.mq(pc) {
         margin-top: 11px;
         margin-left: 0;
         font-size: 14px;
@@ -135,7 +148,7 @@
       }
     }
 
-    .c-news-article__content-date{
+    .c-news-article__content-date {
       @include global.mq(pc) {
         margin-left: 0;
       }
@@ -183,7 +196,7 @@
     width: 70px;
     height: 22px;
     background: global.$text-color;
-    clip-path: polygon(0 0, 100% 0, 91% 50%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 93% 50%, 100% 100%, 0 100%);
 
     @include global.mq(pc) {
       width: 78px;
@@ -245,6 +258,6 @@
 
   @include global.mq(pc) {
     margin-top: 10px;
-    margin-left: 2px;
+    margin-left: 1px;
   }
 }

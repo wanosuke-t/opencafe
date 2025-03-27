@@ -130,8 +130,9 @@
 
 			<div class="p-contact__form">
 
-				<form action="/page-contact.html" method="post" class="wpcf7-form init" aria-label="コンタクトフォーム"
-					novalidate="novalidate" data-status="init">
+
+				<form action="/news/%e3%81%93%e3%82%8c%e3%81%93%e3%81%9d%e6%96%b0%e7%9d%80/#wpcf7-f203-p148-o1" method="post"
+					class="wpcf7-form invalid" aria-label="コンタクトフォーム" novalidate="novalidate" data-status="invalid">
 					<div style="display: none;">
 						<input type="hidden" name="_wpcf7" value="203">
 						<input type="hidden" name="_wpcf7_version" value="6.0.5">
@@ -142,51 +143,59 @@
 					</div>
 					<p><span class="p-contact__item-head">お問い合わせ項目<span class="p-contact__required">必須</span></span><span
 							class="wpcf7-form-control-wrap" data-name="contact-type"><span
-								class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio"
-											name="contact-type" value="お店のご利用・ご予約について"><span
+								class="wpcf7-form-control wpcf7-radio wpcf7-not-valid"
+								aria-describedby="wpcf7-f203-p148-o1-ve-contact-type"><span class="wpcf7-list-item first"><label><input
+											type="radio" name="contact-type" value="お店のご利用・ご予約について"><span
 											class="wpcf7-list-item-label">お店のご利用・ご予約について</span></label></span><span
 									class="wpcf7-list-item"><label><input type="radio" name="contact-type" value="ギフト(贈り物)について"><span
 											class="wpcf7-list-item-label">ギフト(贈り物)について</span></label></span><span
 									class="wpcf7-list-item"><label><input type="radio" name="contact-type" value="アルバイト応募について"><span
 											class="wpcf7-list-item-label">アルバイト応募について</span></label></span><span
 									class="wpcf7-list-item last"><label><input type="radio" name="contact-type" value="その他"><span
-											class="wpcf7-list-item-label">その他</span></label></span></span></span>
+											class="wpcf7-list-item-label">その他</span></label></span></span><span class="wpcf7-not-valid-tip"
+								aria-hidden="true">入力してください。</span></span>
 					</p>
 					<p><label><span class="p-contact__item-head">お名前<span class="p-contact__required">必須</span></span><span
 								class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400"
-									class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="name"
-									aria-required="true" aria-invalid="false" placeholder="お名前を入力してください" value="" type="text"
-									name="your-name"></span></label>
+									class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid" autocomplete="name"
+									aria-required="true" aria-invalid="true" placeholder="お名前を入力してください" value="" type="text"
+									name="your-name" aria-describedby="wpcf7-f203-p148-o1-ve-your-name"><span class="wpcf7-not-valid-tip"
+									aria-hidden="true">入力してください。</span></span></label>
 					</p>
 					<p><label for="your-email"><span class="p-contact__item-head">メールアドレス<span
 									class="p-contact__required">必須</span></span><span class="wpcf7-form-control-wrap"
 								data-name="your-email"><input size="40" maxlength="400"
-									class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-									autocomplete="email" aria-required="true" aria-invalid="false" placeholder="example@mail.com" value=""
-									type="email" name="your-email"></span></label>
+									class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email wpcf7-not-valid"
+									autocomplete="email" aria-required="true" aria-invalid="true" placeholder="example@mail.com" value=""
+									type="email" name="your-email" aria-describedby="wpcf7-f203-p148-o1-ve-your-email"><span
+									class="wpcf7-not-valid-tip" aria-hidden="true">入力してください。</span></span></label>
 					</p>
 					<p><label for="your-number"><span class="p-contact__item-head">電話番号</span><span
 								class="wpcf7-form-control-wrap" data-name="your-number"><input size="40" maxlength="400"
-									class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
-									aria-required="true" aria-invalid="false" placeholder="09012345678" value="" type="tel"
-									name="your-number"></span></label>
+									class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel wpcf7-not-valid"
+									aria-required="true" aria-invalid="true" placeholder="09012345678" value="" type="tel"
+									name="your-number" aria-describedby="wpcf7-f203-p148-o1-ve-your-number"><span
+									class="wpcf7-not-valid-tip" aria-hidden="true">入力してください。</span></span></label>
 					</p>
 					<p><label for="your-message"><span class="p-contact__item-head">お問い合わせ内容<span
 									class="p-contact__required">必須</span></span><span class="wpcf7-form-control-wrap"
 								data-name="your-message"><textarea cols="40" rows="10" maxlength="2000"
-									class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="お問い合わせ内容を入力してください"
-									name="your-message"></textarea></span></label>
+									class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required wpcf7-not-valid"
+									aria-required="true" aria-invalid="true" placeholder="お問い合わせ内容を入力してください" name="your-message"
+									aria-describedby="wpcf7-f203-p148-o1-ve-your-message"></textarea><span class="wpcf7-not-valid-tip"
+									aria-hidden="true">入力してください。</span></span></label>
 					</p>
 					<p><span
 							class="p-contact__privacy">当社は、お客様の個人情報の流出・漏洩の防止、その他個人情報の安全管理のために必要かつ適切な措置を講じるものとし、法令などに正当な理由がある場合を除き、お客様の同意なく目的外での利用および第三者への提供は行いません。</span>
 					</p>
 					<div class="p-contact__submit">
-						<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="送　信"><span
+						<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="送信"><span
 								class="wpcf7-spinner"></span>
 						</p>
 					</div>
-					<div class="wpcf7-response-output" aria-hidden="true"></div>
+					<div class="wpcf7-response-output" aria-hidden="true">入力内容に問題があります。確認して再度お試しください。</div>
 				</form>
+
 
 			</div><!-- /p-contact__form -->
 

@@ -1,13 +1,14 @@
 @use "../global" as global;
 
 .p-pagination {
-  margin-top: 40px;
+  margin-top: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
 
   @include global.mq(pc) {
+    margin-top: 40px;
     margin-left: -8px;
   }
 }

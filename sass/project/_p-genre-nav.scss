@@ -34,10 +34,15 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 1.35714; /* 135.714% */
+    transition: opacity 0.3s ease;
 
     @include global.mq(pc) {
       font-size: 16px;
       height: 68px;
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
 
     &::after {

@@ -13,6 +13,10 @@
     gap: 71px;
   }
 
+  @include global.mq(tb) {
+    gap: 50px;
+  }
+
   &--reverse {
     @include global.mq(pc) {
       flex-direction: row-reverse;
@@ -83,6 +87,10 @@
     width: 389px;
   }
 
+  @include global.mq(tb) {
+    width: 320px;
+  }
+
   &--1 {
   }
 
@@ -105,6 +113,10 @@
     font-size: 28px;
     font-weight: 700;
     line-height: 2.14286; /* 214.286% */
+  }
+
+  @include global.mq(tb) {
+    font-size: 24px;
   }
 }
 
