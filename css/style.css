@@ -2727,19 +2727,36 @@ a {
 
 .p-breadcrumb {
   margin-block: 4px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: normal;
 }
 @media screen and (min-width: 768px) {
   .p-breadcrumb {
     margin-block: 17px;
-    font-size: 14px;
+  }
+}
+.p-breadcrumb .breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+@media screen and (min-width: 768px) {
+  .p-breadcrumb .breadcrumb {
+    gap: 15.5px;
   }
 }
 .p-breadcrumb span {
+  font-size: 12px;
   color: #382620;
   font-weight: 700;
+  line-height: normal;
+}
+@media screen and (min-width: 768px) {
+  .p-breadcrumb span {
+    font-size: 14px;
+  }
 }
 .p-breadcrumb a {
   -webkit-transition: opacity 0.3s ease;
@@ -2751,18 +2768,10 @@ a {
 
 .p-breadcrumb__inner {
   padding-inline: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 6px;
 }
 @media screen and (min-width: 768px) {
   .p-breadcrumb__inner {
     padding-inline: 91px;
-    gap: 15.5px;
   }
 }
 

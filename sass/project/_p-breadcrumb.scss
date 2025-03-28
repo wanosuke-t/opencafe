@@ -2,18 +2,30 @@
 
 .p-breadcrumb {
   margin-block: 4px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: normal;
 
   @include global.mq(pc) {
     margin-block: 17px;
-    font-size: 14px;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    @include global.mq(pc) {
+      gap: 15.5px;
+    }
   }
 
   span {
+    font-size: 12px;
     color: global.$main-color;
     font-weight: 700;
+    line-height: normal;
+
+    @include global.mq(pc) {
+      font-size: 14px;
+    }
   }
 
   a {
@@ -27,12 +39,12 @@
 
 .p-breadcrumb__inner {
   padding-inline: 10px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  // display: flex;
+  // align-items: center;
+  // gap: 6px;
 
   @include global.mq(pc) {
     padding-inline: 91px;
-    gap: 15.5px;
+    // gap: 15.5px;
   }
 }

@@ -538,7 +538,8 @@
                     <time class="c-news-article__content-date" datetime="<?php the_time("c"); ?>"><?php the_time('Y.m.d'); ?></time>
                   </div>
                 </a>
-                </article>
+
+                </article><!-- /c-news-article -->
           </li><!-- /p-news__item -->
 
 
