@@ -24,6 +24,8 @@
 }
 
 .p-menu-entries__item {
+  word-break: break-word; /* 単語の途中でも折り返す */
+  overflow-wrap: break-word; /* 安全な折り返し設定 */
 }
 
 .p-menu-entries__item-image {
@@ -43,6 +45,7 @@
 }
 
 .p-menu-entries__item-price {
+  margin-left: -3px;
   text-align: center;
   font-family: global.$ff-en3;
   font-size: 24px;

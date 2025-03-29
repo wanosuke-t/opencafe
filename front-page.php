@@ -245,202 +245,165 @@
       <h2 class="p-menu__head-ja c-head-ja">グランドメニュー</h2>
     </div>
 
-    <!-- p-menu__genre -->
-    <div class="p-menu__genre">
-      <h3 class="p-menu__genre-head">パスタ</h3>
 
-      <!-- p-menu__genre-list -->
-      <ul class="p-menu__genre-list">
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_pasta1.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">テキストテキストテキストの○○○○風パスタ</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_pasta2.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">テキストテキストの○○風パスタ</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_pasta3.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">テキストテキストの○○風パスタ</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-      </ul><!-- p-menu__genre-list -->
+    <?php
+    $terms = get_terms(array(
+      'taxonomy'   => 'genre',
+      'hide_empty' => false,
+      'parent'     => 0, // 親タームのみ取得
+    )); ?>
 
-    </div><!-- p-menu__genre -->
+    <?php if (!empty($terms) && !is_wp_error($terms)) : ?>
+      <?php foreach ($terms as $term) : ?>
 
-    <!-- p-menu__genre -->
-    <div class="p-menu__genre">
-      <h3 class="p-menu__genre-head">サラダ</h3>
+        <!-- ジャンルごとのヘッダー記述 -->
+        <!-- p-menu__genre -->
+        <div class="p-menu__genre">
+          <h3 class="p-menu__genre-head"><?php echo esc_html($term->name); ?></h3>
+          <!-- /ジャンルごとのヘッダー記述 -->
 
-      <!-- p-menu__genre-list -->
-      <ul class="p-menu__genre-list">
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_salad2.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">○○○○風サラダ</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_salad1.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">○○○○風サラダ</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_salad3.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">○○○○風サラダ</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-      </ul><!-- p-menu__genre-list -->
+          <?php
+          // drinks 以外のターム
+          if ($term->slug !== 'drinks') : ?>
 
-    </div><!-- p-menu__genre -->
+            <!-- ドリンク以外のジャンルごとのヘッダー記述 -->
+            <!-- p-menu__genre-list -->
+            <ul class="p-menu__genre-list">
+              <!-- /ドリンク以外のジャンルごとのヘッダー記述 -->
 
-    <!-- p-menu__genre -->
-    <div class="p-menu__genre">
-      <h3 class="p-menu__genre-head">パン & スイーツ</h3>
+              <?php $args = array(
+                'post_type'      => 'menu',
+                'posts_per_page' => -1,
+                'orderby'        => 'meta_value_num',
+                'order'          => 'ASC',
+                'meta_key'       => 'menu-order',
+                'tax_query'      => array(
+                  array(
+                    'taxonomy' => 'genre',
+                    'field'    => 'slug',
+                    'terms'    => $term->slug,
+                  ),
+                ),
+              );
 
-      <!-- p-menu__genre-list -->
-      <ul class="p-menu__genre-list">
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_sweets1.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">○○○○サンド</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_sweets4.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">○○○○サンド</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_sweets2.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">○○○○サンド</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_sweets3.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">○○○○サンド</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_sweets5.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">○○○○サンド</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-        <li class="p-menu__genre-item">
-          <div class="p-menu__genre-item-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/img_sweets6.jpg" alt="" width="490" height="490">
-          </div>
-          <p class="p-menu__genre-item-name">○○○○サンド</p>
-          <p class="p-menu__genre-item-price">780 yen</p>
-        </li>
-      </ul><!-- p-menu__genre-list -->
+              $menu_query = new WP_Query($args); ?>
 
-    </div><!-- p-menu__genre -->
+              <?php if ($menu_query->have_posts()) : ?>
+                <?php while ($menu_query->have_posts()) : $menu_query->the_post(); ?>
 
-    <!-- p-menu__genre -->
-    <div class="p-menu__genre">
-      <h3 class="p-menu__genre-head">ドリンク</h3>
+                  <!-- ドリンク以外ジャンルのアイテム記述 -->
+                  <li class="p-menu__genre-item">
+                    <div class="p-menu__genre-item-image">
 
-      <!-- p-menu__drinks -->
-      <div class="p-menu__drinks-wrapper">
+                      <?php if (has_post_thumbnail()): ?>
+                        <?php the_post_thumbnail(); ?>
+                      <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/noimg.png" alt="No Image">
+                      <?php endif; ?>
 
-        <div class="p-menu__drinks-image"><img src="<?php echo get_template_directory_uri(); ?>/img/menu/coffee.jpg" alt="" width="654" height="654"></div>
+                    </div>
+                    <p class="p-menu__genre-item-name"><?php the_title(); ?></p>
+                    <p class="p-menu__genre-item-price"><?php echo post_custom('menu-price'); ?> yen</p>
+                  </li>
+                  <!-- /ドリンク以外ジャンルのアイテム記述 -->
 
-        <!-- p-menu__drinks -->
-        <div class="p-menu__drinks">
+                <?php endwhile;
+                wp_reset_postdata(); ?>
 
-          <!-- p-menu__drink -->
-          <div class="p-menu__drink">
-            <h4 class="p-menu__drink-head">コーヒー</h4>
-            <ul class="p-menu__drink-list">
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">ブレンド</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">カフェラテ</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">豆乳ラテ</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">カフェモカ</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">キャラメルラテ</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">バニララテ</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-            </ul>
-          </div><!-- /p-menu__drink -->
+              <?php else : ?>
+                <p>該当するメニューがありません。</p>
+              <?php endif; ?>
 
-          <!-- p-menu__drink -->
-          <div class="p-menu__drink">
-            <h4 class="p-menu__drink-head">紅茶</h4>
-            <ul class="p-menu__drink-list">
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">ストレート</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">ミルク</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">アップル</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-            </ul>
-          </div><!-- /p-menu__drink -->
+              <!-- ドリンク以外のジャンルのヘッダー閉じ記述 -->
+            </ul><!-- p-menu__genre-list -->
+            <!-- /ドリンク以外のジャンルのヘッダー閉じ記述 -->
 
-          <!-- p-menu__drink -->
-          <div class="p-menu__drink">
-            <h4 class="p-menu__drink-head">ソフトドリンク</h4>
-            <ul class="p-menu__drink-list">
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">バナナ</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">オレンジ</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">アップル</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">マンゴー</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-              <li class="p-menu__drink-item">
-                <p class="p-menu__drink-name">ミックス</p>
-                <p class="p-menu__drink-price">500 yen</p>
-              </li>
-            </ul>
-          </div><!-- /p-menu__drink -->
+            <!-- drinks の場合は子タームごとに処理 -->
+          <?php else : ?>
 
-        </div><!-- /p-menu__drinks -->
+            <!-- ドリンクのジャンルのヘッダー記述 -->
+            <!-- p-menu__drinks -->
+            <div class="p-menu__drinks-wrapper">
+              <div class="p-menu__drinks-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/coffee.jpg" alt="" width="654" height="654">
+              </div>
+              <!-- p-menu__drinks -->
+              <div class="p-menu__drinks">
+                <!-- /ドリンクのジャンルのヘッダー記述 -->
 
-      </div><!-- /p-menu__drinks-wrapper -->
+                <?php $child_terms = get_terms(array(
+                  'taxonomy'   => 'genre',
+                  'hide_empty' => false,
+                  'parent'     => $term->term_id,
+                )); ?>
 
-    </div><!-- /p-menu__genre -->
+                <?php if (!empty($child_terms) && !is_wp_error($child_terms)) : ?>
+                  <?php foreach ($child_terms as $child_term) : ?>
+
+                    <!-- ドリンクの子ジャンルのヘッダー記述 -->
+                    <!-- p-menu__drink -->
+                    <div class="p-menu__drink">
+                      <h4 class="p-menu__drink-head"><?php echo esc_html($child_term->name); ?></h4>
+                      <ul class="p-menu__drink-list">
+                        <!-- /ドリンクの子ジャンルのヘッダー記述 -->
+
+                        <?php $args = array(
+                          'post_type'      => 'menu',
+                          'posts_per_page' => -1,
+                          'orderby'        => 'meta_value_num',
+                          'order'          => 'ASC',
+                          'meta_key'       => 'menu-order',
+                          'tax_query'      => array(
+                            array(
+                              'taxonomy' => 'genre',
+                              'field'    => 'slug',
+                              'terms'    => $child_term->slug,
+                            ),
+                          ),
+                        );
+
+                        $child_query = new WP_Query($args); ?>
+
+                        <?php if ($child_query->have_posts()) : ?>
+                          <?php while ($child_query->have_posts()) : $child_query->the_post(); ?>
+
+                            <!-- ドリンクの子ジャンルのアイテム記述 -->
+                            <li class="p-menu__drink-item">
+                              <p class="p-menu__drink-name"><?php the_title(); ?></p>
+                              <p class="p-menu__drink-price"><?php echo post_custom('menu-price'); ?> yen</p>
+                            </li>
+                            <!-- /ドリンクの子ジャンルのアイテム記述 -->
+
+                          <?php endwhile;
+                          wp_reset_postdata(); ?>
+                        <?php else : ?>
+                          <p>該当するメニューがありません。</p>
+                        <?php endif; ?>
+
+                        <!-- ドリンクの子ジャンルのヘッダー閉じ記述 -->
+                      </ul>
+                    </div><!-- /p-menu__drink -->
+                    <!-- /ドリンクの子ジャンルのヘッダー閉じ記述 -->
+
+                  <?php endforeach; ?>
+
+                <?php endif; ?>
+
+                <!-- ドリンクのジャンルのヘッダー閉じ記述 -->
+              </div><!-- /p-menu__drinks -->
+            </div><!-- /p-menu__drinks-wrapper -->
+            <!-- /ドリンクのジャンルのヘッダー閉じ記述 -->
+
+          <?php endif; ?>
+
+        </div><!-- p-menu__genre -->
+
+      <?php endforeach; ?>
+    <?php endif; ?>
+
+
+
+
 
     <div class="p-menu__button"><a class="c-button" href="">その他のメニュー</a></div>
 
