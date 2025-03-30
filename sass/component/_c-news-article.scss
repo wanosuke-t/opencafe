@@ -222,6 +222,12 @@
 
 .c-news-article__image {
   overflow: hidden;
+
+  img {
+    aspect-ratio: 340 / 213;
+    object-fit: cover;
+  }
+
 }
 
 .c-news-article__content {

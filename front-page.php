@@ -466,10 +466,18 @@
     <!-- p-news__list -->
     <ul class="p-news__list">
 
-      <?php if (have_posts()): ?>
+      <?php $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => 5,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+      );
+      $news_query = new WP_Query($args); ?>
+
+      <?php if ($news_query->have_posts()): ?>
         <?php $count = 0; ?>
-        <?php while (have_posts() && $count < 5): ?>
-          <?php the_post(); ?>
+        <?php while ($news_query->have_posts()): ?>
+          <?php $news_query->the_post(); ?>
 
           <!-- p-news__item -->
           <li class="p-news__item">
@@ -509,6 +517,7 @@
           <?php $count++; ?>
         <?php endwhile; ?>
       <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
 
     </ul><!-- /p-news__list -->
 
