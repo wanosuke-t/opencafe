@@ -22,67 +22,73 @@
   <header class="p-header">
 
     <!-- p-drawer -->
-    <div id="js-drawer" class="p-drawer p-drawer--front-page is-show">
-      <div id="js-drawer-icon" class="p-drawer__icon">
-        <span class="p-drawer__icon-bar"></span>
-        <span class="p-drawer__icon-bar"></span>
-        <span class="p-drawer__icon-bar"></span>
-      </div><!-- /p-drawer-icon -->
+    <?php if (is_front_page()) : ?>
+      <div id="js-drawer" class="p-drawer p-drawer--front-page">
+      <?php else: ?>
+        <div id="js-drawer" class="p-drawer is-show">
+        <?php endif; ?>
 
-      <!-- p-drawer-content -->
-      <div id="js-drawer-content" class="p-drawer__content">
-        <div class="p-drawer__content-logo">
-          <a class="u-hover-opacity" href="#">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light_drawer.png" alt="Open Cafe - dish & coffee -" width="256" height="128">
-          </a>
-        </div>
-        <nav class="p-drawer__content-nav">
-          <ul class="p-drawer__content-list">
-            <li class="p-drawer__content-item">
-              <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">TOP</span><span
-                  class="p-drawer__content-text-ja">トップ</span></a>
+        <!-- <div id="js-drawer" class="p-drawer p-drawer--front-page is-show"> -->
+        <div id="js-drawer-icon" class="p-drawer__icon">
+          <span class="p-drawer__icon-bar"></span>
+          <span class="p-drawer__icon-bar"></span>
+          <span class="p-drawer__icon-bar"></span>
+        </div><!-- /p-drawer-icon -->
+
+        <!-- p-drawer-content -->
+        <div id="js-drawer-content" class="p-drawer__content">
+          <div class="p-drawer__content-logo">
+            <a class="u-hover-opacity" href="#">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light_drawer.png" alt="Open Cafe - dish & coffee -" width="256" height="128">
+            </a>
+          </div>
+          <nav class="p-drawer__content-nav">
+            <ul class="p-drawer__content-list">
+              <li class="p-drawer__content-item">
+                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">TOP</span><span
+                    class="p-drawer__content-text-ja">トップ</span></a>
+              </li>
+              <li class="p-drawer__content-item">
+                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">CONCEPT</span><span
+                    class="p-drawer__content-text-ja">コンセプト</span></a>
+              </li>
+              <li class="p-drawer__content-item">
+                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">MENU</span><span
+                    class="p-drawer__content-text-ja">メニュー</span></a>
+              </li>
+              <li class="p-drawer__content-item">
+                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">NEWS</span><span
+                    class="p-drawer__content-text-ja">お知らせ</span></a>
+              </li>
+              <li class="p-drawer__content-item">
+                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">SHOP</span><span
+                    class="p-drawer__content-text-ja">店舗情報</span></a>
+              </li>
+              <li class="p-drawer__content-item">
+                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">GIFT</span><span
+                    class="p-drawer__content-text-ja">ギフト・贈り物</span></a>
+              </li>
+              <li class="p-drawer__content-item">
+                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">CONTACT</span><span
+                    class="p-drawer__content-text-ja">お問い合わせ</span></a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="p-drawer__content-sns-icons">
+            <li class="p-drawer__content-sns-icon">
+              <a class="u-hover-opacity" href="https://x.com/home" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/Icon-twitter-light.png"
+                  alt="twitter icon" width="65" height="54"></a>
             </li>
-            <li class="p-drawer__content-item">
-              <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">CONCEPT</span><span
-                  class="p-drawer__content-text-ja">コンセプト</span></a>
+            <li class="p-drawer__content-sns-icon">
+              <a class="u-hover-opacity" href="https://www.instagram.com/" target="_blank"><img
+                  src="<?php echo get_template_directory_uri(); ?>/img/Icon-instagram-light.png" alt="instagram icon" width="61" height="60"></a>
             </li>
-            <li class="p-drawer__content-item">
-              <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">MENU</span><span
-                  class="p-drawer__content-text-ja">メニュー</span></a>
-            </li>
-            <li class="p-drawer__content-item">
-              <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">NEWS</span><span
-                  class="p-drawer__content-text-ja">お知らせ</span></a>
-            </li>
-            <li class="p-drawer__content-item">
-              <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">SHOP</span><span
-                  class="p-drawer__content-text-ja">店舗情報</span></a>
-            </li>
-            <li class="p-drawer__content-item">
-              <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">GIFT</span><span
-                  class="p-drawer__content-text-ja">ギフト・贈り物</span></a>
-            </li>
-            <li class="p-drawer__content-item">
-              <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">CONTACT</span><span
-                  class="p-drawer__content-text-ja">お問い合わせ</span></a>
+            <li class="p-drawer__content-sns-icon">
+              <a class="u-hover-opacity" href="https://www.youtube.com/" target="_blank"><img
+                  src="<?php echo get_template_directory_uri(); ?>/img/Icon-youtube-light.png" alt="youtube icon" width="71" height="50"></a>
             </li>
           </ul>
-        </nav>
-        <ul class="p-drawer__content-sns-icons">
-          <li class="p-drawer__content-sns-icon">
-            <a class="u-hover-opacity" href="https://x.com/home" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/Icon-twitter-light.png"
-                alt="twitter icon" width="65" height="54"></a>
-          </li>
-          <li class="p-drawer__content-sns-icon">
-            <a class="u-hover-opacity" href="https://www.instagram.com/" target="_blank"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/Icon-instagram-light.png" alt="instagram icon" width="61" height="60"></a>
-          </li>
-          <li class="p-drawer__content-sns-icon">
-            <a class="u-hover-opacity" href="https://www.youtube.com/" target="_blank"><img
-                src="<?php echo get_template_directory_uri(); ?>/img/Icon-youtube-light.png" alt="youtube icon" width="71" height="50"></a>
-          </li>
-        </ul>
-      </div><!-- /p-drawer-content -->
-    </div><!-- /p-drawer -->
+        </div><!-- /p-drawer-content -->
+        </div><!-- /p-drawer -->
 
   </header><!-- /p-header -->

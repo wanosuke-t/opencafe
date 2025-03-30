@@ -276,7 +276,7 @@
                 'posts_per_page' => -1,
                 'orderby'        => 'meta_value_num',
                 'order'          => 'ASC',
-                'meta_key'       => 'menu-order',
+                'meta_key'       => 'order',
                 'tax_query'      => array(
                   array(
                     'taxonomy' => 'genre',
@@ -303,7 +303,7 @@
 
                     </div>
                     <p class="p-menu__genre-item-name"><?php the_title(); ?></p>
-                    <p class="p-menu__genre-item-price"><?php echo post_custom('menu-price'); ?> yen</p>
+                    <p class="p-menu__genre-item-price"><?php echo post_custom('price'); ?> yen</p>
                   </li>
                   <!-- /ドリンク以外ジャンルのアイテム記述 -->
 
@@ -352,7 +352,7 @@
                           'posts_per_page' => -1,
                           'orderby'        => 'meta_value_num',
                           'order'          => 'ASC',
-                          'meta_key'       => 'menu-order',
+                          'meta_key'       => 'order',
                           'tax_query'      => array(
                             array(
                               'taxonomy' => 'genre',
@@ -370,7 +370,7 @@
                             <!-- ドリンクの子ジャンルのアイテム記述 -->
                             <li class="p-menu__drink-item">
                               <p class="p-menu__drink-name"><?php the_title(); ?></p>
-                              <p class="p-menu__drink-price"><?php echo post_custom('menu-price'); ?> yen</p>
+                              <p class="p-menu__drink-price"><?php echo post_custom('price'); ?> yen</p>
                             </li>
                             <!-- /ドリンクの子ジャンルのアイテム記述 -->
 

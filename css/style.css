@@ -3659,7 +3659,7 @@ a {
 @media screen and (min-width: 768px) {
   .p-products-message {
     padding-top: 100px;
-    padding-bottom: 0;
+    padding-bottom: 1px;
   }
 }
 

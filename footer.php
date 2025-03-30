@@ -11,41 +11,61 @@
         <h2 class="p-access__head-ja c-head-ja">アクセス</h2>
       </div>
 
-      <div class="c-shop">
-        <div class="c-shop__map">
-          <iframe class="c-shop__map-iframe"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6480.074414226512!2d139.580213!3d35.700702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ee39b555205f%3A0xabb26a0a2fbda595!2z44CSMTgwLTAwMDMg5p2x5Lqs6YO95q2m6JS16YeO5biC5ZCJ56Wl5a-65Y2X55S677yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1742618080559!5m2!1sja!2sjp"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <!-- c-shop__info -->
-        <div class="c-shop__info">
-          <dl class="c-shop__definition">
-            <dt class="c-shop__term">住所</dt>
-            <dd class="c-shop__description">〒000-0000<br>東京都武蔵野市吉祥寺南町一丁目</dd>
-          </dl>
-          <dl class="c-shop__definition">
-            <dt class="c-shop__term">TEL</dt>
-            <dd class="c-shop__description">0123-456-789</dd>
-          </dl>
-          <dl class="c-shop__definition">
-            <dt class="c-shop__term">Mail</dt>
-            <dd class="c-shop__description">example@mail.com</dd>
-          </dl>
-          <dl class="c-shop__definition">
-            <dt class="c-shop__term">営業時間</dt>
-            <dd class="c-shop__description">7:00〜21:00<br>※ラストオーダー 20:30</dd>
-          </dl>
-          <dl class="c-shop__definition">
-            <dt class="c-shop__term">定休日</dt>
-            <dd class="c-shop__description">水曜日</dd>
-          </dl>
-          <dl class="c-shop__definition">
-            <dt class="c-shop__term">座席</dt>
-            <dd class="c-shop__description">テーブル20席 ／ カウンター席6席</dd>
-          </dl>
-        </div><!-- /c-shop__info -->
-      </div>
+
+      <?php $args = array(
+        'post_type'      => 'shop',
+        'posts_per_page' => -1,
+        'meta_key'       => 'order',        // ACFのフィールド名
+        'orderby'        => 'meta_value_num',    // 数値で並べる
+        'order'          => 'ASC',                // 昇順（安い順）※ DESCなら高い順
+        'meta_query'     => array(
+          array(
+            'key'     => 'is_main_store', // 本店フラグのACFフィールド名
+            'value'   => '1',
+            'compare' => '==',            // フラグが true（1）じゃないものを取得 = 姉妹店だけ
+          )
+        )
+      );
+      $shop_query = new WP_Query($args); ?>
+
+      <?php if ($shop_query->have_posts()): ?>
+        <?php while ($shop_query->have_posts()): ?>
+          <?php $shop_query->the_post(); ?>
+
+          <div class="c-shop">
+            <div class="c-shop__map"><?php echo post_custom('google-map'); ?></div>
+            <!-- c-shop__info -->
+            <div class="c-shop__info">
+              <dl class="c-shop__definition">
+                <dt class="c-shop__term">住所</dt>
+                <dd class="c-shop__description"><?php echo nl2br(post_custom('address')); ?></dd>
+              </dl>
+              <dl class="c-shop__definition">
+                <dt class="c-shop__term">TEL</dt>
+                <dd class="c-shop__description"><?php echo post_custom('tel'); ?></dd>
+              </dl>
+              <dl class="c-shop__definition">
+                <dt class="c-shop__term">Mail</dt>
+                <dd class="c-shop__description"><?php echo post_custom('mail'); ?></dd>
+              </dl>
+              <dl class="c-shop__definition">
+                <dt class="c-shop__term">営業時間</dt>
+                <dd class="c-shop__description"><?php echo nl2br(post_custom('opening-hours')); ?></dd>
+              </dl>
+              <dl class="c-shop__definition">
+                <dt class="c-shop__term">定休日</dt>
+                <dd class="c-shop__description"><?php echo post_custom('closed-day'); ?></dd>
+              </dl>
+              <dl class="c-shop__definition">
+                <dt class="c-shop__term">座席</dt>
+                <dd class="c-shop__description"><?php echo post_custom('seats'); ?></dd>
+              </dl>
+            </div><!-- /c-shop__info -->
+          </div>
+
+        <?php endwhile; ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
 
       <div class="p-access__balloon-image"><img src="<?php echo get_template_directory_uri(); ?>/img/access/img_balloon-access.png" alt="吉祥寺駅から徒歩５分！"
           width="466" height="401"></div>

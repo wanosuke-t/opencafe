@@ -38,7 +38,7 @@
         ),
       ),
       'posts_per_page' => -1, // 全件取得
-      'meta_key'       => 'menu-order',        // ACFのフィールド名
+      'meta_key'       => 'order',        // ACFのフィールド名
       'orderby'        => 'meta_value_num',    // 数値で並べる
       'order'          => 'ASC'                // 昇順（安い順）※ DESCなら高い順
     );
@@ -63,7 +63,7 @@
           </div>
           <div class="p-menu-entries__item-body">
             <h3 class="p-menu-entries__item-name"><?php the_title(); ?></h3>
-            <p class="p-menu-entries__item-price"><?php echo post_custom('menu-price'); ?> yen</p>
+            <p class="p-menu-entries__item-price"><?php echo post_custom('price'); ?> yen</p>
           </div><!-- /entry-item-body -->
         </div><!-- /entry-item -->
 

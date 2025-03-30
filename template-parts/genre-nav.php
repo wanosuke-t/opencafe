@@ -21,12 +21,12 @@
         <?php if (is_tax("genre")): ?>
           <?php if ($term->term_id == $queried_object->term_id): //メインクエリのオブジェクトと一致したらクラスを追加 
           ?>
-            <div class="p-genre-nav__link"><a class="is-active" href="<?php echo get_term_link($term, 'genre'); ?>"><?php echo $display_name; ?></a></div>
+            <div class="p-genre-nav__link"><a class="is-active" href="<?php echo get_term_link($term, 'genre'); ?>"><?php echo nl2br($display_name); ?></a></div>
           <?php else: ?>
-            <div class="p-genre-nav__link"><a href="<?php echo get_term_link($term, 'genre'); ?>"><?php echo $display_name; ?></a></div>
+            <div class="p-genre-nav__link"><a href="<?php echo get_term_link($term, 'genre'); ?>"><?php echo nl2br($display_name); ?></a></div>
           <?php endif; ?>
         <?php else: ?>
-          <div class="p-genre-nav__link"><a href="<?php echo get_term_link($term, 'genre'); ?>"><?php echo $display_name; ?></a></div>
+          <div class="p-genre-nav__link"><a href="<?php echo get_term_link($term, 'genre'); ?>"><?php echo nl2br($display_name); ?></a></div>
         <?php endif; ?>
 
       <?php endforeach; ?>
