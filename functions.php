@@ -54,7 +54,7 @@ function custom_breadcrumb_for_post_detail($trail)
   if (is_singular('post')) {
 
     // 「投稿タイトル」だけ削除
-    $trail->trail = array_slice($trail->trail, 1, 2);
+    $trail->trail = array_slice($trail->trail, 1);
   }
   return $trail;
 }
