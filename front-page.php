@@ -101,25 +101,57 @@
     <p class="p-fv__lead"><span class="p-fv__lead-span">パスタとコーヒーが<br class="u-hidden-pc">とってもおいしい、</span><br
         class="u-hidden-pc"><span class="p-fv__lead-span">ほっと落ち着くのんびり空間。</span></p>
 
-    <!-- p-fv__pickup -->
-    <div class="p-fv__pickup">
-      <span class="p-fv__pickup-label">カテゴリ</span>
-      <picture class="p-fv__pickup-popup">
-        <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/img_balloon-pickup.png" />
-        <img src="<?php echo get_template_directory_uri(); ?>/img/img_balloon-pickup-sp.png" alt="ピックアップニュース" width="336" height="218" />
-      </picture>
-      <a href="#" class="p-fv__pickup-box u-hover-opacity">
-        <div class="p-fv__pickup-image">
-          <div class="p-fv__pickup-image-box">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/news/img_news1.png" alt="" width="1020" height="638">
-          </div>
-        </div>
-        <div class="p-fv__pickup-content">
-          <time class="p-fv__pickup-content-date" datetime="2021-01-01">2021.01.01</time>
-          <p class="p-fv__pickup-content-text">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</p>
-        </div>
-      </a>
-    </div><!-- p-fv__pickup -->
+    <?php
+    $pickup_query = new WP_Query([
+      'post_type'      => 'post',
+      'posts_per_page' => 1,
+      'orderby'        => 'date',
+      'order'          => 'DESC',
+      'tag'            => 'pickup',
+    ]);
+    ?>
+    <?php if ($pickup_query->have_posts()) : ?>
+      <?php while ($pickup_query->have_posts()) : ?>
+        <?php $pickup_query->the_post(); ?>
+
+        <!-- p-fv__pickup -->
+        <div class="p-fv__pickup">
+          <span class="p-fv__pickup-label"><?php my_the_post_category(); ?></span>
+          <picture class="p-fv__pickup-popup">
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/img_balloon-pickup.png" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/img_balloon-pickup-sp.png" alt="ピックアップニュース" width="336" height="218" />
+          </picture>
+          <a href="#" class="p-fv__pickup-box u-hover-opacity">
+            <div class="p-fv__pickup-image">
+              <div class="p-fv__pickup-image-box">
+
+                <?php if (has_post_thumbnail()): ?>
+                  <?php the_post_thumbnail(); ?>
+                <?php else: ?>
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/noimg.png" alt="">
+                <?php endif; ?>
+
+              </div>
+            </div>
+            <div class="p-fv__pickup-content">
+              <time class="p-fv__pickup-content-date" datetime="<?php the_time("c"); ?>"><?php the_time('Y.m.d'); ?></time>
+              <p class="p-fv__pickup-content-text"><?php the_title(); ?></p>
+            </div>
+          </a>
+        </div><!-- p-fv__pickup -->
+
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+    <?php endif;    ?>
+
+
+
+
+
+
+
+
+
 
   </div><!-- /p-fv__content -->
 
@@ -185,30 +217,50 @@
 
         <!-- p-special__list -->
         <ul class="p-special__menu-list">
-          <li class="p-special__menu-item">
-            <div class="p-special__menu-image"><img src="<?php echo get_template_directory_uri(); ?>/img/special/img_special_pasta1.jpg" alt="" width="520"
-                height="520"></div>
-            <h3 class="p-special__menu-name"><span class="p-special__menu-name-label">A</span><span
-                class="p-special__menu-name-text">テキストテキストの○○風パスタ</span></h3>
-          </li>
-          <li class="p-special__menu-item">
-            <div class="p-special__menu-image"><img src="<?php echo get_template_directory_uri(); ?>/img/special/img_special_pasta2.jpg" alt="" width="520"
-                height="520"></div>
-            <h3 class="p-special__menu-name"><span class="p-special__menu-name-label">B</span><span
-                class="p-special__menu-name-text">テキストテキストの○○風パスタ</span></h3>
-          </li>
-          <li class="p-special__menu-item">
-            <div class="p-special__menu-image"><img src="<?php echo get_template_directory_uri(); ?>/img/special/img_special_pasta3.jpg" alt="" width="520"
-                height="520"></div>
-            <h3 class="p-special__menu-name"><span class="p-special__menu-name-label">C</span><span
-                class="p-special__menu-name-text">テキストテキストの○○風パスタ</span></h3>
-          </li>
-          <li class="p-special__menu-item">
-            <div class="p-special__menu-image"><img src="<?php echo get_template_directory_uri(); ?>/img/special/img_special_pasta4.jpg" alt="" width="520"
-                height="520"></div>
-            <h3 class="p-special__menu-name"><span class="p-special__menu-name-label">D</span><span
-                class="p-special__menu-name-text">テキストテキストの○○風パスタ</span></h3>
-          </li>
+
+          <?php $args = array(
+            'post_type'      => 'menu',
+            'posts_per_page' => -1,
+            'meta_key'       => 'order',          // ACFのフィールド名
+            'orderby'        => 'meta_value_num', // 数値で並べる
+            'order'          => 'ASC',            // 昇順（安い順）※ DESCなら高い順
+            'meta_query'     => array(
+              array(
+                'key'     => 'is-special-menu',   // スペシャルメニューフラグのACFフィールド名
+                'value'   => '1',
+                'compare' => '==',                // フラグが true（1）のものを取得 = スペシャルメニューだけ
+              )
+            )
+          );
+          $special_menu_query = new WP_Query($args);
+          $index = 0; ?>
+
+
+          <?php if ($special_menu_query->have_posts()): ?>
+            <?php while ($special_menu_query->have_posts()): ?>
+              <?php $special_menu_query->the_post(); ?>
+
+              <?php $label = chr(65 + $index); // 65は"A"のASCIIコード 
+              ?>
+
+              <li class="p-special__menu-item">
+                <div class="p-special__menu-image">
+                  <?php if (has_post_thumbnail()): ?>
+                    <?php the_post_thumbnail(); ?>
+                  <?php else: ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimg.png" alt="No Image">
+                  <?php endif; ?>
+                </div>
+                <h3 class="p-special__menu-name"><span class="p-special__menu-name-label"><?php echo $label; ?></span><span
+                    class="p-special__menu-name-text"><?php the_title(); ?></span></h3>
+              </li>
+
+              <?php $index++; ?>
+
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
+
         </ul><!-- p-special__list -->
 
         <!-- p-special__set-box -->
@@ -284,6 +336,13 @@
                     'terms'    => $term->slug,
                   ),
                 ),
+                'meta_query'     => array(
+                  array(
+                    'key'     => 'is-special-menu', // スペシャルメニューフラグのACFフィールド名
+                    'value'   => '1',
+                    'compare' => '!=',            // フラグが true（1）じゃないものを取得 = グランドメニューだけ
+                  )
+                )
               );
 
               $menu_query = new WP_Query($args); ?>
@@ -400,10 +459,6 @@
 
       <?php endforeach; ?>
     <?php endif; ?>
-
-
-
-
 
     <div class="p-menu__button"><a class="c-button" href="">その他のメニュー</a></div>
 

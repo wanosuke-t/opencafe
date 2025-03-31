@@ -40,8 +40,8 @@
 					<!-- /p-entry__title -->
 					<!-- p-entry__meta -->
 					<div class="p-entry__meta">
-						<time class="p-entry__published" datetime="2021-01-01">2021.01.01</time>
-						<div class="p-entry__category u-hover-opacity"><a href="">カテゴリ名</a>
+						<time class="p-entry__published" datetime="<?php the_time("c"); ?>"><?php the_time('Y.m.d'); ?></time>
+						<div class="p-entry__category u-hover-opacity"><a href=""><?php my_the_post_category(true); ?></a>
 						</div>
 					</div>
 				</div><!-- /p-entry__header -->
@@ -109,7 +109,7 @@
 										</div>
 										<div class="c-news-article__content">
 											<h3 class="c-news-article__content-lead"><?php echo wp_trim_words(get_the_title(), 27, '…'); ?></h3>
-											<time class="c-news-article__content-date" datetime="2021-01-01">2021.01.01</time>
+											<time class="c-news-article__content-date" datetime="<?php the_time("c"); ?>"><?php the_time('Y.m.d'); ?></time>
 										</div>
 									</a>
 								</article>

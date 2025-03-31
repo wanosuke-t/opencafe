@@ -32,7 +32,14 @@
       'posts_per_page' => -1,
       'meta_key'       => 'order',        // ACFのフィールド名
       'orderby'        => 'meta_value_num',    // 数値で並べる
-      'order'          => 'ASC'                // 昇順（安い順）※ DESCなら高い順
+      'order'          => 'ASC',                // 昇順（安い順）※ DESCなら高い順
+      'meta_query'     => array(
+        array(
+          'key'     => 'is-special-menu', // スペシャルメニューフラグのACFフィールド名
+          'value'   => '1',
+          'compare' => '!=',            // フラグが true（1）じゃないものを取得 = グランドメニューだけ
+        )
+      )
     );
 
     $menu_query = new WP_Query($args); ?>
