@@ -3313,6 +3313,7 @@ a {
   margin-top: 54px;
   margin-bottom: 14px;
   color: #382620;
+  font-weight: 700;
   line-height: 1.71429; /* 171.429% */
 }
 @media screen and (min-width: 768px) {
@@ -3372,29 +3373,37 @@ a {
     left: -16px;
   }
 }
-.p-entry__body > blockquote {
+
+.wp-block-pullquote {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wp-block-pullquote blockquote {
   background: #f8f8f8;
   padding: 20px 24px 24px;
 }
 @media screen and (min-width: 768px) {
-  .p-entry__body > blockquote {
+  .wp-block-pullquote blockquote {
     padding: 36px 40px 38px;
   }
 }
-.p-entry__body > blockquote p {
+.wp-block-pullquote blockquote p {
   margin: 0;
+  text-align: left;
 }
-.p-entry__body > blockquote cite {
+.wp-block-pullquote blockquote cite {
   margin-top: 15px;
   margin-right: 19px;
   display: block;
   text-align: right;
+  font-size: 14px;
   font-weight: 500;
   line-height: normal;
   font-style: normal;
 }
 @media screen and (min-width: 768px) {
-  .p-entry__body > blockquote cite {
+  .wp-block-pullquote blockquote cite {
     margin-top: 17px;
     margin-right: -1px;
   }
@@ -3414,10 +3423,28 @@ a {
 }
 
 .p-entry-nav__left {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 72px;
   position: relative;
   padding-left: 16px;
 }
-.p-entry-nav__left::before {
+@media screen and (min-width: 768px) {
+  .p-entry-nav__left {
+    width: 80px;
+  }
+}
+.p-entry-nav__left a {
+  display: inline-block;
+  color: #382620;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .p-entry-nav__left a {
+    font-size: 16px;
+  }
+}
+.p-entry-nav__left a::before {
   content: "";
   display: block;
   position: absolute;
@@ -3430,19 +3457,9 @@ a {
   background: url("../img/arrow-prev.png") no-repeat center center/contain;
 }
 @media screen and (min-width: 768px) {
-  .p-entry-nav__left::before {
+  .p-entry-nav__left a::before {
     width: 6px;
     height: 12px;
-  }
-}
-.p-entry-nav__left a {
-  display: inline-block;
-  color: #382620;
-  font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  .p-entry-nav__left a {
-    font-size: 16px;
   }
 }
 
@@ -3463,10 +3480,27 @@ a {
 }
 
 .p-entry-nav__right {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 76px;
   position: relative;
-  padding-right: 16.28px;
 }
-.p-entry-nav__right::before {
+@media screen and (min-width: 768px) {
+  .p-entry-nav__right {
+    width: 80px;
+  }
+}
+.p-entry-nav__right a {
+  display: inline-block;
+  color: #382620;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .p-entry-nav__right a {
+    font-size: 16px;
+  }
+}
+.p-entry-nav__right a::before {
   content: "";
   display: block;
   position: absolute;
@@ -3479,22 +3513,10 @@ a {
   background: url("../img/arrow-next.png") no-repeat center center/contain;
 }
 @media screen and (min-width: 768px) {
-  .p-entry-nav__right::before {
+  .p-entry-nav__right a::before {
     right: 0;
     width: 6px;
     height: 12px;
-  }
-}
-.p-entry-nav__right a {
-  display: inline-block;
-  margin-right: 4px;
-  color: #382620;
-  font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  .p-entry-nav__right a {
-    margin-right: 0;
-    font-size: 16px;
   }
 }
 

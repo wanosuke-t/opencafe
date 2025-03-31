@@ -8,24 +8,13 @@
 }
 
 .p-entry-nav__left {
+  flex-shrink: 0;
+  width: 72px;
   position: relative;
   padding-left: 16px;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 6.277px;
-    height: 11.735px;
-    background: url("../img/arrow-prev.png") no-repeat center center / contain;
-
-    @include global.mq(pc) {
-      width: 6px;
-      height: 12px;
-    }
+  @include global.mq(pc) {
+    width: 80px;
   }
 
   a {
@@ -35,6 +24,23 @@
 
     @include global.mq(pc) {
       font-size: 16px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 6.277px;
+      height: 11.735px;
+      background: url("../img/arrow-prev.png") no-repeat center center / contain;
+
+      @include global.mq(pc) {
+        width: 6px;
+        height: 12px;
+      }
     }
   }
 }
@@ -57,36 +63,39 @@
 }
 
 .p-entry-nav__right {
+  flex-shrink: 0;
+  width: 76px;
   position: relative;
-  padding-right: 16.28px;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 4px;
-    transform: translateY(-50%);
-    width: 6.277px;
-    height: 11.735px;
-    background: url("../img/arrow-next.png") no-repeat center center / contain;
-
-    @include global.mq(pc) {
-      right: 0;
-      width: 6px;
-      height: 12px;
-    }
+  @include global.mq(pc) {
+    width: 80px;
   }
 
   a {
     display: inline-block;
-    margin-right: 4px;
     color: global.$main-color;
     font-weight: 700;
 
     @include global.mq(pc) {
-      margin-right: 0;
       font-size: 16px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 4px;
+      transform: translateY(-50%);
+      width: 6.277px;
+      height: 11.735px;
+      background: url("../img/arrow-next.png") no-repeat center center / contain;
+
+      @include global.mq(pc) {
+        right: 0;
+        width: 6px;
+        height: 12px;
+      }
     }
   }
 }

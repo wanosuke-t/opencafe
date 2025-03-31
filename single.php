@@ -20,174 +20,113 @@
 
 <?php get_template_part('/template-parts/breadcrumb'); ?>
 
+<?php if (have_posts()): ?>
+	<?php while (have_posts()): ?>
+		<?php the_post(); ?>
 
-<!-- p-entry -->
-<article class="p-entry">
+		<!-- p-entry -->
+		<article class="p-entry">
 
-	<!-- p-entry__inner -->
-	<div class="p-entry__inner">
+			<!-- p-entry__inner -->
+			<div class="p-entry__inner">
 
-		<!-- p-entry__header -->
-		<div class="p-entry__header">
-			<!-- p-entry__image -->
-			<div class="p-entry__image">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/news/img_news1.png" alt="" width="1020" height="638">
-			</div><!-- /p-entry__image -->
-			<h1 class="p-entry__title">h1タイトル_ダミークリーミーな口溶けの食パンと最高のコーヒーをできる手作りカフェダミークリーミーな口溶けの食パンと最高のコーヒーをできる手作りカフェ</h1>
-			<!-- /p-entry__title -->
-			<!-- p-entry__meta -->
-			<div class="p-entry__meta">
-				<time class="p-entry__published" datetime="2021-01-01">2021.01.01</time>
-				<div class="p-entry__category u-hover-opacity"><a href="">カテゴリ名</a>
-				</div>
-			</div>
-		</div><!-- /p-entry__header -->
-
-		<!-- p-entry__body -->
-		<div class="p-entry__body">
-			<p>
-				ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。
-			</p>
-			<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="1024" height="640"
-					src="https://test.wanosuke.jp/wp-content/uploads/2025/03/img_signle-1024x640.jpg" alt=""
-					class="wp-image-198"
-					srcset="https://test.wanosuke.jp/wp-content/uploads/2025/03/img_signle-1024x640.jpg 1024w, https://test.wanosuke.jp/wp-content/uploads/2025/03/img_signle-300x188.jpg 300w, https://test.wanosuke.jp/wp-content/uploads/2025/03/img_signle-768x480.jpg 768w, https://test.wanosuke.jp/wp-content/uploads/2025/03/img_signle.jpg 1376w"
-					sizes="(max-width: 1024px) 100vw, 1024px"></figure>
-			<p>
-				ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。
-			</p>
-			<h2 class="wp-block-heading"><span id="h2">h2タイトル_テキストテキストテキストテキスト</span></h2>
-			<p>
-				ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。
-			</p>
-			<h3 class="wp-block-heading"><span id="h3">h3タイトル_テキストテキストテキストテキスト</span></h3>
-			<p>
-				ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。
-			</p>
-			<h4 class="wp-block-heading"><span id="h4">h4タイトル_テキストテキストテキストテキスト</span></h4>
-			<p>
-				ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。
-			</p>
-			<ul class="wp-block-list">
-				<li>リスト</li>
-				<li>リスト</li>
-				<li>リスト</li>
-			</ul>
-			<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
-				<figure class="wp-block-pullquote">
-					<blockquote>
-						<p>
-							引用ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。
-						</p><cite>出典元：http://example.com</cite>
-					</blockquote>
-				</figure>
-			</blockquote>
-		</div><!-- p-entry__body -->
-
-		<!-- 記事ナビゲーション -->
-		<div class="p-entry-nav">
-			<p class="p-entry-nav__left">
-				<a class="u-hover-opacity" href="#" rel="prev">前の記事</a>
-			</p>
-			<p class="p-entry-nav__top">
-				<a class="u-hover-opacity" href="#">記事一覧</a>
-			</p>
-			<p class="p-entry-nav__right">
-				<a class="u-hover-opacity" href="#" rel="next">次の記事</a>
-			</p>
-		</div><!-- /p-entry-nav -->
-
-
-		<!-- p-entry-related -->
-		<div class="p-entry-related">
-
-			<h2 class="p-entry-related__title">関連記事</h2>
-
-			<div class="p-entry-related__list">
-
-				<article class="c-news-article c-news-article--related">
-					<span class="c-news-article__label">カテゴリ</span>
-					<a href="#" class="c-news-article__link">
-						<div class="c-news-article__image">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/news/img_news1.png" alt="" width="1020" height="638">
+				<!-- p-entry__header -->
+				<div class="p-entry__header">
+					<!-- p-entry__image -->
+					<div class="p-entry__image">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/news/img_news1.png" alt="" width="1020" height="638">
+					</div><!-- /p-entry__image -->
+					<h1 class="p-entry__title"><?php the_title(); ?></h1>
+					<!-- /p-entry__title -->
+					<!-- p-entry__meta -->
+					<div class="p-entry__meta">
+						<time class="p-entry__published" datetime="2021-01-01">2021.01.01</time>
+						<div class="p-entry__category u-hover-opacity"><a href="">カテゴリ名</a>
 						</div>
-						<div class="c-news-article__content">
-							<h3 class="c-news-article__content-lead">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが…</h3>
-							<time class="c-news-article__content-date" datetime="2021-01-01">2021.01.01</time>
-						</div>
-					</a>
-				</article>
+					</div>
+				</div><!-- /p-entry__header -->
 
-				<article class="c-news-article c-news-article--related">
-					<span class="c-news-article__label">カテゴリ</span>
-					<a href="#" class="c-news-article__link">
-						<div class="c-news-article__image">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/news/img_news1.png" alt="" width="1020" height="638">
-						</div>
-						<div class="c-news-article__content">
-							<h3 class="c-news-article__content-lead">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが…</h3>
-							<time class="c-news-article__content-date" datetime="2021-01-01">2021.01.01</time>
-						</div>
-					</a>
-				</article>
+				<!-- p-entry__body -->
+				<div class="p-entry__body">
 
-				<article class="c-news-article c-news-article--related">
-					<span class="c-news-article__label">カテゴリ</span>
-					<a href="#" class="c-news-article__link">
-						<div class="c-news-article__image">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/news/img_news1.png" alt="" width="1020" height="638">
-						</div>
-						<div class="c-news-article__content">
-							<h3 class="c-news-article__content-lead">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが…</h3>
-							<time class="c-news-article__content-date" datetime="2021-01-01">2021.01.01</time>
-						</div>
-					</a>
-				</article>
+					<?php the_content(); ?>
 
-				<article class="c-news-article c-news-article--related">
-					<span class="c-news-article__label">カテゴリ</span>
-					<a href="#" class="c-news-article__link">
-						<div class="c-news-article__image">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/news/img_news1.png" alt="" width="1020" height="638">
-						</div>
-						<div class="c-news-article__content">
-							<h3 class="c-news-article__content-lead">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが…</h3>
-							<time class="c-news-article__content-date" datetime="2021-01-01">2021.01.01</time>
-						</div>
-					</a>
-				</article>
+				</div><!-- p-entry__body -->
 
-				<article class="c-news-article c-news-article--related">
-					<span class="c-news-article__label">カテゴリ</span>
-					<a href="#" class="c-news-article__link">
-						<div class="c-news-article__image">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/news/img_news1.png" alt="" width="1020" height="638">
-						</div>
-						<div class="c-news-article__content">
-							<h3 class="c-news-article__content-lead">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが…</h3>
-							<time class="c-news-article__content-date" datetime="2021-01-01">2021.01.01</time>
-						</div>
-					</a>
-				</article>
+				<!-- 記事ナビゲーション -->
+				<div class="p-entry-nav">
+					<p class="p-entry-nav__left u-hover-opacity">
+						<?php previous_post_link('%link', '前の記事', TRUE, ''); ?>
+					</p>
+					<p class="p-entry-nav__top u-hover-opacity">
+						<a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>">記事一覧</a>
+					</p>
+					<p class="p-entry-nav__right u-hover-opacity">
+						<?php next_post_link('%link', '次の記事', TRUE, ''); ?>
+					</p>
+				</div><!-- /p-entry-nav -->
 
-				<article class="c-news-article c-news-article--related">
-					<span class="c-news-article__label">カテゴリ</span>
-					<a href="#" class="c-news-article__link">
-						<div class="c-news-article__image">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/news/img_news1.png" alt="" width="1020" height="638">
-						</div>
-						<div class="c-news-article__content">
-							<h3 class="c-news-article__content-lead">ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが…</h3>
-							<time class="c-news-article__content-date" datetime="2021-01-01">2021.01.01</time>
-						</div>
-					</a>
-				</article>
 
-			</div><!-- /related-list -->
-		</div><!-- /p-entry-related -->
+				<!-- 関連記事を表示する -->
+				<?php
+				$category = get_the_category(); //この記事が持つカテゴリーを取得
+				$cat_ids = array(); //カテゴリーIDを格納する配列を初期化
+				foreach ($category as $cat) { //カテゴリーの数だけループさせる
+					$cat_ids = $cat->term_id; //カテゴリーIDを配列に格納
+				}
+				?>
+				<?php
+				$args = array( //関連記事を8件取得する設定
+					'post_type' => 'post', // 投稿タイプが投稿の場合
+					'posts_per_page' => 6, // 6件取得
+					'post__not_in' => array(get_the_ID()), // この記事を除外
+					'category__in' => $cat_ids, // この記事が持つカテゴリーIDを含む記事を取得
+					'orderby' => 'rand', // ランダムに記事を取得
+				);
+				$related_posts = get_posts($args); //関連記事を取得（サブクエリ
+				?>
+				<?php if ($related_posts): //関連記事がある場合 
+				?>
+					<!-- p-entry-related -->
+					<div class="p-entry-related">
+						<h2 class="p-entry-related__title">関連記事</h2>
+						<div class="p-entry-related__list">
 
-	</div><!-- p-entry__inner -->
-</article><!-- /p-entry -->
+							<?php foreach ($related_posts as $post): setup_postdata($post) //関連記事データをポストデータとして使う設定 
+							?>
 
+								<article class="c-news-article c-news-article--related">
+									<span class="c-news-article__label"><?php my_the_post_category(); ?></span>
+									<a href="<?php the_permalink(); ?>" class="c-news-article__link">
+										<div class="c-news-article__image">
+
+											<?php if (has_post_thumbnail()): ?>
+												<?php the_post_thumbnail(); ?>
+											<?php else: ?>
+												<img src="<?php echo get_template_directory_uri(); ?>/img/noimg.png" alt="">
+											<?php endif; ?>
+
+										</div>
+										<div class="c-news-article__content">
+											<h3 class="c-news-article__content-lead"><?php echo wp_trim_words(get_the_title(), 27, '…'); ?></h3>
+											<time class="c-news-article__content-date" datetime="2021-01-01">2021.01.01</time>
+										</div>
+									</a>
+								</article>
+
+							<?php endforeach; ?>
+							<?php wp_reset_postdata(); //関連記事データをポストデータとして使う設定をリセット 
+							?>
+
+						</div><!-- /related-list -->
+					</div><!-- /p-entry-related -->
+
+				<?php endif; ?><!-- /関連記事を表示する -->
+
+			</div><!-- p-entry__inner -->
+		</article><!-- /p-entry -->
+
+	<?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>
