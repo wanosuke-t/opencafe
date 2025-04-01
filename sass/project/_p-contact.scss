@@ -1,4 +1,5 @@
 @use "../global" as global;
+@use "../component" as component;
 
 .p-contact {
   padding-top: 44px;
@@ -138,6 +139,8 @@
 }
 
 .wpcf7-list-item {
+  margin: 0;
+
   input[type="radio"] {
     width: 1px;
     height: 1px;
@@ -261,6 +264,7 @@
 .p-contact__submit {
   margin-top: 43px;
   margin-left: 4px;
+
   align-self: center;
   position: relative;
   display: inline-block;
@@ -292,6 +296,7 @@
   }
 
   &::after {
+    z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
@@ -309,10 +314,13 @@
       transform: translate(0, 0);
     }
   }
+
+  p {
+    display: block;
+  }
 }
 
 .wpcf7-submit {
-  flex-shrink: 0;
   color: global.$text-color-white;
   font-size: 16px;
   font-weight: 700;
@@ -321,10 +329,10 @@
   background: global.$text-color;
   padding-block: 22px 24px;
   width: 100%;
+}
 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.wpcf7-spinner {
+  display: none;
 }
 
 .wpcf7-not-valid-tip {

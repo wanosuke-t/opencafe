@@ -110,7 +110,13 @@
 
 
 <?php wp_footer() ?>
-
+<script>
+  document.addEventListener('wpcf7mailsent', function(event) {
+    setTimeout(() => {
+      location = 'http://example.com/';
+    }, 500);
+  }, false);
+</script>
 </body>
 
 </html>

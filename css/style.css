@@ -4052,6 +4052,9 @@ a {
   width: 100%;
 }
 
+.wpcf7-list-item {
+  margin: 0;
+}
 .wpcf7-list-item input[type=radio] {
   width: 1px;
   height: 1px;
@@ -4225,6 +4228,7 @@ a {
   background: url("../img/button-arrow.png") no-repeat center center/contain;
 }
 .p-contact__submit::after {
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -4246,10 +4250,11 @@ a {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
+.p-contact__submit p {
+  display: block;
+}
 
 .wpcf7-submit {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
@@ -4257,15 +4262,10 @@ a {
   background: #222222;
   padding-block: 22px 24px;
   width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.wpcf7-spinner {
+  display: none;
 }
 
 .wpcf7-not-valid-tip {
