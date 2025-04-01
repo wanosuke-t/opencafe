@@ -113,7 +113,7 @@
 <script>
   document.addEventListener('wpcf7mailsent', function(event) {
     setTimeout(() => {
-      location = 'http://example.com/';
+      location = '<?php echo get_permalink(get_page_by_path('contact/thanks')); ?>';
     }, 500);
   }, false);
 </script>

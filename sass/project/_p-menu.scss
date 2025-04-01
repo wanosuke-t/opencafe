@@ -113,6 +113,11 @@
   @include global.mq(pc) {
     border: 8px solid global.$text-color-white;
   }
+
+  img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
 }
 
 .p-menu__genre-item-name {

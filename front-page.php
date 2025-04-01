@@ -15,31 +15,31 @@
     <nav class="p-fv__menu-nav">
       <ul class="p-fv__menu-list">
         <li class="p-fv__menu-item">
-          <a class="p-fv__menu-link u-hover-opacity" href="#"><span class="p-fv__menu-text-en">TOP</span><span
+          <a class="p-fv__menu-link u-hover-opacity" href="<?php echo home_url(); ?>"><span class="p-fv__menu-text-en">TOP</span><span
               class="p-fv__menu-text-ja">トップ</span></a>
         </li>
         <li class="p-fv__menu-item">
-          <a class="p-fv__menu-link u-hover-opacity" href="#concept"><span
+          <a class="p-fv__menu-link u-hover-opacity" href="<?php echo get_permalink(get_page_by_path('concept')); ?>"><span
               class="p-fv__menu-text-en">CONCEPT</span><span class="p-fv__menu-text-ja">コンセプト</span></a>
         </li>
         <li class="p-fv__menu-item">
-          <a class="p-fv__menu-link u-hover-opacity" href="#"><span class="p-fv__menu-text-en">MENU</span><span
+          <a class="p-fv__menu-link u-hover-opacity" href="<?php echo get_post_type_archive_link('menu'); ?>"><span class="p-fv__menu-text-en">MENU</span><span
               class="p-fv__menu-text-ja">メニュー</span></a>
         </li>
         <li class="p-fv__menu-item">
-          <a class="p-fv__menu-link u-hover-opacity" href="#"><span class="p-fv__menu-text-en">NEWS</span><span
+          <a class="p-fv__menu-link u-hover-opacity" href="<?php echo get_permalink(get_page_by_path('news')); ?>"><span class="p-fv__menu-text-en">NEWS</span><span
               class="p-fv__menu-text-ja">お知らせ</span></a>
         </li>
         <li class="p-fv__menu-item">
-          <a class="p-fv__menu-link u-hover-opacity" href="#"><span class="p-fv__menu-text-en">SHOP</span><span
+          <a class="p-fv__menu-link u-hover-opacity" href="<?php echo get_post_type_archive_link('shop'); ?>"><span class="p-fv__menu-text-en">SHOP</span><span
               class="p-fv__menu-text-ja">店舗情報</span></a>
         </li>
         <li class="p-fv__menu-item">
-          <a class="p-fv__menu-link u-hover-opacity" href="#"><span class="p-fv__menu-text-en">GIFT</span><span
+          <a class="p-fv__menu-link u-hover-opacity" href="<?php echo get_post_type_archive_link('products'); ?>"><span class="p-fv__menu-text-en">GIFT</span><span
               class="p-fv__menu-text-ja">ギフト・贈り物</span></a>
         </li>
         <li class="p-fv__menu-item">
-          <a class="p-fv__menu-link u-hover-opacity" href="#"><span class="p-fv__menu-text-en">CONTACT</span><span
+          <a class="p-fv__menu-link u-hover-opacity" href="<?php echo get_permalink(get_page_by_path('contact')); ?>"><span class="p-fv__menu-text-en">CONTACT</span><span
               class="p-fv__menu-text-ja">お問い合わせ</span></a>
         </li>
       </ul>
@@ -121,7 +121,7 @@
             <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/img_balloon-pickup.png" />
             <img src="<?php echo get_template_directory_uri(); ?>/img/img_balloon-pickup-sp.png" alt="ピックアップニュース" width="336" height="218" />
           </picture>
-          <a href="#" class="p-fv__pickup-box u-hover-opacity">
+          <a href="<?php the_permalink(); ?>" class="p-fv__pickup-box u-hover-opacity">
             <div class="p-fv__pickup-image">
               <div class="p-fv__pickup-image-box">
 
@@ -164,7 +164,7 @@
       <p class="p-concept__description">
         ダミー_国内外から賞賛を<br>受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。<br>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。<br><br>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。
       </p>
-      <div class="p-concept__button"><a class="c-button" href="">詳しくはこちら</a></div>
+      <div class="p-concept__button"><a class="c-button" href="<?php echo get_permalink(get_page_by_path('concept')); ?>">詳しくはこちら</a></div>
     </div><!-- /p-concept__content -->
 
     <!-- p-concept__image -->
@@ -410,6 +410,13 @@
                               'terms'    => $child_term->slug,
                             ),
                           ),
+                          'meta_query'     => array(
+                            array(
+                              'key'     => 'is-special-menu', // スペシャルメニューフラグのACFフィールド名
+                              'value'   => '1',
+                              'compare' => '!=',            // フラグが true（1）じゃないものを取得 = グランドメニューだけ
+                            )
+                          )
                         );
 
                         $child_query = new WP_Query($args); ?>
@@ -451,7 +458,7 @@
       <?php endforeach; ?>
     <?php endif; ?>
 
-    <div class="p-menu__button"><a class="c-button" href="">その他のメニュー</a></div>
+    <div class="p-menu__button"><a class="c-button" href="<?php echo get_post_type_archive_link('menu'); ?>">その他のメニュー</a></div>
 
     <div class="p-menu__leaves-image">
       <img src="<?php echo get_template_directory_uri(); ?>/img/menu/bg_coffee-leaves2.png" alt="" width="791" height="793">
@@ -563,7 +570,7 @@
     </ul><!-- /p-news__list -->
 
 
-    <div class="p-news__button"><a class="c-button" href="">過去のお知らせ</a></div>
+    <div class="p-news__button"><a class="c-button" href="<?php echo get_permalink(get_page_by_path('news')); ?>">過去のお知らせ</a></div>
 
     <div class="p-news__plate-image"><img src="<?php echo get_template_directory_uri(); ?>/img/news/bg_plate.png" alt="" width="708" height="640"></div>
 

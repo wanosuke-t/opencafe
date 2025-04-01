@@ -29,6 +29,10 @@
 }
 
 .p-menu-entries__item-image {
+  img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
 }
 
 .p-menu-entries__item-body {

@@ -30,7 +30,7 @@
                 </div>
                 <div class="c-news-article__content">
                   <h3 class="c-news-article__content-lead"><?php echo wp_trim_words(get_the_title(), 29, '…'); ?></h3>
-                  <time class="c-news-article__content-date" datetime="2021-01-01">2021.01.01</time>
+                  <time class="c-news-article__content-date" datetime="<?php the_time("c"); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>
               </a>
             </article>

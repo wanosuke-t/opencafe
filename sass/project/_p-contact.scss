@@ -3,11 +3,11 @@
 
 .p-contact {
   padding-top: 44px;
-  padding-bottom: 59px;
+  padding-bottom: 60px;
 
   @include global.mq(pc) {
     padding-top: 63px;
-    padding-bottom: 0;
+    padding-bottom: 1px;
   }
 }
 

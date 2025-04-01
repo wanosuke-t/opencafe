@@ -1,4 +1,5 @@
 @use "../global" as global;
+@use "../utility" as utility;
 
 .p-entry {
   padding-top: 43px;
@@ -93,26 +94,20 @@
   }
 
   p {
-    margin-top: 14px;
+    margin-block: 14px;
     font-size: 14px;
     font-weight: 500;
     line-height: 2; /* 200% */
     line-break: strict; /* 禁則処理を厳格に適用 */
 
     @include global.mq(pc) {
-      margin-top: 15px;
+      margin-block: 15px;
       font-size: 16px;
     }
   }
 
-  img {
-    margin-top: 35px;
-    margin-bottom: 23px;
-
-    @include global.mq(pc) {
-      margin-top: 36px;
-      margin-bottom: 20px;
-    }
+  a {
+    @extend .u-hover-opacity;
   }
 
   h2 {
@@ -189,55 +184,71 @@
       font-weight: 700;
     }
   }
+}
 
-  ul {
-    margin-top: 27px;
-    margin-bottom: 33px;
-    margin-left: 34px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.wp-block-image {
+  margin-top: 35px;
+  margin-bottom: 36.5px;
+
+  @include global.mq(pc) {
+    margin-top: 36px;
+    margin-bottom: 35px;
+  }
+}
+
+.wp-block-list {
+  margin-top: 27px;
+  margin-bottom: 33px;
+  margin-left: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include global.mq(pc) {
+    margin-top: 28px;
+    margin-bottom: 32px;
+    margin-left: 36px;
+  }
+
+  li {
+    position: relative;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 
     @include global.mq(pc) {
-      margin-top: 28px;
-      margin-bottom: 32px;
-      margin-left: 36px;
-    }
-
-    li {
-      position: relative;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
+      font-size: 16px;
       line-height: normal;
+    }
+  }
+}
+
+ul.wp-block-list {
+  li {
+    &::before {
+      position: absolute;
+      content: "・";
+      display: block;
+      top: 50%;
+      left: -14px;
+      transform: translateY(-50%);
 
       @include global.mq(pc) {
-        font-size: 16px;
-        line-height: normal;
-      }
-
-      &::before {
-        position: absolute;
-        content: "・";
-        display: block;
-        top: 50%;
-        left: -14px;
-        transform: translateY(-50%);
-
-        @include global.mq(pc) {
-          left: -16px;
-        }
+        left: -16px;
       }
     }
   }
 }
 
-.wp-block-pullquote {
-  padding-top: 0;
-  padding-bottom: 0;
+ol.wp-block-list {
+  list-style: decimal;
 }
 
 .wp-block-pullquote {
+  padding-top: 0;
+  padding-bottom: 0;
+
   blockquote {
     background: #f8f8f8;
     padding: 20px 24px 24px;

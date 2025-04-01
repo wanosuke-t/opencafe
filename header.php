@@ -45,31 +45,31 @@
           <nav class="p-drawer__content-nav">
             <ul class="p-drawer__content-list">
               <li class="p-drawer__content-item">
-                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">TOP</span><span
+                <a class="u-hover-opacity" href="<?php echo home_url(); ?>"><span class="p-drawer__content-text-en">TOP</span><span
                     class="p-drawer__content-text-ja">トップ</span></a>
               </li>
               <li class="p-drawer__content-item">
-                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">CONCEPT</span><span
+                <a class="u-hover-opacity" href="<?php echo get_permalink(get_page_by_path('concept')); ?>"><span class="p-drawer__content-text-en">CONCEPT</span><span
                     class="p-drawer__content-text-ja">コンセプト</span></a>
               </li>
               <li class="p-drawer__content-item">
-                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">MENU</span><span
+                <a class="u-hover-opacity" href="<?php echo get_post_type_archive_link('menu'); ?>"><span class="p-drawer__content-text-en">MENU</span><span
                     class="p-drawer__content-text-ja">メニュー</span></a>
               </li>
               <li class="p-drawer__content-item">
-                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">NEWS</span><span
+                <a class="u-hover-opacity" href="<?php echo get_permalink(get_page_by_path('news')); ?>"><span class="p-drawer__content-text-en">NEWS</span><span
                     class="p-drawer__content-text-ja">お知らせ</span></a>
               </li>
               <li class="p-drawer__content-item">
-                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">SHOP</span><span
+                <a class="u-hover-opacity" href="<?php echo get_post_type_archive_link('shop'); ?>"><span class="p-drawer__content-text-en">SHOP</span><span
                     class="p-drawer__content-text-ja">店舗情報</span></a>
               </li>
               <li class="p-drawer__content-item">
-                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">GIFT</span><span
+                <a class="u-hover-opacity" href="<?php echo get_post_type_archive_link('products'); ?>"><span class="p-drawer__content-text-en">GIFT</span><span
                     class="p-drawer__content-text-ja">ギフト・贈り物</span></a>
               </li>
               <li class="p-drawer__content-item">
-                <a class="u-hover-opacity" href="#"><span class="p-drawer__content-text-en">CONTACT</span><span
+                <a class="u-hover-opacity" href="<?php echo get_permalink(get_page_by_path('contact')); ?>"><span class="p-drawer__content-text-en">CONTACT</span><span
                     class="p-drawer__content-text-ja">お問い合わせ</span></a>
               </li>
             </ul>
