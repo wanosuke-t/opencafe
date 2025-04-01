@@ -142,16 +142,7 @@
 
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?>
-    <?php endif;    ?>
-
-
-
-
-
-
-
-
-
+    <?php endif; ?>
 
   </div><!-- /p-fv__content -->
 
@@ -484,14 +475,9 @@
         <h2 class="p-gallery__head-ja c-head-ja">ギャラリー</h2>
       </div>
 
-      <div class="p-gallery__images">
-        <div class="p-gallery__image"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/img_gallery1.png" alt="" width="514" height="514"></div>
-        <div class="p-gallery__image"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/img_gallery2.png" alt="" width="514" height="514"></div>
-        <div class="p-gallery__image"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/img_gallery3.png" alt="" width="514" height="514"></div>
-        <div class="p-gallery__image"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/img_gallery4.png" alt="" width="514" height="514"></div>
-      </div>
+      <!-- Instagram Feed short code -->
+      <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
 
-      <div class="p-gallery__button"><a class="c-button" href="">インスタグラムを見る</a></div>
 
       <div class="p-gallery__beans-image">
         <img src="<?php echo get_template_directory_uri(); ?>/img/gallery/bg_coffee-beans2.png" alt="" width="780" height="660">

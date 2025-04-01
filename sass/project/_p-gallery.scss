@@ -1,4 +1,5 @@
 @use "../global" as global;
+@use "../component" as component;
 
 .p-gallery {
   position: relative;
@@ -89,5 +90,50 @@
     width: 390px;
     top: -459px;
     right: -175px;
+  }
+}
+
+#sb_instagram {
+  #sbi_images {
+    margin-top: 40px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 19px;
+
+    @include global.mq(pc) {
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 24px;
+    }
+  }
+
+  .sbi_photo {
+    height: 100% !important;
+  }
+
+  .sbi_follow_btn {
+    display: block;
+    margin-top: 41px;
+    margin-left: 10px !important;
+    text-align: center;
+
+    @include global.mq(pc) {
+      margin-top: 63px;
+      margin-left: 5px !important;
+    }
+
+    a {
+      @extend .c-button;
+    }
+  }
+
+  .sbi_custom {
+  }
+  .svg-inline--fa {
+    display: none !important;
+  }
+  .fa-instagram {
+  }
+  .fa-w-14 {
   }
 }

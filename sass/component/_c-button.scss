@@ -8,10 +8,13 @@
   font-weight: 700;
   line-height: normal;
 
-  background: global.$text-color;
+  background: global.$text-color !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   padding-block: 24px 25px;
+  padding-inline: 0;
   width: 100%;
-  max-width: 290px;
+  max-width: 290px !important;
 
   display: inline-flex;
   justify-content: center;
@@ -21,7 +24,11 @@
   transition: transform 0.3s;
 
   @include global.mq(pc) {
-    max-width: 280px;
+    max-width: 280px !important;
+  }
+
+  span {
+    font-weight: 700;
   }
 
   &::before,

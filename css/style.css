@@ -188,16 +188,20 @@ a {
   }
 }
 
-.c-button {
+.c-button, #sb_instagram .sbi_follow_btn a {
   position: relative;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
-  background: #222222;
+  background: #222222 !important;
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   padding-block: 24px 25px;
+  padding-inline: 0;
   width: 100%;
-  max-width: 290px;
+  max-width: 290px !important;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -215,15 +219,18 @@ a {
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 @media screen and (min-width: 768px) {
-  .c-button {
-    max-width: 280px;
+  .c-button, #sb_instagram .sbi_follow_btn a {
+    max-width: 280px !important;
   }
 }
-.c-button::before, .c-button::after {
+.c-button span, #sb_instagram .sbi_follow_btn a span {
+  font-weight: 700;
+}
+.c-button::before, #sb_instagram .sbi_follow_btn a::before, .c-button::after, #sb_instagram .sbi_follow_btn a::after {
   content: "";
   position: absolute;
 }
-.c-button::before {
+.c-button::before, #sb_instagram .sbi_follow_btn a::before {
   top: 50%;
   right: 12px;
   -webkit-transform: translateY(-50%);
@@ -232,7 +239,7 @@ a {
   height: 24px;
   background: url("../img/button-arrow.png") no-repeat center center/contain;
 }
-.c-button::after {
+.c-button::after, #sb_instagram .sbi_follow_btn a::after {
   top: 0;
   left: 0;
   width: 100%;
@@ -246,11 +253,11 @@ a {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.c-button:hover {
+.c-button:hover, #sb_instagram .sbi_follow_btn a:hover {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
-.c-button:hover::after {
+.c-button:hover::after, #sb_instagram .sbi_follow_btn a:hover::after {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
@@ -2356,6 +2363,37 @@ a {
   }
 }
 
+#sb_instagram #sbi_images {
+  margin-top: 40px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 19px;
+}
+@media screen and (min-width: 768px) {
+  #sb_instagram #sbi_images {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px;
+  }
+}
+#sb_instagram .sbi_photo {
+  height: 100% !important;
+}
+#sb_instagram .sbi_follow_btn {
+  display: block;
+  margin-top: 41px;
+  margin-left: 10px !important;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  #sb_instagram .sbi_follow_btn {
+    margin-top: 63px;
+    margin-left: 5px !important;
+  }
+}
+#sb_instagram .svg-inline--fa {
+  display: none !important;
+}
 .p-news {
   position: relative;
   padding-top: 116px;
