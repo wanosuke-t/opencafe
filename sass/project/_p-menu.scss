@@ -3,7 +3,7 @@
 .p-menu {
   position: relative;
   padding-top: 119px;
-  padding-bottom: 66px;
+  padding-bottom: 67px;
 
   @include global.mq(pc) {
     padding-top: 159px;
@@ -65,7 +65,7 @@
   @include global.mq(pc) {
     font-size: 24px;
     padding-block: 7px;
-    padding-left: 22px;
+    padding-left: 21px;
   }
 
   &::before,

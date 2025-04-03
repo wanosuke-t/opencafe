@@ -23,21 +23,10 @@
           bottom: 0;
         }
       }
-
-      // &::after {
-      //   // left: 1px;
-      //   // width: 78px;
-      //   // height: 24px;
-
-      //   @include global.mq(pc) {
-      //     // width: 93px;
-      //     // height: 30px;
-      //   }
-      // }
     }
 
     .c-news-article__content-lead {
-      margin-top: 10px;
+      margin-top: 9px;
       font-size: 14px;
       line-height: 1.71429; /* 171.429% */
 
@@ -49,7 +38,7 @@
     }
 
     .c-news-article__content-date {
-      margin-top: 10px;
+      margin-top: 11px;
     }
 
     .c-news-article__content-date {
@@ -227,7 +216,6 @@
     aspect-ratio: 340 / 213;
     object-fit: cover;
   }
-
 }
 
 .c-news-article__content {

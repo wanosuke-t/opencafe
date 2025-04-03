@@ -28,7 +28,7 @@
   flex-shrink: 0;
   width: calc(200px / 1280px * 100%);
   padding-top: 27px;
-  padding-left: 4px;
+  padding-left: 3px;
 
   @include global.mq(pc) {
     display: flex;
@@ -232,17 +232,10 @@
     z-index: -1;
     top: 0;
     left: 0;
-    // width: 70px;
-    // height: 22px;
     width: 100%;
     height: 100%;
     background: global.$text-color;
     clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 50%, 100% 100%, 0 100%);
-
-    // @include global.mq(pc) {
-    //   width: 78px;
-    //   height: 24px;
-    // }
   }
 }
 

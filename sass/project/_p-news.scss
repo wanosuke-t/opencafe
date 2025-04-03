@@ -38,10 +38,9 @@
   row-gap: 18px;
 
   @include global.mq(pc) {
-    margin-top: 40px;
     grid-template-columns: calc((510px - 6px) / 1100px * 100%) 1fr 1fr; /* 3列 */
     grid-template-rows: repeat(2, auto); /* 2行 */
-    column-gap: 43px;
+    column-gap: 44px;
     row-gap: 32px;
   }
 
