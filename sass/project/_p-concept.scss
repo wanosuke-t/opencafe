@@ -107,6 +107,7 @@
   text-align: center;
 
   @include global.mq(pc) {
+    margin-top: 61px;
     margin-left: 6px;
     text-align-last: left;
   }

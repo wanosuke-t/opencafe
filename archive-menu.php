@@ -50,7 +50,7 @@
         <?php $menu_query->the_post(); ?>
 
 
-        <div href="" class="p-menu-entries__item">
+        <div class="p-menu-entries__item">
           <div class="p-menu-entries__item-image">
 
             <?php if (has_post_thumbnail()): ?>

@@ -38,10 +38,11 @@
   row-gap: 18px;
 
   @include global.mq(pc) {
+    margin-top: 40px;
     grid-template-columns: calc((510px - 6px) / 1100px * 100%) 1fr 1fr; /* 3列 */
     grid-template-rows: repeat(2, auto); /* 2行 */
-    column-gap: 44px;
-    row-gap: 32px;
+    column-gap: 43px;
+    row-gap: 31px;
   }
 
   & > :first-child {
@@ -62,7 +63,7 @@
 
   @include global.mq(pc) {
     margin-top: 65px;
-    margin-left: -3px;
+    margin-left: -5px;
   }
 }
 
@@ -74,7 +75,7 @@
 
   @include global.mq(pc) {
     top: -264px;
-    left: -126px;
+    left: -127px;
     width: 354px;
   }
 }

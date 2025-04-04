@@ -97,7 +97,7 @@
 
   @include global.mq(pc) {
     margin-top: 24px;
-    margin-bottom: 101.3px;
+    margin-bottom: 100px;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 40px;
     column-gap: 34px;
@@ -137,6 +137,7 @@
   line-height: normal;
 
   @include global.mq(pc) {
+    margin-top: 1px;
     font-size: 32px;
   }
 }
@@ -169,6 +170,7 @@
 
 .p-menu__drinks {
   @include global.mq(pc) {
+    margin-top: -1px;
     margin-right: 8px;
     flex-shrink: 0;
     width: 686px;
@@ -231,7 +233,6 @@
 
   @include global.mq(pc) {
     margin-top: 59px;
-    margin-left: 8px;
   }
 }
 
@@ -244,7 +245,7 @@
 
   @include global.mq(pc) {
     top: -292px;
-    left: -134px;
+    left: -136px;
     width: 392px;
     transform: none;
   }

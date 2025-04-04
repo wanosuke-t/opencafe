@@ -28,8 +28,7 @@
         <div id="js-drawer" class="p-drawer is-show">
         <?php endif; ?>
 
-        <!-- <div id="js-drawer" class="p-drawer p-drawer--front-page is-show"> -->
-        <div id="js-drawer-icon" class="p-drawer__icon">
+        <div id="js-drawer-icon" class="p-drawer__icon u-hover-opacity">
           <span class="p-drawer__icon-bar"></span>
           <span class="p-drawer__icon-bar"></span>
           <span class="p-drawer__icon-bar"></span>

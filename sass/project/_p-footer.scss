@@ -68,8 +68,8 @@
   width: 128px;
 
   @include global.mq(pc) {
-    bottom: 4px;
-    left: calc(50% - 724px);
+    bottom: 4.5px;
+    left: calc(50% - 725px);
     width: 341px;
   }
 

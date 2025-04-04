@@ -530,7 +530,6 @@ a {
 @media screen and (min-width: 768px) {
   .c-news-article--archive .c-news-article__content-date {
     margin-top: 11px;
-    margin-left: 0;
     font-size: 14px;
   }
 }
@@ -632,6 +631,7 @@ a {
   -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 50%, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, calc(100% - 6px) 50%, 100% 100%, 0 100%);
 }
+
 .c-news-article__link .c-news-article__image img {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
@@ -692,7 +692,6 @@ a {
 @media screen and (min-width: 768px) {
   .c-news-article__content-date {
     margin-top: 10px;
-    margin-left: 1px;
   }
 }
 
@@ -1577,6 +1576,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-concept__button {
+    margin-top: 61px;
     margin-left: 6px;
     -moz-text-align-last: left;
          text-align-last: left;
@@ -1962,7 +1962,7 @@ a {
 @media screen and (min-width: 768px) {
   .p-special__set-price {
     margin-top: 2px;
-    margin-right: 7px;
+    margin-right: 8px;
     font-size: 60px;
   }
 }
@@ -2104,7 +2104,7 @@ a {
 @media screen and (min-width: 768px) {
   .p-menu__genre-list {
     margin-top: 24px;
-    margin-bottom: 101.3px;
+    margin-bottom: 100px;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 40px;
     -webkit-column-gap: 34px;
@@ -2146,6 +2146,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-menu__genre-item-price {
+    margin-top: 1px;
     font-size: 32px;
   }
 }
@@ -2185,6 +2186,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .p-menu__drinks {
+    margin-top: -1px;
     margin-right: 8px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
@@ -2259,7 +2261,6 @@ a {
 @media screen and (min-width: 768px) {
   .p-menu__button {
     margin-top: 59px;
-    margin-left: 8px;
   }
 }
 
@@ -2274,7 +2275,7 @@ a {
 @media screen and (min-width: 768px) {
   .p-menu__leaves-image {
     top: -292px;
-    left: -134px;
+    left: -136px;
     width: 392px;
     -webkit-transform: none;
             transform: none;
@@ -2349,7 +2350,7 @@ a {
 @media screen and (min-width: 768px) {
   .p-gallery__balloon-image {
     width: 266px;
-    top: 140px;
+    top: 139px;
     left: calc(50% - 342px);
   }
 }
@@ -2398,7 +2399,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   #sb_instagram .sbi_follow_btn {
-    margin-top: 62px;
+    margin-top: 61px;
     margin-left: 5px !important;
   }
 }
@@ -2445,12 +2446,13 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-news__list {
+    margin-top: 40px;
     grid-template-columns: 45.8181818182% 1fr 1fr; /* 3列 */
     grid-template-rows: repeat(2, auto); /* 2行 */
-    -webkit-column-gap: 44px;
-       -moz-column-gap: 44px;
-            column-gap: 44px;
-    row-gap: 32px;
+    -webkit-column-gap: 43px;
+       -moz-column-gap: 43px;
+            column-gap: 43px;
+    row-gap: 31px;
   }
 }
 .p-news__list > :first-child {
@@ -2472,7 +2474,7 @@ a {
 @media screen and (min-width: 768px) {
   .p-news__button {
     margin-top: 65px;
-    margin-left: -3px;
+    margin-left: -5px;
   }
 }
 
@@ -2485,7 +2487,7 @@ a {
 @media screen and (min-width: 768px) {
   .p-news__plate-image {
     top: -264px;
-    left: -126px;
+    left: -127px;
     width: 354px;
   }
 }
@@ -2541,14 +2543,14 @@ a {
 
 .p-access__balloon-image {
   position: absolute;
-  top: -123px;
+  top: -124px;
   left: -31px;
-  width: 200px;
+  width: 201px;
 }
 @media screen and (min-width: 768px) {
   .p-access__balloon-image {
     top: -132px;
-    left: 91px;
+    left: 90px;
     width: 232.912px;
   }
 }
@@ -2562,8 +2564,8 @@ a {
 @media screen and (min-width: 768px) {
   .p-access__bread-image {
     top: -263px;
-    right: -342px;
-    width: 392px;
+    right: -340px;
+    width: 390px;
   }
 }
 
@@ -2643,8 +2645,8 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-footer__coffee-image {
-    bottom: 4px;
-    left: calc(50% - 724px);
+    bottom: 4.5px;
+    left: calc(50% - 725px);
     width: 341px;
   }
 }
@@ -2823,12 +2825,12 @@ a {
 }
 
 .p-page-concept {
-  padding-top: 43px;
+  padding-top: 44px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .p-page-concept {
-    padding-top: 63px;
+    padding-top: 62px;
     padding-bottom: 80px;
   }
 }
