@@ -114,9 +114,10 @@
     position: relative;
     margin-top: 75px;
     margin-bottom: 18px;
-    padding-left: 17px;
+    padding-left: 16px;
     color: global.$main-color;
     font-size: 18px;
+    font-weight: 700;
     line-height: 1.55556; /* 155.556% */
 
     @include global.mq(pc) {
@@ -154,6 +155,7 @@
     border-bottom: 1px solid global.$main-color;
     color: global.$main-color;
     font-size: 16px;
+    font-weight: 700;
     line-height: 1.5; /* 150% */
 
     @include global.mq(pc) {
@@ -175,7 +177,7 @@
     line-height: 1.71429; /* 171.429% */
 
     @include global.mq(pc) {
-      margin-top: 54px;
+      margin-top: 55px;
       font-size: 16px;
       line-height: normal;
     }
@@ -197,8 +199,8 @@
 }
 
 .wp-block-list {
-  margin-top: 27px;
-  margin-bottom: 33px;
+  margin-top: 28px;
+  margin-bottom: 32px;
   margin-left: 34px;
   display: flex;
   flex-direction: column;
@@ -206,7 +208,7 @@
 
   @include global.mq(pc) {
     margin-top: 28px;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
     margin-left: 36px;
   }
 
@@ -254,7 +256,7 @@ ol.wp-block-list {
     padding: 20px 24px 24px;
 
     @include global.mq(pc) {
-      padding: 36px 40px 38px;
+      padding: 36px 40px 39px;
     }
 
     p {
@@ -273,7 +275,7 @@ ol.wp-block-list {
       font-style: normal;
 
       @include global.mq(pc) {
-        margin-top: 17px;
+        margin-top: 16px;
         margin-right: -1px;
       }
     }

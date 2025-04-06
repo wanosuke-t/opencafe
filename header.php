@@ -37,7 +37,7 @@
         <!-- p-drawer-content -->
         <div id="js-drawer-content" class="p-drawer__content">
           <div class="p-drawer__content-logo">
-            <a class="u-hover-opacity" href="#">
+            <a class="u-hover-opacity" href="<?php echo home_url(); ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light_drawer.png" alt="Open Cafe - dish & coffee -" width="256" height="128">
             </a>
           </div>

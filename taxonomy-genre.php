@@ -70,7 +70,7 @@
           </div>
           <div class="p-menu-entries__item-body">
             <h3 class="p-menu-entries__item-name"><?php the_title(); ?></h3>
-            <p class="p-menu-entries__item-price"><?php echo post_custom('price'); ?> yen</p>
+            <p class="p-menu-entries__item-price"><?php echo get_formatted_price(); ?></p>
           </div><!-- /entry-item-body -->
         </div><!-- /entry-item -->
 

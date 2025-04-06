@@ -38,7 +38,7 @@ add_action('wp_enqueue_scripts', 'my_script_init');
 function my_the_post_category($anchor = false)
 {
   $category = get_the_category();
-  if ($category[0]) {
+  if (!empty($category[0])) {
     if ($anchor) {
       echo '<a href="' . get_category_link($category[0]->term_id) . '">' . $category[0]->cat_name . '</a>';
     } else {
@@ -91,3 +91,11 @@ function my_archive_title($title)
   return $title;
 };
 add_filter('get_the_archive_title', 'my_archive_title');
+
+
+// カスタムフィールド「price」の値を三桁カンマ付きで表示する関数
+function get_formatted_price($field = 'price')
+{
+  $value = post_custom($field);
+  return is_numeric($value) ? number_format((int)$value) . ' yen' : '';
+}

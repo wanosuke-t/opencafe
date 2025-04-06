@@ -71,7 +71,7 @@
     }
 
     &:nth-of-type(n + 2) {
-      margin-top: 39.5px;
+      margin-top: 39px;
 
       @include global.mq(pc) {
         margin-top: 40px;
@@ -225,6 +225,11 @@
   &::placeholder {
     color: #ccc;
   }
+
+  &:focus {
+    outline: none;
+    border-color: global.$accent-color;
+  }
 }
 
 .wpcf7-textarea {
@@ -246,10 +251,15 @@
   &::placeholder {
     color: #ccc;
   }
+
+  &:focus {
+    outline: none;
+    border-color: global.$accent-color;
+  }
 }
 
 .p-contact__privacy {
-  margin-top: -22px;
+  margin-top: -20px;
   color: global.$main-color;
   font-size: 14px;
   font-weight: 500;

@@ -30,9 +30,8 @@
       <?php $args = array(
         'post_type'      => 'products',
         'posts_per_page' => -1,
-        'meta_key'       => 'order',        // ACFのフィールド名
-        'orderby'        => 'meta_value_num',    // 数値で並べる
-        'order'          => 'ASC'                // 昇順（安い順）※ DESCなら高い順
+        'orderby'        => 'date',
+        'order'          => 'DESC',
       );
 
       $products_query = new WP_Query($args); ?>
@@ -52,9 +51,9 @@
 
             </div>
             <h3 class="p-products__entry-name"><?php the_title(); ?></h3>
-            <p class="p-products__entry-price"><?php echo post_custom('price'); ?> yen</p>
+            <p class="p-products__entry-price"><?php echo get_formatted_price(); ?></p>
             <div class="p-products__entry-button">
-              <a href="#">ショップで確認する</a>
+              <a href="#" target="_blank">ショップで確認する</a>
             </div>
           </div>
 

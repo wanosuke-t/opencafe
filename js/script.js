@@ -63,3 +63,21 @@ window.addEventListener("scroll", function () {
     pageTop.classList.remove("is-show");
   }
 });
+
+
+// ページ読み込み時
+$(function () {
+  closeDrawer();
+});
+
+// ブラウザバックや履歴復元時
+$(window).on("pageshow", function () {
+  closeDrawer();
+});
+
+// 閉じる処理を関数にまとめて再利用
+function closeDrawer() {
+  $("#js-drawer-icon").removeClass("is-checked");
+  $("#js-drawer-content").removeClass("is-checked");
+  $("#js-drawer").removeClass("is-checked");
+}

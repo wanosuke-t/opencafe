@@ -122,7 +122,7 @@ a {
 
 .l-two-column {
   padding-top: 43px;
-  padding-bottom: 58px;
+  padding-bottom: 60px;
   padding-inline: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,7 +179,7 @@ a {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     width: 27.4725274725%;
-    gap: 61px;
+    gap: 60px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1100px) {
@@ -560,13 +560,13 @@ a {
           flex-grow: 1;
 }
 .c-news-article--aside .c-news-article__content-lead {
-  margin-top: 1px;
+  margin-top: 0;
   font-size: 14px;
   line-height: 1.71429; /* 171.429% */
   line-break: strict;
 }
 .c-news-article--aside .c-news-article__content-date {
-  margin-top: 9px;
+  margin-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .c-news-article--aside .c-news-article__content-date {
@@ -578,7 +578,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .c-news-article--related .c-news-article__content-lead {
-    margin-top: 9px;
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1342,21 +1342,21 @@ a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-top: -1px;
-  margin-left: 4px;
-  margin-right: 12px;
+  padding: 12px 12px 12px 4px;
 }
 @media screen and (min-width: 768px) {
   .p-fv__pickup-content {
     -ms-flex-item-align: start;
         align-self: flex-start;
-    margin-top: 12px;
-    margin-left: 0;
-    margin-right: 16px;
+    padding-top: 12px;
+    padding-left: 0;
+    padding-right: 16px;
+    padding: 15px 16px 16px 0;
   }
 }
 
 .p-fv__pickup-content-date {
+  display: block;
   font-size: 12px;
   font-weight: 500;
 }
@@ -3004,6 +3004,7 @@ a {
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 
 .p-menu-entries__item-name {
@@ -3044,14 +3045,14 @@ a {
 .p-news-entries {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 24px;
+  row-gap: 23.5px;
   -webkit-column-gap: 19px;
      -moz-column-gap: 19px;
           column-gap: 19px;
 }
 @media screen and (min-width: 768px) {
   .p-news-entries {
-    row-gap: 40.5px;
+    row-gap: 40px;
     -webkit-column-gap: 40px;
        -moz-column-gap: 40px;
             column-gap: 40px;
@@ -3066,7 +3067,7 @@ a {
 }
 
 .p-pagination {
-  margin-top: 38px;
+  margin-top: 39px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3111,7 +3112,7 @@ a {
 }
 
 .p-latest-news {
-  padding: 20px;
+  padding: 21px 20px 20px;
   background: #f8f8f8;
 }
 
@@ -3156,7 +3157,7 @@ a {
 }
 
 .p-categories__list {
-  margin-top: 20px;
+  margin-top: 19px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3317,9 +3318,10 @@ a {
   position: relative;
   margin-top: 75px;
   margin-bottom: 18px;
-  padding-left: 17px;
+  padding-left: 16px;
   color: #382620;
   font-size: 18px;
+  font-weight: 700;
   line-height: 1.55556; /* 155.556% */
 }
 @media screen and (min-width: 768px) {
@@ -3357,6 +3359,7 @@ a {
   border-bottom: 1px solid #382620;
   color: #382620;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.5; /* 150% */
 }
 @media screen and (min-width: 768px) {
@@ -3378,7 +3381,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-entry__body h4 {
-    margin-top: 54px;
+    margin-top: 55px;
     font-size: 16px;
     line-height: normal;
   }
@@ -3399,8 +3402,8 @@ a {
 }
 
 .wp-block-list {
-  margin-top: 27px;
-  margin-bottom: 33px;
+  margin-top: 28px;
+  margin-bottom: 32px;
   margin-left: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3414,7 +3417,7 @@ a {
 @media screen and (min-width: 768px) {
   .wp-block-list {
     margin-top: 28px;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
     margin-left: 36px;
   }
 }
@@ -3461,7 +3464,7 @@ ol.wp-block-list {
 }
 @media screen and (min-width: 768px) {
   .wp-block-pullquote blockquote {
-    padding: 36px 40px 38px;
+    padding: 36px 40px 39px;
   }
 }
 .wp-block-pullquote blockquote p {
@@ -3480,7 +3483,7 @@ ol.wp-block-list {
 }
 @media screen and (min-width: 768px) {
   .wp-block-pullquote blockquote cite {
-    margin-top: 17px;
+    margin-top: 16px;
     margin-right: -1px;
   }
 }
@@ -3635,7 +3638,7 @@ ol.wp-block-list {
     margin-top: 60px;
     margin-left: 8px;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 41px;
+    row-gap: 39px;
     -webkit-column-gap: 40px;
        -moz-column-gap: 40px;
             column-gap: 40px;
@@ -3701,6 +3704,13 @@ ol.wp-block-list {
   }
 }
 
+.p-products__entry-image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-products__entry-name {
   margin-top: 8.5px;
   font-weight: 700;
@@ -3762,7 +3772,7 @@ ol.wp-block-list {
 @media screen and (min-width: 768px) {
   .p-products-message {
     padding-top: 100px;
-    padding-bottom: 1px;
+    padding-bottom: 0;
   }
 }
 
@@ -4020,7 +4030,7 @@ ol.wp-block-list {
   }
 }
 .wpcf7-form p:nth-of-type(n + 2) {
-  margin-top: 39.5px;
+  margin-top: 39px;
 }
 @media screen and (min-width: 768px) {
   .wpcf7-form p:nth-of-type(n + 2) {
@@ -4187,6 +4197,10 @@ ol.wp-block-list {
 .wpcf7-text::placeholder {
   color: #ccc;
 }
+.wpcf7-text:focus {
+  outline: none;
+  border-color: #f07317;
+}
 
 .wpcf7-textarea {
   margin-top: 8.5px;
@@ -4220,9 +4234,13 @@ ol.wp-block-list {
 .wpcf7-textarea::placeholder {
   color: #ccc;
 }
+.wpcf7-textarea:focus {
+  outline: none;
+  border-color: #f07317;
+}
 
 .p-contact__privacy {
-  margin-top: -22px;
+  margin-top: -20px;
   color: #382620;
   font-size: 14px;
   font-weight: 500;

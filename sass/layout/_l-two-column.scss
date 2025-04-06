@@ -2,7 +2,7 @@
 
 .l-two-column {
   padding-top: 43px;
-  padding-bottom: 58px;
+  padding-bottom: 60px;
   padding-inline: 20px;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
   @include global.mq(pc) {
     flex-shrink: 0;
     width: calc(300px / 1092px * 100%);
-    gap: 61px;
+    gap: 60px;
   }
 
   @include global.mq(tb) {

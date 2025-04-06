@@ -56,13 +56,13 @@
 				<!-- 記事ナビゲーション -->
 				<div class="p-entry-nav">
 					<p class="p-entry-nav__left u-hover-opacity">
-						<?php previous_post_link('%link', '前の記事', TRUE, ''); ?>
+						<?php previous_post_link('%link', '前の記事', FALSE, ''); ?>
 					</p>
 					<p class="p-entry-nav__top u-hover-opacity">
 						<a href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>">記事一覧</a>
 					</p>
 					<p class="p-entry-nav__right u-hover-opacity">
-						<?php next_post_link('%link', '次の記事', TRUE, ''); ?>
+						<?php next_post_link('%link', '次の記事', FALSE, ''); ?>
 					</p>
 				</div><!-- /p-entry-nav -->
 

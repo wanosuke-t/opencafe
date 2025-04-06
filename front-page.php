@@ -353,7 +353,7 @@
 
                     </div>
                     <p class="p-menu__genre-item-name"><?php the_title(); ?></p>
-                    <p class="p-menu__genre-item-price"><?php echo post_custom('price'); ?> yen</p>
+                    <p class="p-menu__genre-item-price"><?php echo get_formatted_price(); ?></p>
                   </li>
                   <!-- /ドリンク以外ジャンルのアイテム記述 -->
 
@@ -427,7 +427,7 @@
                             <!-- ドリンクの子ジャンルのアイテム記述 -->
                             <li class="p-menu__drink-item">
                               <p class="p-menu__drink-name"><?php the_title(); ?></p>
-                              <p class="p-menu__drink-price"><?php echo post_custom('price'); ?> yen</p>
+                              <p class="p-menu__drink-price"><?php echo get_formatted_price(); ?></p>
                             </li>
                             <!-- /ドリンクの子ジャンルのアイテム記述 -->
 

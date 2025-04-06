@@ -107,14 +107,14 @@
     }
 
     .c-news-article__content-lead {
-      margin-top: 1px;
+      margin-top: 0;
       font-size: 14px;
       line-height: 1.71429; /* 171.429% */
       line-break: strict;
     }
 
     .c-news-article__content-date {
-      margin-top: 9px;
+      margin-top: 10px;
 
       @include global.mq(pc) {
         margin-left: 0;
@@ -127,7 +127,7 @@
       margin-top: 8px;
 
       @include global.mq(pc) {
-        margin-top: 9px;
+        margin-top: 10px;
       }
     }
 
