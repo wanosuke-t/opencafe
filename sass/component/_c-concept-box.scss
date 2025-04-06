@@ -91,12 +91,6 @@
     width: 320px;
   }
 
-  &--1 {
-  }
-
-  &--2 {
-  }
-
   &--3 {
     @include global.mq(pc) {
       margin-top: 0px;

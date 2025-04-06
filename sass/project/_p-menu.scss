@@ -27,9 +27,6 @@
   }
 }
 
-.p-menu__inner {
-}
-
 .p-menu__head {
   margin-bottom: 40px;
   text-align: center;
@@ -47,9 +44,6 @@
   @include global.mq(pc) {
     margin-top: 10px;
   }
-}
-
-.p-menu__genre {
 }
 
 .p-menu__genre-head {
@@ -102,9 +96,6 @@
     row-gap: 40px;
     column-gap: 34px;
   }
-}
-
-.p-menu__genre-item {
 }
 
 .p-menu__genre-item-image {
@@ -183,9 +174,6 @@
     margin-right: 0;
     width: 100%;
   }
-}
-
-.p-menu__drink {
 }
 
 .p-menu__drink-head {

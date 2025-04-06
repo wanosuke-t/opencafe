@@ -812,6 +812,7 @@ a {
   margin-top: 2px;
   line-height: normal;
 }
+
 .p-drawer {
   position: fixed;
   z-index: 40;
@@ -2406,6 +2407,7 @@ a {
 #sb_instagram .svg-inline--fa {
   display: none !important;
 }
+
 .p-news {
   position: relative;
   padding-top: 116px;

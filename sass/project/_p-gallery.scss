@@ -21,9 +21,6 @@
   }
 }
 
-.p-gallery__inner {
-}
-
 .p-gallery__head {
   text-align: center;
 }
@@ -46,9 +43,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
-}
-
-.p-gallery__image {
 }
 
 .p-gallery__button {
@@ -127,13 +121,7 @@
     }
   }
 
-  .sbi_custom {
-  }
   .svg-inline--fa {
     display: none !important;
-  }
-  .fa-instagram {
-  }
-  .fa-w-14 {
   }
 }

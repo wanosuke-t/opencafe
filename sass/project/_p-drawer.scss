@@ -49,7 +49,6 @@
   @include global.mq(pc) {
     top: 20px;
     right: 20px;
-  
   }
 
   &.is-checked {
@@ -134,9 +133,6 @@
   display: flex;
   flex-direction: column;
   gap: 31.5px;
-}
-
-.p-drawer__content-item {
 }
 
 .p-drawer__content-text-en {

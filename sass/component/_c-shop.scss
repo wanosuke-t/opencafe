@@ -81,7 +81,6 @@
 
     @include global.mq(pc) {
       font-weight: 700;
-      // line-height: normal;
     }
   }
 
@@ -92,9 +91,6 @@
   }
 
   &--sister {
-    .c-shop__title {
-    }
-
     .c-shop__map {
       margin-top: 20px;
 
@@ -121,9 +117,6 @@
     .c-shop__term {
       margin-top: 2px;
       line-height: normal;
-    }
-
-    .c-shop__description {
     }
   }
 }
