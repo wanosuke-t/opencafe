@@ -128,5 +128,6 @@ add_filter('get_the_archive_title', 'my_archive_title');
 function get_formatted_price($field = 'price')
 {
   $value = post_custom($field);
-  return is_numeric($value) ? number_format((int)$value) . ' yen' : '';
+  // return is_numeric($value) ? number_format((int)$value) . ' yen' : '';
+  return is_numeric($value) ? $value . ' yen' : '';
 }

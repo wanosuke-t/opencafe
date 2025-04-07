@@ -6,7 +6,7 @@
   padding-inline: 20px;
   display: flex;
   flex-direction: column;
-  gap: 61px;
+  gap: 60px;
 
   @include global.mq(pc) {
     padding-top: 62px;
