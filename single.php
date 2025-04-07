@@ -41,8 +41,7 @@
 					<!-- p-entry__meta -->
 					<div class="p-entry__meta">
 						<time class="p-entry__published" datetime="<?php the_time("c"); ?>"><?php the_time('Y.m.d'); ?></time>
-						<div class="p-entry__category u-hover-opacity"><a href=""><?php my_the_post_category(true); ?></a>
-						</div>
+						<div class="p-entry__category u-hover-opacity"><?php my_the_post_category(true); ?></div>
 					</div>
 				</div><!-- /p-entry__header -->
 
